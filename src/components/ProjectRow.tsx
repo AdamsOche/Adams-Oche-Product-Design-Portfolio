@@ -59,10 +59,10 @@ export function ProjectRow({ project }: { project: Project }) {
             <Image
               src={project.image}
               alt={project.imageAlt}
-              width={2400}
-              height={1500}
-              className="h-auto w-full rounded-xl"
-              sizes="(min-width: 768px) 90vw, 100vw"
+              width={project.imageWidth}
+              height={project.imageHeight}
+              className="h-auto w-full rounded-xl border border-rule"
+              sizes="(min-width: 1440px) 1360px, (min-width: 768px) 92vw, 100vw"
               priority={project.index === "01"}
             />
           ) : (

@@ -29,7 +29,7 @@ export function Eyebrow({
 }: {
   children: ReactNode;
   className?: string;
-  as?: "p" | "span" | "h2" | "h3" | "div";
+  as?: "p" | "span" | "h2" | "h3" | "div" | "dt";
 }) {
   return (
     <Tag
