@@ -125,14 +125,22 @@ export default function SonoCaseStudy() {
           max="1360px"
         />
 
-        <CaseStudyFigure
-          image={{
-            src: "/work/sono-v1-brand-sheet.png",
-            width: 1536,
-            height: 1024,
-            alt: "The Sono v1 brand sheet: a dark navy base, a bright blue accent circle mark, and Montserrat Alternates as the display face.",
-          }}
-          caption={sono.pivot.brandSheetCaption}
+        <CaseStudyFigureGrid
+          images={[
+            {
+              src: "/case-studies/sono/sono-v1-brand-sheet.png",
+              width: 1536,
+              height: 1024,
+              alt: "The Sono v1 brand sheet: a dark navy base, a bright blue accent circle mark, and Montserrat Alternates as the display face.",
+            },
+            {
+              src: "/case-studies/sono/sono-v2-lockup-cyan-on-dark.png",
+              width: 2000,
+              height: 2000,
+              alt: "The Sono v2 lockup: a cyan wordmark on black, with a mark of four shapes meeting in a square around a star-shaped gap.",
+            },
+          ]}
+          caption={sono.pivot.identityCaption}
           max="900px"
         />
 

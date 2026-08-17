@@ -59,8 +59,8 @@ export const sono = {
     ],
     v1ScreensCaption:
       "Sono v1, designed in Figma. Home feed, beat detail, cart and library. Almost none of this survived.",
-    brandSheetCaption:
-      "The v1 identity, dark navy with a bright blue accent and Montserrat Alternates. The shipped product moved to a lighter, quieter system on an 8px grid.",
+    identityCaption:
+      "The first identity was a soundwave in a circle, in navy and bright blue, set in Montserrat Alternates. The second one draws nothing about music. Four shapes meet in a square and leave a star in the gap between them. The logo stopped picturing sound at the same point the product stopped being about finding music and became the part that handles the sale.",
   },
 
   decisions: {
