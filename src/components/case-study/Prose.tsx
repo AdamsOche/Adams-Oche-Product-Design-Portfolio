@@ -13,7 +13,7 @@ export function ProseSection({
   id,
 }: {
   heading?: ReactNode;
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   id?: string;
 }) {

@@ -5,14 +5,16 @@ type MetaItem = { label: string; value: string };
 
 /**
  * Shared header for every case study: `01 / SONO` eyebrow, title, standfirst,
- * the ROLE / PLATFORM / TOOLS metadata row, and a `Visit [project] →` link.
- * `liveUrl` is nullable on purpose so a fake or dead link never ships. When a
- * project's demo link isn't confirmed yet, the link is simply omitted.
+ * an optional intro line, the ROLE / PLATFORM / TOOLS metadata row, and a
+ * `Visit [project] →` link. `liveUrl` is nullable on purpose so a fake or
+ * dead link never ships. When a project's demo link isn't confirmed yet,
+ * the link is simply omitted.
  */
 export function CaseStudyHero({
   eyebrow,
   title,
   standfirst,
+  intro,
   meta,
   liveUrl,
   liveLabel,
@@ -20,6 +22,7 @@ export function CaseStudyHero({
   eyebrow: string;
   title: string;
   standfirst: string;
+  intro?: string;
   meta: readonly MetaItem[];
   liveUrl: string | null;
   liveLabel: string;
@@ -50,6 +53,10 @@ export function CaseStudyHero({
         <p className="mt-8 max-w-[42ch] text-xl leading-[1.35] text-ink/70 sm:text-2xl">
           {standfirst}
         </p>
+
+        {intro ? (
+          <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-ink/60">{intro}</p>
+        ) : null}
 
         <dl className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3 sm:gap-x-10">
           {meta.map((item) => (

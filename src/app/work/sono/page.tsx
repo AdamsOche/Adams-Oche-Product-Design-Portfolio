@@ -43,6 +43,7 @@ export default function SonoCaseStudy() {
           eyebrow={sono.hero.eyebrow}
           title={sono.hero.title}
           standfirst={sono.hero.standfirst}
+          intro={sono.hero.intro}
           meta={sono.hero.meta}
           liveUrl={sono.liveUrl}
           liveLabel={sono.liveLabel}
