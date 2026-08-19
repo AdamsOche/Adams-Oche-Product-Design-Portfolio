@@ -39,7 +39,7 @@ export function SiteHeader() {
           </Link>
 
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-sm text-ink/60 transition-colors hover:text-ink motion-reduce:transition-none sm:hidden"
           >
             Contact
