@@ -101,6 +101,8 @@ export const stash = {
         body: "Create a group pool, invite contacts, set a target and due date. Every member's contribution is visible to the whole group in real time, which is the actual point: group saving breaks down when people can't see who's paid.",
       },
     ],
+    flowScreensCaption:
+      "Goals and Pools, showing real state rather than a static comp: progress bars filled from actual contributions, and every member's share visible by name. No screenshot yet for Send.",
     landingHeading: "The landing page",
     landingBody:
       "A separate marketing site introduces the product with a dark, editorial layout, a floating cluster of real UI cards (balance, a goal in progress, a pool, a live transaction) in the hero instead of a static phone screenshot, because the interface itself is the pitch. Copy stays short and confident throughout: no feature-explainer paragraphs, just what the product does and why it's different.",

@@ -105,6 +105,31 @@ export default function StashCaseStudy() {
           ))}
         </ProseSection>
 
+        <CaseStudyFigureGrid
+          images={[
+            {
+              src: "/case-studies/stash/stash-goals-list.png",
+              width: 475,
+              height: 904,
+              alt: "The Goals list: MacBook Pro, Detty December and Emergency Fund, each with a horizontal progress bar filled from real contributions.",
+            },
+            {
+              src: "/case-studies/stash/stash-pools-list.png",
+              width: 475,
+              height: 904,
+              alt: "The Pools list: three active pools with member avatar stacks and progress bars, each showing the total pooled against its target.",
+            },
+            {
+              src: "/case-studies/stash/stash-pool-detail.png",
+              width: 475,
+              height: 904,
+              alt: "A single pool's detail screen: five members listed by name and initials, each with their contribution amount and share of the pool.",
+            },
+          ]}
+          caption={stash.screens.flowScreensCaption}
+          max="900px"
+        />
+
         <CaseStudyFigure
           image={{
             src: "/case-studies/stash/stash-screens.png",
