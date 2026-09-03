@@ -33,16 +33,9 @@ export function SiteHeader() {
 
           <Link
             href={`mailto:${contact.email}`}
-            className="hidden shrink-0 rounded-full bg-ink px-5 py-2.5 text-sm font-medium leading-none text-paper transition-colors duration-200 hover:bg-ink/85 motion-reduce:transition-none sm:inline-flex"
+            className="inline-flex shrink-0 rounded-full bg-ink px-5 py-2.5 text-sm font-medium leading-none text-paper transition-colors duration-200 hover:bg-ink/85 motion-reduce:transition-none"
           >
             Get in touch
-          </Link>
-
-          <Link
-            href="/#contact"
-            className="text-sm text-ink/60 transition-colors hover:text-ink motion-reduce:transition-none sm:hidden"
-          >
-            Contact
           </Link>
         </div>
       </Container>
