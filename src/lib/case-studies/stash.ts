@@ -78,7 +78,7 @@ export const stash = {
     fixed:
       "Every invented number, borrowed face, and gradient came out. What's left is the system in the design tokens: a fixed dark-navy and violet base, gold pulled back to the moments money actually moves, real interaction states instead of static comps. Fewer ingredients, used more deliberately.",
     beforeAlt:
-      "The pre-refinement Stash marketing hero: gradient headline text, a fabricated \"12,000+ active savers\" stat, a 4.8 star rating, stock photo avatars, and a \"Now live in Nigeria & Ghana\" badge. Discarded — shown here only as the before state.",
+      "The pre-refinement Stash marketing hero: gradient headline text, a fabricated \"12,000+ active savers\" stat, a 4.8 star rating, stock photo avatars, and a \"Now live in Nigeria & Ghana\" badge. Discarded. Shown here only as the before state.",
     afterAlt:
       "The Stash design system: colour tokens (navy base, violet actions, gold reserved for milestones), type scale, and component scaffolds that replaced the first pass.",
   },

@@ -29,8 +29,8 @@ export default function Home() {
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
                   I&rsquo;m Adams Oche, a product designer and builder in Abuja. I take
                   work from framing the problem through interface and design system to a
-                  product that actually runs &mdash; writing real source code with AI
-                  coding agents rather than handing off a file and hoping.
+                  product that actually runs. That means writing real source code with AI
+                  coding agents, not handing off a file and hoping.
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-3">
@@ -77,8 +77,8 @@ export default function Home() {
               <TwoCol heading="What I do" eyebrow="02 / Services">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
                   More than just screens. The useful part is moving between product
-                  thinking, interface design and the code that makes it real &mdash;
-                  because the seams between those three are where products usually break.
+                  thinking, interface design and the code that makes it real. The seams
+                  between those three are where products usually break.
                 </p>
               </TwoCol>
 
@@ -136,7 +136,7 @@ export default function Home() {
                   <p>
                     I&rsquo;m Adams, a product designer and builder based in Nigeria. I
                     work across product thinking, interface design and the source code
-                    underneath &mdash; planning docs and design systems on one end, a
+                    underneath: planning docs and design systems on one end, a
                     Supabase schema and a payment flow on the other.
                   </p>
                   <p>

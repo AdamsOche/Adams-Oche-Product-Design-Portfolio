@@ -8,11 +8,11 @@ import { Container, Eyebrow, Rule } from "@/components/primitives";
 import { matchday } from "@/lib/case-studies/matchday";
 
 export const metadata: Metadata = {
-  title: "Matchday — Adams Oche",
+  title: "Matchday · Adams Oche",
   description:
     "A squad management tool for grassroots and semi-pro football teams, keeping the squad, their form and the next lineup in one place. Case study by Adams Oche.",
   openGraph: {
-    title: "Matchday — Adams Oche",
+    title: "Matchday · Adams Oche",
     description:
       "A squad management tool for grassroots and semi-pro football teams, keeping the squad, their form and the next lineup in one place.",
     type: "article",
@@ -137,7 +137,7 @@ export default function MatchdayCaseStudy() {
               className="flex aspect-[9/16] w-full max-w-[320px] items-center justify-center rounded-xl border border-dashed border-ink/20 bg-paper-sunk"
             >
               <Eyebrow className="px-6 text-center">
-                Mobile view — pending capture
+                Mobile view: pending capture
               </Eyebrow>
             </div>
             <figcaption className="mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">

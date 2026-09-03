@@ -64,7 +64,7 @@ export const projects: Project[] = [
     slug: "matchday",
     name: "Matchday",
     oneLiner:
-      "Squad and lineup management for amateur football teams — built for the ten minutes before kickoff, on a phone, at the side of a pitch.",
+      "Squad and lineup management for amateur football teams. Built for the ten minutes before kickoff, on a phone, at the side of a pitch.",
     tags: ["Product design", "Product build", "Supabase backend", "Design system"],
     status:
       "Tested live by two coaches with their real squads, one managing a 5-a-side team.",
@@ -80,27 +80,27 @@ export const projects: Project[] = [
     slug: "stash",
     name: "Stash",
     oneLiner:
-      "A personal finance concept for saving toward goals, sending money, and pooling funds with friends — built for a Nigerian and Ghanaian context.",
+      "A personal finance concept for saving toward goals, sending money, and pooling funds with friends. Built for a Nigerian and Ghanaian context.",
     tags: ["Product design", "Brand identity", "Design system", "Next.js marketing site"],
     status:
-      "A design and frontend concept on mock data — 19 app screens plus a marketing site built in Next.js. Not a live backend product.",
+      "A design and frontend concept on mock data: 19 app screens plus a marketing site built in Next.js. Not a live backend product.",
     href: "/work/stash",
     image: "/work/stash-screens.png",
     imageWidth: 4603,
     imageHeight: 2508,
     imageAlt:
-      "The Stash app laid out across 19 screens — onboarding, savings goals, transfers and group pools — in the deep indigo base, with the accent colour reserved for amounts.",
+      "The Stash app laid out across 19 screens (onboarding, savings goals, transfers and group pools) in the deep indigo base, with the accent colour reserved for amounts.",
   },
 ];
 
 export const services = [
   {
     label: "Product design",
-    body: "Problem framing, information architecture, interaction and interface design — down to the states nobody asks for until they're missing.",
+    body: "Problem framing, information architecture, interaction and interface design, right down to the states nobody asks for until they're missing.",
   },
   {
     label: "Build in code",
-    body: "Designs taken all the way to a working product in real source code, written with AI coding agents. Next.js, Tailwind, Supabase, Paystack — bugs root-caused rather than patched over.",
+    body: "Designs taken all the way to a working product in real source code, written with AI coding agents. Next.js, Tailwind, Supabase, Paystack. Bugs root-caused rather than patched over.",
   },
   {
     label: "Design systems & identity",

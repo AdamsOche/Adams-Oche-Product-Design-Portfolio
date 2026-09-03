@@ -13,7 +13,7 @@ export function SiteFooter() {
               {identity.name}
             </p>
             <Eyebrow className="mt-3">
-              {identity.title} — {identity.location}
+              {identity.title}, based in {identity.location}
             </Eyebrow>
           </div>
 

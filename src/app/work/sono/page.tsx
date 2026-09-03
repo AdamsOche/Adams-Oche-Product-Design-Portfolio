@@ -9,11 +9,11 @@ import { Rule } from "@/components/primitives";
 import { sono } from "@/lib/case-studies/sono";
 
 export const metadata: Metadata = {
-  title: "Sono — Adams Oche",
+  title: "Sono · Adams Oche",
   description:
     "Storefront and checkout software that helps independent music producers sell beats directly to their own audience. Case study by Adams Oche.",
   openGraph: {
-    title: "Sono — Adams Oche",
+    title: "Sono · Adams Oche",
     description:
       "Storefront and checkout software that helps independent music producers sell beats directly to their own audience.",
     type: "article",

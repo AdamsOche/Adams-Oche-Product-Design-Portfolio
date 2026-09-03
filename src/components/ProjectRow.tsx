@@ -71,7 +71,7 @@ export function ProjectRow({ project }: { project: Project }) {
               className="flex aspect-[16/10] w-full items-center justify-center rounded-xl border border-dashed border-ink/20 bg-paper-sunk"
             >
               <Eyebrow>
-                {project.name} screenshot — pending capture
+                {project.name} screenshot: pending capture
               </Eyebrow>
             </div>
           )}

@@ -23,11 +23,11 @@ const sansFace = Inter({
 });
 
 export const metadata: Metadata = {
-  title: `${identity.name} — Product Designer & Builder`,
+  title: `${identity.name} · ${identity.title}`,
   description:
     "Adams Oche is a product designer and builder in Abuja, Nigeria. Storefront and checkout software for independent music producers, squad management for amateur football teams, and a personal finance concept.",
   openGraph: {
-    title: `${identity.name} — Product Designer & Builder`,
+    title: `${identity.name} · ${identity.title}`,
     description:
       "Product design taken through to working software. Selected work: Sono, Matchday and Stash.",
     type: "website",
