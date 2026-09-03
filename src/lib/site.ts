@@ -21,8 +21,7 @@ export const identity = {
 // Homepage-relative so these still resolve when clicked from a case study route.
 export const nav = [
   { label: "Work", href: "/#work" },
-  { label: "What I do", href: "/#services" },
-  { label: "Process", href: "/#process" },
+  { label: "Stack", href: "/#stack" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
 ] as const;
@@ -32,6 +31,8 @@ export type Project = {
   slug: string;
   name: string;
   oneLiner: string;
+  /** Extra narrative paragraphs, rendered between the one-liner and tags. */
+  detail?: string[];
   tags: string[];
   status?: string;
   href: string;
@@ -48,8 +49,12 @@ export const projects: Project[] = [
     slug: "sono",
     name: "Sono",
     oneLiner:
-      "Storefront and checkout software for independent music producers to sell beats directly to their own audience.",
-    tags: ["Product design", "Product build", "Checkout & licensing", "Design system"],
+      "Storefront and checkout software for independent music producers who want to sell beats directly to their audience.",
+    detail: [
+      "I designed Sono as a browsable storefront first, open to anyone searching for beats. Then I spoke to a producer who had tried selling on BeatStars. He couldn't get noticed there, and that open, browse-and-discover model didn't make much sense for someone who already had an audience.",
+      "So I scrapped the feed, search and cart and rebuilt the product around one thing: a producer sharing one link with their audience.",
+    ],
+    tags: ["Product design", "Product build", "Checkout", "Design system"],
     status:
       "Runs as a working demo on free infrastructure in Paystack test mode. Every screen works; only the currency isn't real.",
     href: "/work/sono",
@@ -65,9 +70,9 @@ export const projects: Project[] = [
     name: "Matchday",
     oneLiner:
       "Squad and lineup management for amateur football teams. Built for the ten minutes before kickoff, on a phone, at the side of a pitch.",
-    tags: ["Product design", "Product build", "Supabase backend", "Design system"],
+    tags: ["Product design", "Product build", "Supabase", "Design system"],
     status:
-      "Tested live by two coaches with their real squads, one managing a 5-a-side team.",
+      "Two coaches tested it with their real squads. One of those tests exposed a formation bug that my own testing hadn't caught.",
     href: "/work/matchday",
     image: "/work/matchday-squad-overview.png",
     imageWidth: 1892,
@@ -80,10 +85,10 @@ export const projects: Project[] = [
     slug: "stash",
     name: "Stash",
     oneLiner:
-      "A personal finance concept for saving toward goals, sending money, and pooling funds with friends. Built for a Nigerian and Ghanaian context.",
-    tags: ["Product design", "Brand identity", "Design system", "Next.js marketing site"],
+      "A personal finance concept for saving toward goals, sending money, and pooling funds with friends, designed for a Nigerian and Ghanaian context.",
+    tags: ["Product design", "Brand identity", "Design system", "Next.js"],
     status:
-      "A design and frontend concept on mock data: 19 app screens plus a marketing site built in Next.js. Not a live backend product.",
+      "Design and frontend concept built with Next.js. Uses mock data and has no live backend.",
     href: "/work/stash",
     image: "/work/stash-screens.png",
     imageWidth: 4603,
@@ -93,40 +98,13 @@ export const projects: Project[] = [
   },
 ];
 
-export const services = [
-  {
-    label: "Product design",
-    body: "Problem framing, information architecture, interaction and interface design, right down to the states nobody asks for until they're missing.",
-  },
-  {
-    label: "Build in code",
-    body: "Designs taken all the way to a working product in real source code, written with AI coding agents. Next.js, Tailwind, Supabase, Paystack. Bugs root-caused rather than patched over.",
-  },
-  {
-    label: "Design systems & identity",
-    body: "Type scales, colour roles, components and brand marks, set up once so a product stays coherent as it grows past the first ten screens.",
-  },
-];
-
-export const process = [
-  {
-    number: "01",
-    label: "Understand",
-    body: "Start with the situation the product actually lives in — a producer with an audience and no way to take payment, a coach picking a lineup ten minutes before kickoff. The constraint is the brief.",
-  },
-  {
-    number: "02",
-    label: "Decide",
-    body: "Make the calls explicitly and write down why. Tap to swap instead of drag. One link instead of a catalog. Every decision is a trade, and the reasoning is worth more later than the outcome.",
-  },
-  {
-    number: "03",
-    label: "Build",
-    body: "Take it into real code — schema, states, edge cases, the design system holding it together. Building it is what surfaces the parts of the design that were only true in Figma.",
-  },
-  {
-    number: "04",
-    label: "Catch and fix",
-    body: "Check the thing itself, not the test that says it passed. A checkout that silently redirected, a security policy that read correctly and wasn't, a formation that didn't persist — all found by looking.",
-  },
-];
+export const stack = {
+  tools: ["Figma", "Next.js", "TypeScript", "Supabase", "Tailwind", "Claude Code"],
+  disciplines: [
+    "Product design",
+    "UI design",
+    "Design systems",
+    "Brand identity",
+    "Frontend",
+  ],
+} as const;

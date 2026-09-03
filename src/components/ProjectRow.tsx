@@ -22,6 +22,14 @@ export function ProjectRow({ project }: { project: Project }) {
               {project.oneLiner}
             </p>
 
+            {project.detail ? (
+              <div className="mt-6 max-w-[62ch] space-y-4 text-[0.9375rem] leading-relaxed text-ink/70">
+                {project.detail.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            ) : null}
+
             {project.status ? (
               <p className="mt-6 max-w-[62ch] text-[0.9375rem] leading-relaxed text-ink/60">
                 {project.status}

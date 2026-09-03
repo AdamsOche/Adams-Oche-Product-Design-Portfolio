@@ -3,9 +3,7 @@ import { ProjectRow } from "@/components/ProjectRow";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Container, Eyebrow, Pill, Rule, TwoCol } from "@/components/primitives";
-import { contact, process, projects, services, social } from "@/lib/site";
-
-const heroCategories = ["Product design", "Build in code", "Design systems"];
+import { contact, projects, social, stack } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -16,21 +14,21 @@ export default function Home() {
         {/* ---------------------------------------------------------------- Hero */}
         <section className="pt-20 pb-20 md:pt-28 md:pb-28">
           <Container>
-            <Eyebrow>
-              {heroCategories.join("  /  ")}
-            </Eyebrow>
-
-            <h1 className="mt-10 max-w-[16ch] font-display text-[clamp(2.75rem,9vw,7.5rem)] font-medium leading-[0.94] tracking-[-0.04em]">
-              I design products, then <em className="italic">build</em> them.
+            <h1 className="max-w-[16ch] font-display text-[clamp(2.75rem,9vw,7.5rem)] font-medium leading-[0.94] tracking-[-0.04em]">
+              I design products, and <em className="italic">build</em> them.
             </h1>
 
             <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-12">
-              <div className="md:col-span-7 md:col-start-6">
+              <div className="md:col-span-7 md:col-start-6 space-y-5">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  I&rsquo;m Adams Oche, a product designer and builder in Abuja. I take
-                  work from framing the problem through interface and design system to a
-                  product that actually runs. That means writing real source code with AI
-                  coding agents, not handing off a file and hoping.
+                  I&rsquo;m Adams, a product designer and builder in Abuja. I take
+                  products from the first problem to the interface, the system
+                  underneath, and a working build.
+                </p>
+                <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
+                  Three products so far: Sono, checkout software for music producers;
+                  Matchday, a squad tool used by real football coaches; and Stash, a
+                  finance concept.
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-3">
@@ -52,9 +50,8 @@ export default function Home() {
             <div className="py-16 md:py-20">
               <TwoCol heading="Selected work" eyebrow="Work">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  Three products, each carried from the problem through to something you
-                  can open. Two of them run; the third is a design and frontend concept,
-                  and is labelled as one.
+                  Three products. The first one I designed twice, because the first
+                  version was wrong.
                 </p>
               </TwoCol>
             </div>
@@ -70,57 +67,31 @@ export default function Home() {
 
         <Rule />
 
-        {/* ------------------------------------------------------------- What I do */}
-        <section id="services" className="scroll-mt-24">
+        {/* ---------------------------------------------------------------- Stack */}
+        <section id="stack" className="scroll-mt-24">
           <Container>
-            <div className="py-16 md:py-20">
-              <TwoCol heading="What I do" eyebrow="Services">
-                <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  More than just screens. The useful part is moving between product
-                  thinking, interface design and the code that makes it real. The seams
-                  between those three are where products usually break.
-                </p>
-              </TwoCol>
-
-              <div className="mt-16 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-3">
-                {services.map((service) => (
-                  <div key={service.label} className="border-t border-rule pt-6">
-                    <Eyebrow>{service.label}</Eyebrow>
-                    <p className="mt-5 max-w-[46ch] leading-relaxed text-ink/70">
-                      {service.body}
-                    </p>
-                  </div>
-                ))}
+            <div className="py-10 md:py-12">
+              <div className="grid grid-cols-1 gap-x-10 gap-y-4 md:grid-cols-12">
+                <div className="md:col-span-5 lg:col-span-4">
+                  <Eyebrow>Stack</Eyebrow>
+                </div>
+                <div className="md:col-span-7 md:col-start-6 lg:col-span-7 lg:col-start-6">
+                  <p className="text-[0.9375rem] leading-relaxed text-ink/70">
+                    {stack.tools.join(" · ")}
+                  </p>
+                </div>
               </div>
-            </div>
-          </Container>
-        </section>
 
-        <Rule />
-
-        {/* --------------------------------------------------------------- Process */}
-        <section id="process" className="scroll-mt-24">
-          <Container>
-            <div className="py-16 md:py-20">
-              <TwoCol heading="How the work goes" eyebrow="Process">
-                <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  Four steps, in this order, on every project. The last one is the part
-                  most portfolios leave out.
-                </p>
-              </TwoCol>
-
-              <ol className="mt-16 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
-                {process.map((step) => (
-                  <li key={step.number} className="border-t border-rule pt-6">
-                    <Eyebrow>
-                      {step.number} &mdash; {step.label}
-                    </Eyebrow>
-                    <p className="mt-5 max-w-[42ch] text-[0.9375rem] leading-relaxed text-ink/70">
-                      {step.body}
-                    </p>
-                  </li>
-                ))}
-              </ol>
+              <div className="mt-6 grid grid-cols-1 gap-x-10 gap-y-4 md:grid-cols-12">
+                <div className="md:col-span-5 lg:col-span-4">
+                  <Eyebrow>Disciplines</Eyebrow>
+                </div>
+                <div className="md:col-span-7 md:col-start-6 lg:col-span-7 lg:col-start-6">
+                  <p className="text-[0.9375rem] leading-relaxed text-ink/70">
+                    {stack.disciplines.join(" · ")}
+                  </p>
+                </div>
+              </div>
             </div>
           </Container>
         </section>
@@ -134,20 +105,47 @@ export default function Home() {
               <TwoCol heading="About">
                 <div className="max-w-[62ch] space-y-6 text-lg leading-relaxed text-ink/70">
                   <p>
-                    I&rsquo;m Adams, a product designer and builder based in Nigeria. I
-                    work across product thinking, interface design and the source code
-                    underneath: planning docs and design systems on one end, a
-                    Supabase schema and a payment flow on the other.
+                    I&rsquo;m a product designer and builder based in Abuja. I like
+                    working across the whole product, from figuring out what needs to
+                    exist to designing the interface and building what&rsquo;s
+                    underneath it.
                   </p>
                   <p>
-                    That range is deliberate. Building a design is the fastest way to find
-                    out which parts of it were only true in Figma: the state you forgot,
-                    the table that&rsquo;s unreadable at column width, the checkout that
-                    quietly does the wrong thing while its test still passes.
+                    Building what I design has changed how I work. A checkout can look
+                    finished in Figma and still send someone to the wrong page. A
+                    formation can look perfect and still fail when a coach tries to save
+                    it on a Saturday. Those are the problems I want to catch before they
+                    reach someone else.
                   </p>
-                  <p>Based in Abuja, working with teams anywhere.</p>
                 </div>
               </TwoCol>
+            </div>
+          </Container>
+        </section>
+
+        <Rule />
+
+        {/* ------------------------------------------------------ Outside work */}
+        <section id="outside-work" className="scroll-mt-24">
+          <Container>
+            <div className="py-14 md:py-16">
+              <div className="grid grid-cols-1 gap-x-10 gap-y-4 md:grid-cols-12">
+                <div className="md:col-span-5 lg:col-span-4">
+                  <Eyebrow>A few things I care about</Eyebrow>
+                </div>
+                <div className="md:col-span-7 md:col-start-6 lg:col-span-7 lg:col-start-6 space-y-4 text-[0.9375rem] leading-relaxed text-ink/70">
+                  <p>
+                    I&rsquo;ve been running since 2019. These days I&rsquo;m usually out
+                    before six, because Abuja gets hot quickly.
+                  </p>
+                  <p>
+                    I play football, follow the game far too closely, and spend an
+                    unreasonable amount of time thinking about how things work and why
+                    they don&rsquo;t.
+                  </p>
+                  <p>I&rsquo;m usually building something too.</p>
+                </div>
+              </div>
             </div>
           </Container>
         </section>
@@ -160,8 +158,8 @@ export default function Home() {
             <div className="py-20 md:py-28">
               <TwoCol heading={<>Let&rsquo;s talk.</>} eyebrow="Contact">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  Open to product design roles and freelance work. The fastest way to
-                  reach me is email.
+                  Open to product design roles, product teams, and interesting
+                  freelance work.
                 </p>
 
                 <Link
