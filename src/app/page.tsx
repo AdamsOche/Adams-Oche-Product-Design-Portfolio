@@ -50,7 +50,7 @@ export default function Home() {
         <section id="work" className="scroll-mt-24">
           <Container>
             <div className="py-16 md:py-20">
-              <TwoCol heading="Selected work" eyebrow="01 / Work">
+              <TwoCol heading="Selected work" eyebrow="Work">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
                   Three products, each carried from the problem through to something you
                   can open. Two of them run; the third is a design and frontend concept,
@@ -74,7 +74,7 @@ export default function Home() {
         <section id="services" className="scroll-mt-24">
           <Container>
             <div className="py-16 md:py-20">
-              <TwoCol heading="What I do" eyebrow="02 / Services">
+              <TwoCol heading="What I do" eyebrow="Services">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
                   More than just screens. The useful part is moving between product
                   thinking, interface design and the code that makes it real. The seams
@@ -102,7 +102,7 @@ export default function Home() {
         <section id="process" className="scroll-mt-24">
           <Container>
             <div className="py-16 md:py-20">
-              <TwoCol heading="How the work goes" eyebrow="03 / Process">
+              <TwoCol heading="How the work goes" eyebrow="Process">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
                   Four steps, in this order, on every project. The last one is the part
                   most portfolios leave out.
@@ -131,7 +131,7 @@ export default function Home() {
         <section id="about" className="scroll-mt-24">
           <Container>
             <div className="py-16 md:py-20">
-              <TwoCol heading="About" eyebrow="04 / About">
+              <TwoCol heading="About">
                 <div className="max-w-[62ch] space-y-6 text-lg leading-relaxed text-ink/70">
                   <p>
                     I&rsquo;m Adams, a product designer and builder based in Nigeria. I
@@ -158,7 +158,7 @@ export default function Home() {
         <section id="contact" className="scroll-mt-24">
           <Container>
             <div className="py-20 md:py-28">
-              <TwoCol heading={<>Let&rsquo;s talk.</>} eyebrow="05 / Contact">
+              <TwoCol heading={<>Let&rsquo;s talk.</>} eyebrow="Contact">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
                   Open to product design roles and freelance work. The fastest way to
                   reach me is email.
