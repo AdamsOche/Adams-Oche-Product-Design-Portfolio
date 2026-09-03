@@ -56,5 +56,5 @@ export function ProseItem({
 }
 
 export function ProseEyebrow({ children }: { children: ReactNode }) {
-  return <Eyebrow className="text-ink/45">{children}</Eyebrow>;
+  return <Eyebrow>{children}</Eyebrow>;
 }

@@ -63,7 +63,7 @@ export default function SonoCaseStudy() {
             </InlineLink>
             {sono.problem.paymentsParagraph.after}
           </ProseP>
-          <p className="break-words text-sm leading-relaxed text-ink/50">
+          <p className="break-words text-sm leading-relaxed text-ink/65">
             {sono.problem.secondarySource.label}{" "}
             <InlineLink href={sono.problem.secondarySource.href}>
               {sono.problem.secondarySource.href}

@@ -9,7 +9,7 @@ export function ProjectRow({ project }: { project: Project }) {
       <Container>
         <div className="grid grid-cols-1 gap-x-10 gap-y-8 py-16 md:grid-cols-12 md:py-20">
           <div className="md:col-span-5 lg:col-span-4">
-            <Eyebrow className="text-ink/45">
+            <Eyebrow>
               {project.index} / {project.name.toUpperCase()}
             </Eyebrow>
             <h3 className="mt-6 font-display text-3xl leading-[1.05] tracking-[-0.03em] sm:text-4xl">
@@ -70,7 +70,7 @@ export function ProjectRow({ project }: { project: Project }) {
               role="presentation"
               className="flex aspect-[16/10] w-full items-center justify-center rounded-xl border border-dashed border-ink/20 bg-paper-sunk"
             >
-              <Eyebrow className="text-ink/35">
+              <Eyebrow>
                 {project.name} screenshot — pending capture
               </Eyebrow>
             </div>

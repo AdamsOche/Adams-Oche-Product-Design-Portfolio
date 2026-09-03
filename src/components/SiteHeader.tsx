@@ -11,7 +11,7 @@ export function SiteHeader() {
             <span className="font-display text-lg leading-none tracking-[-0.02em]">
               {identity.name}
             </span>
-            <Eyebrow as="span" className="text-ink/45">
+            <Eyebrow as="span">
               {identity.title}
             </Eyebrow>
           </Link>

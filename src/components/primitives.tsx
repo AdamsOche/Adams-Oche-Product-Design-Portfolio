@@ -33,7 +33,7 @@ export function Eyebrow({
 }) {
   return (
     <Tag
-      className={`font-sans text-[0.6875rem] font-medium uppercase tracking-[0.18em] leading-none ${className}`}
+      className={`font-sans text-[0.6875rem] font-medium uppercase tracking-[0.18em] leading-none text-ink/65 ${className}`}
     >
       {children}
     </Tag>
@@ -83,7 +83,7 @@ export function TwoCol({
       className={`grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-12 ${className}`}
     >
       <div className="md:col-span-5 lg:col-span-4">
-        {eyebrow ? <Eyebrow className="mb-5 text-ink/45">{eyebrow}</Eyebrow> : null}
+        {eyebrow ? <Eyebrow className="mb-5">{eyebrow}</Eyebrow> : null}
         <h2 className="font-display text-3xl leading-[1.05] tracking-[-0.03em] sm:text-4xl lg:text-5xl">
           {heading}
         </h2>

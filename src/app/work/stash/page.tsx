@@ -36,7 +36,7 @@ export default function StashCaseStudy() {
         />
 
         <Container>
-          <p className="mx-auto -mt-10 mb-4 max-w-[680px] text-sm leading-relaxed text-ink/55">
+          <p className="mx-auto -mt-10 mb-4 max-w-[680px] text-sm leading-relaxed text-ink/65">
             {stash.hero.concept}
           </p>
         </Container>

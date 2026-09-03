@@ -31,7 +31,7 @@ export function CaseStudyHero({
     <Container>
       <div className="pt-14 pb-16 md:pt-20 md:pb-20">
         <div className="flex flex-wrap items-start justify-between gap-6">
-          <Eyebrow className="text-ink/45">{eyebrow}</Eyebrow>
+          <Eyebrow>{eyebrow}</Eyebrow>
 
           {liveUrl ? (
             <Link
@@ -61,7 +61,7 @@ export function CaseStudyHero({
         <dl className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3 sm:gap-x-10">
           {meta.map((item) => (
             <div key={item.label}>
-              <Eyebrow as="dt" className="text-ink/45">
+              <Eyebrow as="dt">
                 {item.label}
               </Eyebrow>
               <dd className="mt-2 max-w-[28ch] text-[0.9375rem] leading-snug text-ink/80">

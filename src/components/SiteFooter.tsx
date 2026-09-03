@@ -12,7 +12,7 @@ export function SiteFooter() {
             <p className="font-display text-xl leading-none tracking-[-0.02em]">
               {identity.name}
             </p>
-            <Eyebrow className="mt-3 text-ink/45">
+            <Eyebrow className="mt-3">
               {identity.title} — {identity.location}
             </Eyebrow>
           </div>

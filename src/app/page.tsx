@@ -16,7 +16,7 @@ export default function Home() {
         {/* ---------------------------------------------------------------- Hero */}
         <section className="pt-20 pb-20 md:pt-28 md:pb-28">
           <Container>
-            <Eyebrow className="text-ink/45">
+            <Eyebrow>
               {heroCategories.join("  /  ")}
             </Eyebrow>
 
@@ -85,7 +85,7 @@ export default function Home() {
               <div className="mt-16 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-3">
                 {services.map((service) => (
                   <div key={service.label} className="border-t border-rule pt-6">
-                    <Eyebrow className="text-ink/45">{service.label}</Eyebrow>
+                    <Eyebrow>{service.label}</Eyebrow>
                     <p className="mt-5 max-w-[46ch] leading-relaxed text-ink/70">
                       {service.body}
                     </p>
@@ -112,7 +112,7 @@ export default function Home() {
               <ol className="mt-16 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
                 {process.map((step) => (
                   <li key={step.number} className="border-t border-rule pt-6">
-                    <Eyebrow className="text-ink/45">
+                    <Eyebrow>
                       {step.number} &mdash; {step.label}
                     </Eyebrow>
                     <p className="mt-5 max-w-[42ch] text-[0.9375rem] leading-relaxed text-ink/70">
@@ -176,7 +176,7 @@ export default function Home() {
                     .filter((item) => item.label !== "Email")
                     .map((item) => (
                       <li key={item.label} className="border-t border-rule pt-5">
-                        <Eyebrow className="text-ink/45">{item.label}</Eyebrow>
+                        <Eyebrow>{item.label}</Eyebrow>
                         <Link
                           href={item.href}
                           target="_blank"

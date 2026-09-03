@@ -136,11 +136,11 @@ export default function MatchdayCaseStudy() {
               role="presentation"
               className="flex aspect-[9/16] w-full max-w-[320px] items-center justify-center rounded-xl border border-dashed border-ink/20 bg-paper-sunk"
             >
-              <Eyebrow className="px-6 text-center text-ink/35">
+              <Eyebrow className="px-6 text-center">
                 Mobile view — pending capture
               </Eyebrow>
             </div>
-            <figcaption className="mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/55">
+            <figcaption className="mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">
               The tap to swap argument rests on phone use, so a phone width screen belongs here.
               Coming once it&rsquo;s captured.
             </figcaption>
@@ -165,7 +165,7 @@ export default function MatchdayCaseStudy() {
         {/* -------------------------------------------------------- Role & stack */}
         <ProseSection heading={matchday.role.heading} className="pb-20 md:pb-28">
           <ProseP>{matchday.role.body}</ProseP>
-          <p className="border-t border-rule pt-6 text-[0.9375rem] leading-relaxed text-ink/55">
+          <p className="border-t border-rule pt-6 text-[0.9375rem] leading-relaxed text-ink/65">
             {matchday.role.verification}
           </p>
         </ProseSection>

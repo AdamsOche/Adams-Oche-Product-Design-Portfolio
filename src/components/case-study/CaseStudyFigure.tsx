@@ -39,7 +39,7 @@ export function CaseStudyFigure({
           priority={priority}
         />
         {caption ? (
-          <figcaption className="mx-auto mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/55">
+          <figcaption className="mx-auto mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">
             {caption}
           </figcaption>
         ) : null}
@@ -77,7 +77,7 @@ export function CaseStudyFigureGrid({
           ))}
         </div>
         {caption ? (
-          <figcaption className="mx-auto mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/55">
+          <figcaption className="mx-auto mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">
             {caption}
           </figcaption>
         ) : null}
