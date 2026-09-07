@@ -106,16 +106,13 @@ export default function Home() {
                 <div className="max-w-[62ch] space-y-6 text-lg leading-relaxed text-ink/70">
                   <p>
                     I&rsquo;m a product designer and builder based in Abuja. I like
-                    working across the whole product, from figuring out what needs to
-                    exist to designing the interface and building what&rsquo;s
-                    underneath it.
+                    figuring out what a product needs, designing how it should work, and
+                    then building it into something people can actually use.
                   </p>
                   <p>
-                    Building what I design has changed how I work. A checkout can look
-                    finished in Figma and still send someone to the wrong page. A
-                    formation can look perfect and still fail when a coach tries to save
-                    it on a Saturday. Those are the problems I want to catch before they
-                    reach someone else.
+                    Building has become a big part of how I design. It&rsquo;s easy for
+                    something to make sense in Figma. Building and testing it is usually
+                    where you find out whether it actually makes sense.
                   </p>
                 </div>
               </TwoCol>
