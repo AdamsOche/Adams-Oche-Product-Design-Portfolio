@@ -145,6 +145,31 @@ export default function SonoCaseStudy() {
           max="900px"
         />
 
+        <CaseStudyFigureGrid
+          images={[
+            {
+              src: "/case-studies/sono/sono-billboard.png",
+              width: 1536,
+              height: 1024,
+              alt: "A Sono street billboard: a teal brand panel beside a photo panel of a producer at work, with the logo and tagline repeated on black.",
+            },
+            {
+              src: "/case-studies/sono/sono-merch-cap.png",
+              width: 1122,
+              height: 1402,
+              alt: "A black cap embroidered with the Sono wordmark and icon.",
+            },
+            {
+              src: "/case-studies/sono/sono-tote-bag.png",
+              width: 1122,
+              height: 1402,
+              alt: "A canvas tote bag carrying the Sono mark and the line \"Your beats. Your storefront. Your business.\"",
+            },
+          ]}
+          caption={sono.pivot.brandCaption}
+          max="1200px"
+        />
+
         <Rule />
 
         {/* ------------------------------------------------------------ Decisions */}
