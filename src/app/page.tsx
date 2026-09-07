@@ -132,15 +132,15 @@ export default function Home() {
                 </div>
                 <div className="md:col-span-7 md:col-start-6 lg:col-span-7 lg:col-start-6 space-y-4 text-[0.9375rem] leading-relaxed text-ink/70">
                   <p>
-                    I&rsquo;ve been running since 2019. These days I&rsquo;m usually out
-                    before six, because Abuja gets hot quickly.
+                    I&rsquo;ve been running since 2019, and it&rsquo;s become one of the
+                    things I genuinely enjoy making time for.
                   </p>
                   <p>
-                    I play football, follow the game far too closely, and spend an
-                    unreasonable amount of time thinking about how things work and why
-                    they don&rsquo;t.
+                    I love playing football and follow Arsenal far too closely. When
+                    I&rsquo;m not doing either, I&rsquo;m probably playing Call of Duty
+                    or an adventure game.
                   </p>
-                  <p>I&rsquo;m usually building something too.</p>
+                  <p>Somewhere in between all of that, I&rsquo;m usually building something too.</p>
                 </div>
               </div>
             </div>
