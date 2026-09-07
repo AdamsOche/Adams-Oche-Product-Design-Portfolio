@@ -58,11 +58,11 @@ export const projects: Project[] = [
     status:
       "Runs as a working demo on free infrastructure in Paystack test mode. Every screen works; only the currency isn't real.",
     href: "/work/sono",
-    image: "/work/sono-storefront.png",
-    imageWidth: 1896,
-    imageHeight: 877,
+    image: "/work/sono-home-dashboard.png",
+    imageWidth: 1897,
+    imageHeight: 880,
     imageAlt:
-      "Sono's producer-facing site: a beat card showing Basic and Premium license tiers priced in naira.",
+      "Sono's marketing homepage, with a producer's live dashboard card showing revenue, sales, downloads and recent orders.",
   },
   {
     index: "02",
