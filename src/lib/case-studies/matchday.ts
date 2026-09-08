@@ -41,11 +41,11 @@ export const matchday = {
       },
       {
         lead: "Form as a single number.",
-        body: "Each player carries one form rating so a coach can scan the squad instead of reading it. The detail behind the number sits one tap deeper rather than crowding the list.",
+        body: "Each player carries one form rating so a coach can scan the squad instead of reading it. The detail behind the number sits one tap deeper, not crowding the list.",
       },
       {
         lead: "Position colour as structure.",
-        body: "Goalkeeper, defence, midfield and attack each get a consistent colour, so the pitch view is readable at a glance and the squad list and the formation feel like the same system rather than two screens.",
+        body: "Goalkeeper, defence, midfield and attack each get a consistent colour, so the pitch view is readable at a glance and the squad list and the formation feel like the same system, not two screens.",
       },
       {
         lead: "Dark mode as a first class case.",
@@ -60,7 +60,7 @@ export const matchday = {
       },
       {
         lead: "Every squad size, not just eleven.",
-        body: "Matchday started as an eleven a side tool. Most of the teams it is actually for play five and seven a side. Supporting 5, 7, 9 and 11 meant rebuilding the formation data around format rather than treating eleven as the default, including hand placing pitch coordinates for seven new formations. It was the right amount of work for a decision that changed who could use the product at all.",
+        body: "Matchday started as an eleven a side tool. Most of the teams it is actually for play five and seven a side. Supporting 5, 7, 9 and 11 meant rebuilding the formation data around format instead of treating eleven as the default, including hand placing pitch coordinates for seven new formations. It was the right amount of work for a decision that changed who could use the product at all.",
       },
     ],
   },
@@ -89,7 +89,7 @@ export const matchday = {
       },
     ],
     featureRequest:
-      "Both were fixed. They also asked for custom formations, which was a feature request rather than a bug, and the more useful signal of the two: they were already trying to use it for a shape I hadn't anticipated. It isn't built yet.",
+      "Both were fixed. They also asked for custom formations: a feature request, not a bug, and the more useful signal of the two. They were already trying to use it for a shape I hadn't anticipated. It isn't built yet.",
     closing:
       "The five I found came from checking my own work properly. The two I missed came from putting it in front of someone who had a match to organise. Both are necessary and neither replaces the other.",
   },
@@ -107,6 +107,6 @@ export const matchday = {
     heading: "Role and stack",
     body: "Product design and engineering. Research, information architecture, UI, design system, and the build. Next.js and Tailwind, Supabase for database and auth with row level security, a schema covering clubs, players, matches, ratings and match events, a format aware formation builder for 5, 7, 9 and 11 a side, and goals and assists tracking. Responsive, light and dark, mobile first. Deployed and in use.",
     verification:
-      "Row level security was tested by signing in as two different coaches and confirming neither could see the other's squad, with both a positive and a negative case rather than assuming the policy worked.",
+      "Row level security was tested by signing in as two different coaches and confirming neither could see the other's squad, with both a positive and a negative case, not just assuming the policy worked.",
   },
 } as const;

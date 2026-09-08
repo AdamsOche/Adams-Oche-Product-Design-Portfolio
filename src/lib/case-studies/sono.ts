@@ -64,7 +64,7 @@ export const sono = {
     identityCaption:
       "The first identity was a soundwave in a circle, in navy and bright blue, set in Montserrat Alternates. The second one draws nothing about music. Four shapes meet in a square and leave a star in the gap between them. The logo stopped picturing sound at the same point the product stopped being about finding music and became the part that handles the sale.",
     brandCaption:
-      "The mark held up off-screen too: a street billboard, a cap and a tote bag, all built on the same system rather than a one-off treatment for print.",
+      "The mark held up off-screen too: a street billboard, a cap and a tote bag, all built on the same system.",
   },
 
   decisions: {
@@ -80,7 +80,7 @@ export const sono = {
       },
       {
         lead: "Producers get paid directly.",
-        body: "Payments split at the point of sale through Paystack Subaccounts, with a flat 5% platform fee. Money reaches the producer's own account rather than sitting in a Sono balance waiting on a payout schedule.",
+        body: "Payments split at the point of sale through Paystack Subaccounts, with a flat 5% platform fee. Money goes straight to the producer's own account. It never sits in a Sono balance waiting on a payout schedule.",
       },
       {
         lead: "No buyer account, ever.",
@@ -94,7 +94,7 @@ export const sono = {
     items: [
       {
         lead: "Checkout was silently leaving the page.",
-        body: "The in page overlay was a deliberate decision, and the tests reported it working. It wasn't. Under some conditions Paystack Inline fell back to a full page redirect, so buyers were being sent off the storefront in the middle of paying. I found it by watching the browser address bar during a real checkout rather than trusting the passing test.",
+        body: "The in page overlay was a deliberate decision, and the tests reported it working. It wasn't. Under some conditions Paystack Inline fell back to a full page redirect, so buyers were being sent off the storefront in the middle of paying. I caught it by watching the browser address bar during a real checkout. The test kept passing anyway.",
       },
       {
         lead: "A storage policy that read correctly and wasn't.",
@@ -106,7 +106,7 @@ export const sono = {
       },
     ],
     closing:
-      "Every one of these got traced back to a cause rather than patched at the surface. The habit behind them is the same: check the thing itself, not the report that says the thing is fine.",
+      "Every one of these got traced back to a cause, not patched at the surface. The habit behind them is the same: check the thing itself, not the report that says the thing is fine.",
   },
 
   screens: {

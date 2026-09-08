@@ -115,7 +115,7 @@ export default function MatchdayCaseStudy() {
               src: "/case-studies/matchday/matchday-squad-overview-dark.png",
               width: 1567,
               height: 904,
-              alt: "The same squad overview in dark mode, designed alongside the light version rather than inverted from it.",
+              alt: "The same squad overview in dark mode, designed alongside the light version, not inverted from it.",
             },
           ]}
           max="1360px"

@@ -34,7 +34,7 @@ export const stash = {
     intro:
       "I designed and built the full product: 19 mobile screens covering onboarding, savings goals, peer-to-peer transfers, and group savings pools, plus a marketing landing page to introduce it.",
     concept:
-      "Stash is a design and frontend concept, not a live product: nineteen screens and a marketing site, built in real code, running on mock data rather than a connected backend.",
+      "Stash is a design and frontend concept, not a live product: nineteen screens and a marketing site, built in real code, running on mock data with no connected backend.",
     meta: [
       { label: "Role", value: "Product Designer · Builder, solo" },
       { label: "Platform", value: "Mobile app concept · Marketing site" },
@@ -55,7 +55,7 @@ export const stash = {
     items: [
       {
         lead: "Goals, Send, and Pools as equal peers.",
-        body: "Everything in the information architecture flows from the three jobs people actually hire a savings app for: save toward something specific, move money to someone instantly, pool money with a group. Goals, Send and Pools sit alongside Home in the bottom nav, rather than burying pooled savings three menus deep the way most banking apps do.",
+        body: "Everything in the information architecture flows from the three jobs people actually hire a savings app for: save toward something specific, move money to someone instantly, pool money with a group. Goals, Send and Pools sit alongside Home in the bottom nav. Most banking apps bury pooled savings three menus deep. This doesn't.",
       },
       {
         lead: "Every screen backed by real interaction logic.",
@@ -90,11 +90,11 @@ export const stash = {
   screens: {
     heading: "Screens",
     intro:
-      "Nineteen screens across three core flows, each backed by real state rather than a static comp.",
+      "Nineteen screens across three core flows, each backed by real state, not a static comp.",
     flows: [
       {
         label: "Goals",
-        body: "Set a target, an emoji, and a savings rhythm (weekly, monthly, manual, or auto-save), then track it with a concentric progress ring that fills as contributions land. Hitting 100% triggers a dedicated celebration screen rather than just updating a number.",
+        body: "Set a target, an emoji, and a savings rhythm (weekly, monthly, manual, or auto-save), then track it with a concentric progress ring that fills as contributions land. Hitting 100% triggers a dedicated celebration screen. It doesn't just update a number.",
       },
       {
         label: "Send",
@@ -106,7 +106,7 @@ export const stash = {
       },
     ],
     flowScreensCaption:
-      "Goals and Pools, showing real state rather than a static comp: progress bars filled from actual contributions, and every member's share visible by name. No screenshot yet for Send.",
+      "Goals and Pools, showing real state, not a static comp: progress bars filled from actual contributions, and every member's share visible by name. No screenshot yet for Send.",
     landingHeading: "The landing page",
     landingBody:
       "A separate marketing site introduces the product with a dark, editorial layout, a floating cluster of real UI cards (balance, a goal in progress, a pool, a live transaction) in the hero instead of a static phone screenshot, because the interface itself is the pitch. Copy stays short and confident throughout: no feature-explainer paragraphs, just what the product does and why it's different.",
@@ -117,6 +117,6 @@ export const stash = {
     body: "Solo: product design, UI design, and front-end build. Next.js, TypeScript, Tailwind, Zustand for state, Framer Motion for transitions.",
     differentlyHeading: "What I'd do differently",
     differentlyBody:
-      "Given more time, I'd want real backend-connected balances tying Send and Pool contributions back to a single wallet figure instead of three independently-mocked numbers, and a proper login flow with real session persistence rather than a mocked auth store. Both are solvable. They just weren't the point of this pass, which was proving out the interaction design end to end.",
+      "Given more time, I'd want real backend-connected balances tying Send and Pool contributions back to a single wallet figure instead of three independently-mocked numbers, and a proper login flow with real session persistence instead of a mocked auth store. Both are solvable. They just weren't the point of this pass, which was proving out the interaction design end to end.",
   },
 } as const;
