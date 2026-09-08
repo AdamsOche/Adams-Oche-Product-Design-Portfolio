@@ -41,17 +41,24 @@ export function Eyebrow({
 }
 
 type PillProps = ComponentPropsWithoutRef<typeof Link> & {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "brand";
 };
 
-/** Black pill primary, outlined pill secondary. */
+/**
+ * Black pill primary, outlined pill secondary, or `brand`: an unstyled fill
+ * for callers passing their own `style={{ backgroundColor, color }}` (each
+ * project's own product color). `brand` darkens on hover via a filter
+ * instead of a background-color class, so it works with any inline color.
+ */
 export function Pill({ variant = "primary", className = "", children, ...rest }: PillProps) {
   const base =
-    "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium leading-none transition-colors duration-200 motion-reduce:transition-none";
+    "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium leading-none transition-[filter,background-color,border-color] duration-200 motion-reduce:transition-none";
   const styles =
     variant === "primary"
       ? "bg-ink text-paper hover:bg-ink/85"
-      : "border border-ink/30 text-ink hover:border-ink hover:bg-ink/5";
+      : variant === "secondary"
+        ? "border border-ink/30 text-ink hover:border-ink hover:bg-ink/5"
+        : "hover:brightness-90";
 
   return (
     <Link className={`${base} ${styles} ${className}`} {...rest}>

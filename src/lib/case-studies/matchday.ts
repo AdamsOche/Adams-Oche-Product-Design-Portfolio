@@ -7,6 +7,8 @@
 export const matchday = {
   liveUrl: "https://matchday-ma.vercel.app" as string | null,
   liveLabel: "Matchday",
+  brandColor: "#00cc6a",
+  brandTextColor: "#14120f",
 
   hero: {
     eyebrow: "02 / MATCHDAY · Sports · Product design · SaaS",

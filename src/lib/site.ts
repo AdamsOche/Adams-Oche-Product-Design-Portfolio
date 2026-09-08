@@ -43,6 +43,10 @@ export type Project = {
   imageAlt: string;
   /** Optional small square logo mark, shown alongside the screenshot. */
   logoMark?: { src: string; width: number; height: number; alt: string };
+  /** The product's own primary color, used for its "Read the case study" button. */
+  brandColor: string;
+  /** Text color for brandColor, chosen for WCAG AA contrast against it. */
+  brandTextColor: string;
 };
 
 export const projects: Project[] = [
@@ -66,6 +70,8 @@ export const projects: Project[] = [
     imageAlt:
       "Sono's marketing homepage, with a producer's live dashboard card showing revenue, sales, downloads and recent orders.",
     logoMark: { src: "/work/sono-mark.png", width: 300, height: 300, alt: "The Sono logo mark." },
+    brandColor: "#0e7490",
+    brandTextColor: "#ffffff",
   },
   {
     index: "02",
@@ -83,6 +89,8 @@ export const projects: Project[] = [
     imageAlt:
       "Matchday in dark mode: a squad overview with form ratings shown as single numbers and position colour running through the player list.",
     logoMark: { src: "/work/matchday-mark.png", width: 300, height: 300, alt: "The Matchday logo mark." },
+    brandColor: "#00cc6a",
+    brandTextColor: "#14120f",
   },
   {
     index: "03",
@@ -99,6 +107,10 @@ export const projects: Project[] = [
     imageHeight: 2508,
     imageAlt:
       "The Stash app laid out across 19 screens (onboarding, savings goals, transfers and group pools) in the deep indigo base, with the accent colour reserved for amounts.",
+    // A touch deeper than the design system's #7B5CF6 swatch: that exact
+    // shade sits just under 4.5:1 against white text, this clears it.
+    brandColor: "#6d4fe0",
+    brandTextColor: "#ffffff",
   },
 ];
 

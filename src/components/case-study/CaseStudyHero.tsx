@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Container, Eyebrow } from "@/components/primitives";
+import { Container, Eyebrow, Pill } from "@/components/primitives";
 
 type MetaItem = { label: string; value: string };
 
@@ -18,6 +17,8 @@ export function CaseStudyHero({
   meta,
   liveUrl,
   liveLabel,
+  brandColor,
+  brandTextColor,
 }: {
   eyebrow: string;
   title: string;
@@ -26,6 +27,9 @@ export function CaseStudyHero({
   meta: readonly MetaItem[];
   liveUrl: string | null;
   liveLabel: string;
+  /** The product's own primary color and a WCAG AA-safe text color for it. */
+  brandColor: string;
+  brandTextColor: string;
 }) {
   return (
     <Container>
@@ -34,15 +38,17 @@ export function CaseStudyHero({
           <Eyebrow>{eyebrow}</Eyebrow>
 
           {liveUrl ? (
-            <Link
+            <Pill
               href={liveUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-1.5 text-sm font-medium underline decoration-ink/30 underline-offset-4 transition-colors duration-200 hover:decoration-ink motion-reduce:transition-none"
+              variant="brand"
+              style={{ backgroundColor: brandColor, color: brandTextColor }}
+              className="gap-1.5 px-5 py-2.5 text-sm"
             >
               Visit {liveLabel}
               <span aria-hidden="true">&rarr;</span>
-            </Link>
+            </Pill>
           ) : null}
         </div>
 

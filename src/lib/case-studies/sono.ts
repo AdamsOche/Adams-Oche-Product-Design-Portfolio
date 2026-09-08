@@ -7,6 +7,8 @@
 export const sono = {
   liveUrl: "https://sono-six.vercel.app/" as string | null,
   liveLabel: "Sono",
+  brandColor: "#0e7490",
+  brandTextColor: "#ffffff",
 
   hero: {
     eyebrow: "01 / SONO · Product design · Product development · Creator tools",

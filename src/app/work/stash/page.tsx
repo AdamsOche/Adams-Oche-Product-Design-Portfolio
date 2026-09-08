@@ -33,6 +33,8 @@ export default function StashCaseStudy() {
           meta={stash.hero.meta}
           liveUrl={stash.liveUrl}
           liveLabel={stash.liveLabel}
+          brandColor={stash.brandColor}
+          brandTextColor={stash.brandTextColor}
         />
 
         <Container>

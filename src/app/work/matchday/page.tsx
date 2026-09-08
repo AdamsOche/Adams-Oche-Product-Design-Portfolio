@@ -33,6 +33,8 @@ export default function MatchdayCaseStudy() {
           meta={matchday.hero.meta}
           liveUrl={matchday.liveUrl}
           liveLabel={matchday.liveLabel}
+          brandColor={matchday.brandColor}
+          brandTextColor={matchday.brandTextColor}
         />
 
         <Rule />

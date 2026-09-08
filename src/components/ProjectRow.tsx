@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Container, Eyebrow } from "@/components/primitives";
+import { Container, Eyebrow, Pill } from "@/components/primitives";
 import type { Project } from "@/lib/site";
 
 export function ProjectRow({
@@ -59,15 +58,15 @@ export function ProjectRow({
               ))}
             </ul>
 
-            <Link
+            <Pill
               href={project.href}
-              className="group mt-10 inline-flex items-center gap-2 text-sm font-medium"
+              variant="brand"
+              style={{ backgroundColor: project.brandColor, color: project.brandTextColor }}
+              className="mt-10 gap-2"
             >
-              <span className="underline decoration-ink/30 underline-offset-4 transition-colors duration-200 group-hover:decoration-ink motion-reduce:transition-none">
-                Read the case study
-              </span>
+              Read the case study
               <span aria-hidden="true">&rarr;</span>
-            </Link>
+            </Pill>
           </div>
 
           <div className={imageClass}>

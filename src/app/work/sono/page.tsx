@@ -47,6 +47,8 @@ export default function SonoCaseStudy() {
           meta={sono.hero.meta}
           liveUrl={sono.liveUrl}
           liveLabel={sono.liveLabel}
+          brandColor={sono.brandColor}
+          brandTextColor={sono.brandTextColor}
         />
 
         <Rule />

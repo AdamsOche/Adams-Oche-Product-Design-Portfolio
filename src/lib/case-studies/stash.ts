@@ -21,6 +21,10 @@
 export const stash = {
   liveUrl: null as string | null,
   liveLabel: "Stash",
+  // A touch deeper than the design system's #7B5CF6 swatch, for AA contrast
+  // against white text (see src/lib/site.ts for the same note).
+  brandColor: "#6d4fe0",
+  brandTextColor: "#ffffff",
 
   hero: {
     eyebrow: "03 / STASH · Personal finance concept · Product design · Brand & UI",
