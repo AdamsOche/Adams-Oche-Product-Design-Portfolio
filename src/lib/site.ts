@@ -41,6 +41,8 @@ export type Project = {
   imageWidth: number;
   imageHeight: number;
   imageAlt: string;
+  /** Optional small square logo mark, shown alongside the screenshot. */
+  logoMark?: { src: string; width: number; height: number; alt: string };
 };
 
 export const projects: Project[] = [
@@ -63,6 +65,7 @@ export const projects: Project[] = [
     imageHeight: 880,
     imageAlt:
       "Sono's marketing homepage, with a producer's live dashboard card showing revenue, sales, downloads and recent orders.",
+    logoMark: { src: "/work/sono-mark.png", width: 300, height: 300, alt: "The Sono logo mark." },
   },
   {
     index: "02",
@@ -70,15 +73,16 @@ export const projects: Project[] = [
     name: "Matchday",
     oneLiner:
       "Squad and lineup management for amateur football teams. Built for the ten minutes before kickoff, on a phone, at the side of a pitch.",
-    tags: ["Product design", "Product build", "Supabase", "Design system"],
+    tags: ["Product design", "Product build", "Formation builder", "Design system"],
     status:
-      "Two coaches tested it with their real squads. One of those tests exposed a formation bug that my own testing hadn't caught.",
+      "Built to handle every squad size a real team plays, from five-a-side to eleven.",
     href: "/work/matchday",
     image: "/work/matchday-squad-overview.png",
     imageWidth: 1892,
     imageHeight: 872,
     imageAlt:
       "Matchday in dark mode: a squad overview with form ratings shown as single numbers and position colour running through the player list.",
+    logoMark: { src: "/work/matchday-mark.png", width: 300, height: 300, alt: "The Matchday logo mark." },
   },
   {
     index: "03",

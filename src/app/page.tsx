@@ -57,10 +57,10 @@ export default function Home() {
             </div>
           </Container>
 
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <div key={project.slug}>
               <Rule />
-              <ProjectRow project={project} />
+              <ProjectRow project={project} reversed={i % 2 === 1} />
             </div>
           ))}
         </section>
