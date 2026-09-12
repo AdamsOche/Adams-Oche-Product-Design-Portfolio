@@ -16,6 +16,15 @@ export const metadata: Metadata = {
     description:
       "A savings and payments app concept for young professionals across Nigeria and Ghana, saving toward specific goals and pooling money with a group.",
     type: "article",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Adams Oche, Product Designer · Builder",
+        type: "image/png",
+      },
+    ],
   },
 };
 

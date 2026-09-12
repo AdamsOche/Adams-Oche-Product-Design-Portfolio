@@ -16,6 +16,15 @@ export const metadata: Metadata = {
     description:
       "A squad management tool for grassroots and semi-pro football teams, keeping the squad, their form and the next lineup in one place.",
     type: "article",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Adams Oche, Product Designer · Builder",
+        type: "image/png",
+      },
+    ],
   },
 };
 

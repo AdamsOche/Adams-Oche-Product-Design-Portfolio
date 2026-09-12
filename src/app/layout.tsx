@@ -23,6 +23,7 @@ const sansFace = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://adamsoche.netlify.app"),
   title: `${identity.name} · ${identity.title}`,
   description:
     "Adams Oche is a product designer and builder in Abuja, Nigeria. Storefront and checkout software for independent music producers, squad management for amateur football teams, and a personal finance concept.",
@@ -32,6 +33,9 @@ export const metadata: Metadata = {
       "Product design taken through to working software. Selected work: Sono, Matchday and Stash.",
     type: "website",
     locale: "en_NG",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

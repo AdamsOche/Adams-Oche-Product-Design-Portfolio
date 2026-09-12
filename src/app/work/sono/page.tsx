@@ -17,6 +17,15 @@ export const metadata: Metadata = {
     description:
       "Storefront and checkout software that helps independent music producers sell beats directly to their own audience.",
     type: "article",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Adams Oche, Product Designer · Builder",
+        type: "image/png",
+      },
+    ],
   },
 };
 
