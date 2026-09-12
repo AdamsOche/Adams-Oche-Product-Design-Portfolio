@@ -74,12 +74,15 @@ export function Pill({ variant = "primary", className = "", children, ...rest }:
 export function TwoCol({
   heading,
   eyebrow,
+  media,
   children,
   className = "",
   id,
 }: {
   heading: ReactNode;
   eyebrow?: ReactNode;
+  /** Optional small visual (e.g. an avatar), rendered above the heading. */
+  media?: ReactNode;
   children?: ReactNode;
   className?: string;
   id?: string;
@@ -90,6 +93,7 @@ export function TwoCol({
       className={`grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-12 ${className}`}
     >
       <div className="md:col-span-5 lg:col-span-4">
+        {media ? <div className="mb-6">{media}</div> : null}
         {eyebrow ? <Eyebrow className="mb-5">{eyebrow}</Eyebrow> : null}
         <h2 className="font-display text-3xl leading-[1.05] tracking-[-0.03em] sm:text-4xl lg:text-5xl">
           {heading}

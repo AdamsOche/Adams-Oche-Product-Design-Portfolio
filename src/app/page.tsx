@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ProjectRow } from "@/components/ProjectRow";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -102,7 +103,18 @@ export default function Home() {
         <section id="about" className="scroll-mt-24">
           <Container>
             <div className="py-16 md:py-20">
-              <TwoCol heading="About">
+              <TwoCol
+                heading="About"
+                media={
+                  <Image
+                    src="/profile-pic.png"
+                    alt="An illustrated portrait of Adams Oche."
+                    width={400}
+                    height={400}
+                    className="h-20 w-20 rounded-full sm:h-24 sm:w-24"
+                  />
+                }
+              >
                 <div className="max-w-[62ch] space-y-6 text-lg leading-relaxed text-ink/70">
                   <p>
                     I&rsquo;m a product designer and builder based in Abuja. I like
