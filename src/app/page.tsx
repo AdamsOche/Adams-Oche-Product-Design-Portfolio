@@ -27,9 +27,9 @@ export default function Home() {
                   underneath, and a working build.
                 </p>
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  Three products so far: Sono, checkout software for music producers;
+                  Four products so far: Sono, checkout software for music producers;
                   Matchday, a squad tool used by real football coaches; and Stash, a
-                  finance concept.
+                  finance concept; and WKND, a weekend planning app.
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-3">
@@ -51,8 +51,7 @@ export default function Home() {
             <div className="py-16 md:py-20">
               <TwoCol heading="Selected work" eyebrow="Work">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  Three products. The first one I designed twice, because the first
-                  version was wrong.
+                  Four products I've built, each with a different porblem to solve.
                 </p>
               </TwoCol>
             </div>
