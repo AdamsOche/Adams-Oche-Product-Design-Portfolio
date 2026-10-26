@@ -112,7 +112,28 @@ export const projects: Project[] = [
     brandColor: "#6d4fe0",
     brandTextColor: "#ffffff",
   },
-];
+  {
+    index: "04",
+    slug: "wknd",
+    name: "WKND",
+    oneLiner:
+      "A mobile app that helps people in Abuja turn a free weekend into a plan, and get their friends to say yes.",
+    detail: [
+      "The first version of WKND was a catalogue of events. I audited it and rebuilt the product around one question: what are we doing this weekend, and who is coming?",
+    ],
+    tags: ["Product design", "Mobile", "User flows", "Design system"],
+    status:
+      "A concept across 44 screens and eight flows. Not launched, so the case study reports no results.",
+    href: "/work/wknd",
+    image: "/case-studies/wknd/wknd-week.png",
+    imageWidth: 3080,
+    imageHeight: 1472,
+    imageAlt:
+      "Four WKND screens: an empty Wednesday, a plan on Thursday, the Saturday list, and an event page with a Reserve button.",
+          logoMark: { src: "/work/wknd-mark.png", width: 300, height: 300, alt: "The WKND logo mark." },
+    brandColor: "#3629b7",
+    brandTextColor: "#ffffff",
+  },];
 
 export const stack = {
   tools: ["Figma", "Next.js", "TypeScript", "Supabase", "Tailwind", "Claude Code"],
