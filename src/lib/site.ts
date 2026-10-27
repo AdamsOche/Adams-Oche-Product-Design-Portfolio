@@ -130,10 +130,11 @@ export const projects: Project[] = [
     imageHeight: 1472,
     imageAlt:
       "Four WKND screens: an empty Wednesday, a plan on Thursday, the Saturday list, and an event page with a Reserve button.",
-          logoMark: { src: "/work/wknd-mark.png", width: 300, height: 300, alt: "The WKND logo mark." },
+    logoMark: { src: "/work/wknd-mark.png", width: 300, height: 300, alt: "The WKND logo mark." },
     brandColor: "#3629b7",
     brandTextColor: "#ffffff",
-  },];
+  },
+];
 
 export const stack = {
   tools: ["Figma", "Next.js", "TypeScript", "Supabase", "Tailwind", "Claude Code"],
