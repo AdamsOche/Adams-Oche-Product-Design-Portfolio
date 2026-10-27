@@ -1,6 +1,8 @@
 /**
  * WKND case-study copy. No em dashes by design.
  * WKND is a concept and has not launched, so this page reports no results.
+ * It swaps "What I caught and fixed" for the sponsors and "what I still need
+ * to test" sections on purpose, since there is nothing live to catch bugs in.
  */
 export const wknd = {
   liveUrl: null as string | null,
@@ -12,13 +14,13 @@ export const wknd = {
     eyebrow: "04 / WKND · Consumer · Product design · Mobile",
     title: "WKND",
     standfirst:
-      "A mobile app that helps people in Abuja turn a free weekend into a plan, and get their friends to say yes.",
+      "A mobile app for finding things to do in Abuja and making plans with friends.",
     intro:
-      "Built for people who keep meaning to do something on Saturday and end up at home. I redesigned it from a first version that was a catalogue of events.",
+      "The first version of WKND was mostly an event catalogue. I redesigned it around the whole process of making a weekend plan: finding something nearby, deciding what to do, getting friends involved and booking a place.",
     meta: [
       { label: "Role", value: "Product Designer" },
       { label: "Platform", value: "Mobile" },
-      { label: "Tools", value: "Figma · Claude" },
+      { label: "Tools", value: "Figma · Claude Code" },
       { label: "Status", value: "Concept, not launched" },
     ],
   },
@@ -26,92 +28,60 @@ export const wknd = {
   problem: {
     heading: "The problem",
     paragraphs: [
-      "Abuja does not lack things to do. People lack a plan. A weekend is decided on weekdays and lived on Saturday, and most of the deciding dies in a group chat that nobody answers until Saturday morning, when it is too late to book anything.",
-      "I started by auditing the first version of WKND, which showed every event on offer. It asked for an account and a quiz before it showed a single event, sent friends to a chat they could only join by installing the app, and had no way to ask for the photo that would have filled its Memories grid.",
-      "So the redesign starts from one question: what are we doing this weekend, and who is coming?",
+      "Abuja has places to go and things to do, but finding an activity is only part of making a plan. You still have to decide what works, get your friends interested and book before the opportunity passes.",
+      "I went back through the first version of WKND and found a few things getting in the way. People had to create an account and complete a quiz before seeing any events. Inviting friends meant sending them to a chat that required an app install, and the Memories section depended on photos without giving people a clear way to add them.",
+      "I wanted to make the experience more useful before asking people to commit to it.",
     ],
   },
 
-  decisions: {
-    heading: "What I decided, and why",
+  redesign: {
+    heading: "The redesign",
     items: [
       {
-        lead: "Time is the interface.",
-        body: "The home screen changes with the day of the week. From Monday to Thursday it counts down to Saturday and asks for a plan. On Friday there is one reminder, at the time you chose. On Saturday it shows what is on and your ticket, with nothing else in the way.",
+        title: "The app changes through the week",
+        paragraphs: [
+          "I designed the home screen around when people are likely to make plans, so it isn't the same screen every day. Early in the week, it encourages them to organise their Saturday. On Friday, it sends the reminder they've chosen. On Saturday, it puts available activities and bookings first.",
+          "The idea is to make the app useful at each stage of the weekend, instead of treating every visit like a search for events.",
+        ],
       },
       {
-        lead: "Ask for the account last.",
-        body: "Sign up moved from the first screen to Reserve. People see the value first and only commit when there is a plan to lose.",
+        title: "You can look around before signing up",
+        paragraphs: [
+          "In the first version, people had to register and answer questions before they could see what was available. I moved registration to the point where someone is ready to reserve an activity.",
+          "That way, people can understand what WKND offers before deciding to create an account.",
+        ],
       },
       {
-        lead: "A link instead of a chat.",
-        body: "A friend answers a plan on a web page with one tap and no install, and the host sees who is in. The first version needed an installed app before anyone could say yes, which was the biggest wall in it.",
+        title: "Friends don't need the app to join a plan",
+        paragraphs: [
+          "I changed the invitation flow so friends could open a web link, respond to the plan and let the host see who's coming without installing WKND.",
+          "This removes an extra step from the process. It also makes the invitation easier to share with people who don't use the app.",
+        ],
       },
       {
-        lead: "Money first when it fails.",
-        body: "Cancellations, expired holds and refunds all lead with what happened to the payment. Trust is built on the worst Saturday, not the best one.",
+        title: "Payment problems need clear answers",
+        paragraphs: [
+          "I designed the checkout flow to explain what happens when a payment fails, a reservation hold expires or an event is cancelled. These are situations where people need to know whether they've been charged and what happens next.",
+          "The screens put the payment status and next steps up front, so people don't have to work it out for themselves.",
+        ],
       },
       {
-        lead: "Close the loop.",
-        body: "After the event the app asks for a photo once, in the evening, and counts the weekend either way. That is what makes Memories fill up.",
-      },
-    ],
-    changedHeading: "What changed from the first version",
-    changed: [
-      {
-        lead: "Ten screens became four.",
-        body: "The first version asked for an account, then a quiz about indoors or outdoors, effort and budget, before showing an event. The redesign shows a welcome, where you are, a few interests and a handoff with the countdown already running.",
-      },
-      {
-        lead: "A catalogue became a plan.",
-        body: "Every event used to look the same, in small type, with nothing to say whether the weekend was close or planned. Now the first thing you see is your plan, or the lack of one.",
+        title: "Memories needs a way to collect photos",
+        paragraphs: [
+          "The original Memories section had no clear way for people to contribute photos. In the redesign, WKND asks attendees to add a photo after an event, with one prompt in the evening.",
+          "It's a small addition, but the feature depends on people actually sharing their photos. Without that, there's not much to look back on.",
+        ],
       },
     ],
   },
 
-  sponsors: {
-    heading: "Sponsors that belong in the plan",
-    intro:
-      "A product like this needs a way to earn, so I designed how brands could appear without taking over the plan. The examples use Bolt, inDrive, Chowdeck, Pizza Hut and Chicken Republic as stand ins, with typed wordmarks and their colours. They are concept examples, and no partnership exists.",
-    rules: [
-      "Every sponsored item says Sponsored in plain text and names the brand",
-      "One per screen, never above your plan and never the first item in a list",
-      "Real or not at all: a sponsored event has a real time, place and price, and a perk can actually be redeemed",
-      "Brand colour sits on the card, while the buttons stay WKND's",
-      "Never a notification, so the Friday reminder stays trustworthy",
+  changes: {
+    heading: "What changed",
+    paragraphs: [
+      "The redesign reduced the initial onboarding from ten screens to four. Instead of completing a quiz before seeing any activities, people choose their location and interests, then move into the app.",
+      "I also moved the experience away from a catalogue where every event had similar weight. The home screen now gives more attention to the current stage of the week, while event pages make details such as time, location and price easier to find.",
+      "The wider redesign covers onboarding, weekly discovery, event details, checkout, invitations, sponsorships and Memories.",
     ],
-    closing:
-      "The brand colours made the cards easier to tell apart and more fun to look at. They also meant checking every pairing for contrast, and one of them, Pizza Hut's red, only works for large text.",
-  },
-
-  validation: {
-    heading: "What is still a hypothesis",
-    intro:
-      "WKND has not launched, so there are no results here and I would rather not invent any. The design rests on five beliefs, and each one has a test.",
-    beliefs: [
-      {
-        lead: "People decide on weekdays, not on Saturday morning.",
-        body: "The whole week structure depends on it. Test: interview eight people in Abuja about their last four weekends and when each plan was made.",
-      },
-      {
-        lead: "Friends will answer a link without installing anything.",
-        body: "It replaces the chat and the friends list. Test: send twenty real links for real plans and count how many get an answer.",
-      },
-      {
-        lead: "One Friday reminder brings people back.",
-        body: "It is the only push the app sends on its own. Test: give a clickable prototype and real notifications to ten people for two weekends.",
-      },
-      {
-        lead: "Operators can give live availability and refunds.",
-        body: "Holds, places left and refund timing depend on it. Test: talk to five operators about how they take bookings and what they can promise.",
-      },
-      {
-        lead: "People add a photo when asked once, in the evening.",
-        body: "Memories only works if photos get in. Test: pilot the prompt at one event and count how many add a photo within a day.",
-      },
-    ],
-    closing:
-      "Until those tests run, the design is a strong hypothesis, not a proven one. I set no success targets yet, because a number picked before there is a baseline has nothing to be compared to.",
   },
 
   screens: {
@@ -150,10 +120,52 @@ export const wknd = {
     ],
   },
 
+  sponsors: {
+    heading: "Making room for sponsors",
+    paragraphs: [
+      "WKND would need a business model if it were to become a real product, so I explored how sponsored activities and brand offers could fit into the experience.",
+      "I used Bolt, inDrive, Chowdeck, Pizza Hut and Chicken Republic as examples. These are illustrative concepts, not actual partnerships.",
+      "I kept sponsored content labelled, limited how often it appears and made sure it wouldn't take priority over a user's plan. Brand colours are used on the sponsored cards, while the main interface keeps WKND's own visual identity.",
+      "I also checked the colour combinations for readability. Some brand colours needed adjustments to maintain enough contrast.",
+    ],
+  },
+
+  validation: {
+    heading: "What I still need to test",
+    intro:
+      "WKND is a concept and hasn't launched, so I don't have usage data to show whether these changes would work. There are a few assumptions I'd want to test before treating the redesign as successful.",
+    tests: [
+      {
+        lead: "When people make plans:",
+        body: "I'd speak to eight people in Abuja about their last four weekends to understand when they decided what to do.",
+      },
+      {
+        lead: "Whether friends respond to a link:",
+        body: "I'd share links for real plans and track how many invited friends respond without installing the app.",
+      },
+      {
+        lead: "Whether a Friday reminder helps:",
+        body: "I'd test the reminder over two weekends and see whether it brings people back to the app.",
+      },
+      {
+        lead: "Whether booking details are realistic:",
+        body: "I'd speak to five event operators about availability, reservation holds and refunds.",
+      },
+      {
+        lead: "Whether people share photos:",
+        body: "I'd test the post-event prompt at an activity and measure how many attendees add a photo within a day.",
+      },
+    ],
+    closing:
+      "These are proposed tests, not research I've already completed. They would help me find out which parts of the redesign solve real problems and which need another look.",
+  },
+
   role: {
-    heading: "Role and approach",
-    body: "Product design from the first audit to the interface. I audited the first version, wrote the insight and five principles, mapped the user flow, and designed 44 screens across eight flows, from first launch to a saved memory, plus the edge cases such as rain, a cancelled event and a sold out one. I also built the design system, ten colours and two typefaces, and a before and after against the first version.",
-    verification:
-      "Every pair of colours in the interface was measured for contrast, and text that failed was changed rather than argued with.",
+    heading: "My role",
+    paragraphs: [
+      "I worked on the project from the initial audit through to the redesigned interface. I reviewed the first version, mapped the main user flows, made the product decisions and designed 44 screens across eight flows, including edge cases such as cancellations, sold-out events and payment failures.",
+      "I also created the design system, covering colours, typography and interface components, and documented the changes from the original experience.",
+      "I used Figma to work through the designs and Claude Code to build and refine the interface. Working across both helped me evaluate the screens as part of one connected experience, not as separate designs.",
+    ],
   },
 } as const;

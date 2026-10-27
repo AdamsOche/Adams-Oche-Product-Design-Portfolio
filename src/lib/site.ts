@@ -117,9 +117,9 @@ export const projects: Project[] = [
     slug: "wknd",
     name: "WKND",
     oneLiner:
-      "A mobile app that helps people in Abuja turn a free weekend into a plan, and get their friends to say yes.",
+      "A mobile app for finding things to do in Abuja and making plans with friends.",
     detail: [
-      "The first version of WKND was a catalogue of events. I audited it and rebuilt the product around one question: what are we doing this weekend, and who is coming?",
+      "The first version of WKND was mostly an event catalogue. I redesigned it around the whole process of making a weekend plan: finding something nearby, deciding what to do, getting friends involved and booking a place.",
     ],
     tags: ["Product design", "Mobile", "User flows", "Design system"],
     status:
