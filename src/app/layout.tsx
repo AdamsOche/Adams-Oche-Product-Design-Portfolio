@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${identity.name} · ${identity.title}`,
     description:
-      "Product design taken through to working software. Selected work: Sono, Matchday and Stash.",
+      "Product design taken through to working software. Selected work: Sono, Matchday, Stash and WKND.",
     type: "website",
     locale: "en_NG",
   },
