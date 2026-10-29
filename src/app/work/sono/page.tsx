@@ -6,6 +6,7 @@ import { CaseStudyHero } from "@/components/case-study/CaseStudyHero";
 import { CaseStudyFigure, CaseStudyFigureGrid } from "@/components/case-study/CaseStudyFigure";
 import { ProseItem, ProseP, ProseSection } from "@/components/case-study/Prose";
 import { Rule } from "@/components/primitives";
+import { heroImageFor } from "@/lib/site";
 import { sono } from "@/lib/case-studies/sono";
 
 export const metadata: Metadata = {
@@ -49,7 +50,6 @@ export default function SonoCaseStudy() {
 
       <main id="main">
         <CaseStudyHero
-          eyebrow={sono.hero.eyebrow}
           title={sono.hero.title}
           standfirst={sono.hero.standfirst}
           intro={sono.hero.intro}
@@ -58,6 +58,7 @@ export default function SonoCaseStudy() {
           liveLabel={sono.liveLabel}
           brandColor={sono.brandColor}
           brandTextColor={sono.brandTextColor}
+          heroImage={heroImageFor("sono")}
         />
 
         <Rule />
@@ -74,7 +75,7 @@ export default function SonoCaseStudy() {
             </InlineLink>
             {sono.problem.paymentsParagraph.after}
           </ProseP>
-          <p className="break-words text-sm leading-relaxed text-ink/65">
+          <p className="break-words text-[13px] leading-relaxed text-muted">
             {sono.problem.secondarySource.label}{" "}
             <InlineLink href={sono.problem.secondarySource.href}>
               {sono.problem.secondarySource.href}
@@ -94,7 +95,7 @@ export default function SonoCaseStudy() {
             <p className="font-medium text-ink">{sono.pivot.cutHeading}</p>
             <ul className="mt-4 space-y-4">
               {sono.pivot.cutItems.map((item) => (
-                <li key={item} className="flex gap-3 text-lg leading-relaxed text-ink/75">
+                <li key={item} className="flex gap-3 font-serif text-lg leading-[1.6] text-[#3f3b34]">
                   <span aria-hidden="true" className="mt-3 h-1 w-1 shrink-0 rounded-full bg-ink/40" />
                   {item}
                 </li>
@@ -201,7 +202,6 @@ export default function SonoCaseStudy() {
               {item.body}
             </ProseItem>
           ))}
-          <p className="pt-2 text-lg leading-relaxed text-ink/75">{sono.fixes.closing}</p>
         </ProseSection>
 
         <Rule />
@@ -251,7 +251,7 @@ export default function SonoCaseStudy() {
         <Rule />
 
         {/* -------------------------------------------------------- Role & stack */}
-        <ProseSection heading={sono.role.heading} className="pb-20 md:pb-28">
+        <ProseSection heading={sono.role.heading} className="pb-6 md:pb-6">
           <ProseP>{sono.role.body}</ProseP>
         </ProseSection>
       </main>

@@ -5,16 +5,17 @@ import { CaseStudyHero } from "@/components/case-study/CaseStudyHero";
 import { CaseStudyFigure, CaseStudyFigureGrid } from "@/components/case-study/CaseStudyFigure";
 import { ProseItem, ProseP, ProseSection } from "@/components/case-study/Prose";
 import { Container, Eyebrow, Rule } from "@/components/primitives";
+import { heroImageFor } from "@/lib/site";
 import { matchday } from "@/lib/case-studies/matchday";
 
 export const metadata: Metadata = {
   title: "Matchday · Adams Oche",
   description:
-    "A squad management tool for grassroots and semi-pro football teams, keeping the squad, their form and the next lineup in one place. Case study by Adams Oche.",
+    "A squad management tool that helps football coaches check player availability and organise their squad and lineup before a match. Case study by Adams Oche.",
   openGraph: {
     title: "Matchday · Adams Oche",
     description:
-      "A squad management tool for grassroots and semi-pro football teams, keeping the squad, their form and the next lineup in one place.",
+      "A squad management tool that helps football coaches check player availability and organise their squad and lineup before a match.",
     type: "article",
     images: [
       {
@@ -35,7 +36,6 @@ export default function MatchdayCaseStudy() {
 
       <main id="main">
         <CaseStudyHero
-          eyebrow={matchday.hero.eyebrow}
           title={matchday.hero.title}
           standfirst={matchday.hero.standfirst}
           intro={matchday.hero.intro}
@@ -44,6 +44,7 @@ export default function MatchdayCaseStudy() {
           liveLabel={matchday.liveLabel}
           brandColor={matchday.brandColor}
           brandTextColor={matchday.brandTextColor}
+          heroImage={heroImageFor("matchday")}
         />
 
         <Rule />
@@ -85,7 +86,7 @@ export default function MatchdayCaseStudy() {
 
           <ul className="space-y-4">
             {matchday.fixes.selfFound.map((item) => (
-              <li key={item} className="flex gap-3 text-lg leading-relaxed text-ink/75">
+              <li key={item} className="flex gap-3 font-serif text-lg leading-[1.6] text-[#3f3b34]">
                 <span
                   aria-hidden="true"
                   className="mt-3 h-1 w-1 shrink-0 rounded-full bg-ink/40"
@@ -103,8 +104,7 @@ export default function MatchdayCaseStudy() {
             </ProseItem>
           ))}
 
-          <p className="text-lg leading-relaxed text-ink/75">{matchday.fixes.featureRequest}</p>
-          <p className="pt-2 text-lg leading-relaxed text-ink/75">{matchday.fixes.closing}</p>
+          <p className="font-serif text-lg leading-[1.6] text-[#3f3b34]">{matchday.fixes.featureRequest}</p>
         </ProseSection>
 
         <Rule />
@@ -135,9 +135,9 @@ export default function MatchdayCaseStudy() {
             src: "/case-studies/matchday/matchday-formation-builder.png",
             width: 1567,
             height: 904,
-            alt: "The Matchday formation builder: tap a player then tap another to swap them, with a bench panel and formation switcher.",
+            alt: "The Matchday formation builder: tap a player, then tap another player or someone on the bench to swap them, with a bench panel and formation switcher.",
           }}
-          caption={matchday.screens.visualPassCaption}
+          caption={matchday.screens.formationCaption}
           max="1360px"
         />
 
@@ -151,9 +151,8 @@ export default function MatchdayCaseStudy() {
                 Mobile view: pending capture
               </Eyebrow>
             </div>
-            <figcaption className="mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">
-              The tap to swap argument rests on phone use, so a phone width screen belongs here.
-              Coming once it&rsquo;s captured.
+            <figcaption className="mt-4 max-w-[62ch] text-[13px] leading-relaxed text-muted">
+              {matchday.screens.mobilePlaceholderCaption}
             </figcaption>
           </figure>
         </Container>
@@ -164,7 +163,7 @@ export default function MatchdayCaseStudy() {
               <h3 className="font-display text-xl tracking-[-0.02em]">
                 {matchday.screens.landingHeading}
               </h3>
-              <p className="mt-4 text-lg leading-relaxed text-ink/75">
+              <p className="mt-4 font-serif text-lg leading-[1.6] text-[#3f3b34]">
                 {matchday.screens.landingBody}
               </p>
             </div>
@@ -174,9 +173,9 @@ export default function MatchdayCaseStudy() {
         <Rule />
 
         {/* -------------------------------------------------------- Role & stack */}
-        <ProseSection heading={matchday.role.heading} className="pb-20 md:pb-28">
+        <ProseSection heading={matchday.role.heading} className="pb-6 md:pb-6">
           <ProseP>{matchday.role.body}</ProseP>
-          <p className="border-t border-rule pt-6 text-[0.9375rem] leading-relaxed text-ink/65">
+          <p className="border-t border-rule pt-6 text-[13px] leading-relaxed text-muted">
             {matchday.role.verification}
           </p>
         </ProseSection>

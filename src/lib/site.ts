@@ -21,9 +21,8 @@ export const identity = {
 // Homepage-relative so these still resolve when clicked from a case study route.
 export const nav = [
   { label: "Work", href: "/#work" },
-  { label: "Stack", href: "/#stack" },
+  { label: "Brand", href: "/#brand" },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
 ] as const;
 
 export type Project = {
@@ -43,7 +42,9 @@ export type Project = {
   imageAlt: string;
   /** Optional small square logo mark, shown alongside the screenshot. */
   logoMark?: { src: string; width: number; height: number; alt: string };
-  /** The product's own primary color, used for its "Read the case study" button. */
+  /** Tint behind the screenshot on the homepage card. Defaults to brandColor. */
+  panelColor?: string;
+  /** The product's own primary color, used for its "Visit" button. */
   brandColor: string;
   /** Text color for brandColor, chosen for WCAG AA contrast against it. */
   brandTextColor: string;
@@ -57,12 +58,12 @@ export const projects: Project[] = [
     oneLiner:
       "Storefront and checkout software for independent music producers who want to sell beats directly to their audience.",
     detail: [
-      "I designed Sono as a browsable storefront first, open to anyone searching for beats. Then I spoke to a producer who had tried selling on BeatStars. He couldn't get noticed there, and that open, browse-and-discover model didn't make much sense for someone who already had an audience.",
-      "So I scrapped the feed, search and cart and rebuilt the product around one thing: a producer sharing one link with their audience.",
+      "I first designed Sono as a place where buyers browse and search for beats. Then I spoke to a producer who had tried selling on BeatStars. He couldn't get noticed there, and a feed like that didn't suit someone who already had an audience.",
+      "So I removed the feed, search and cart and rebuilt Sono around a single storefront link that the producer shares with their own audience.",
     ],
     tags: ["Product design", "Product build", "Checkout", "Design system"],
     status:
-      "Runs as a working demo on free infrastructure in Paystack test mode. Every screen works; only the currency isn't real.",
+      "The demo supports the main storefront and checkout flows. Payments run in test mode.",
     href: "/work/sono",
     image: "/work/sono-home-dashboard.png",
     imageWidth: 1897,
@@ -78,10 +79,10 @@ export const projects: Project[] = [
     slug: "matchday",
     name: "Matchday",
     oneLiner:
-      "Squad and lineup management for amateur football teams. Built for the ten minutes before kickoff, on a phone, at the side of a pitch.",
+      "A squad management tool that helps football coaches check player availability and organise their squad and lineup before a match.",
     tags: ["Product design", "Product build", "Formation builder", "Design system"],
     status:
-      "Built to handle every squad size a real team plays, from five-a-side to eleven.",
+      "Two coaches tested it with their real squads. Their feedback led to fixes for formations not saving and player availability not updating reliably.",
     href: "/work/matchday",
     image: "/work/matchday-squad-overview.png",
     imageWidth: 1892,
@@ -97,7 +98,7 @@ export const projects: Project[] = [
     slug: "stash",
     name: "Stash",
     oneLiner:
-      "A personal finance concept for saving toward goals, sending money, and pooling funds with friends, designed for a Nigerian and Ghanaian context.",
+      "A personal finance concept for young adults in West Africa, covering savings goals, group pools and sending money.",
     tags: ["Product design", "Brand identity", "Design system", "Next.js"],
     status:
       "Design and frontend concept built with Next.js. Uses mock data and has no live backend.",
@@ -109,6 +110,8 @@ export const projects: Project[] = [
       "The Stash app laid out across 19 screens (onboarding, savings goals, transfers and group pools) in the deep indigo base, with the accent colour reserved for amounts.",
     // A touch deeper than the design system's #7B5CF6 swatch: that exact
     // shade sits just under 4.5:1 against white text, this clears it.
+    // The indigo clashes with WKND's next to it, so the card panel is gold.
+    panelColor: "#e9b949",
     brandColor: "#6d4fe0",
     brandTextColor: "#ffffff",
   },
@@ -117,9 +120,9 @@ export const projects: Project[] = [
     slug: "wknd",
     name: "WKND",
     oneLiner:
-      "A mobile app that helps people in Abuja turn a free weekend into a plan, and get their friends to say yes.",
+      "A mobile concept for finding things to do in Abuja and making plans with friends.",
     detail: [
-      "The first version of WKND was a catalogue of events. I audited it and rebuilt the product around one question: what are we doing this weekend, and who is coming?",
+      "I redesigned an event catalogue around planning the weekend: a home screen that changes through the week, invitations friends can answer from a web link, checkout, and sponsored offers.",
     ],
     tags: ["Product design", "Mobile", "User flows", "Design system"],
     status:
@@ -146,3 +149,73 @@ export const stack = {
     "Frontend",
   ],
 } as const;
+
+export function getProject(slug: string) {
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) throw new Error(`Unknown project: ${slug}`);
+  return project;
+}
+
+/** The project's hero screenshot on its panel colour, for the case-study header. */
+export function heroImageFor(slug: string) {
+  const p = getProject(slug);
+  if (!p.image) return undefined;
+  return {
+    src: p.image,
+    width: p.imageWidth,
+    height: p.imageHeight,
+    alt: p.imageAlt,
+    color: p.panelColor ?? p.brandColor,
+  };
+}
+
+export type BrandWork = {
+  slug: string;
+  name: string;
+  chip: string;
+  oneLiner: string;
+  tags: string[];
+  href: string;
+  /** Images shown on the homepage card. */
+  images: { src: string; alt: string; width: number; height: number }[];
+  /** Kit images show a real sportswear logo, so they carry a "Concept mockup" badge. */
+  conceptMockup?: boolean;
+};
+
+export const brandWork: BrandWork[] = [
+  {
+    slug: "praise-caffeine",
+    name: "Praise Caffeine",
+    chip: "Client work",
+    oneLiner:
+      "Logo and identity for a platform that gives BPOC gospel artists in Canada a place to worship freely.",
+    tags: ["Logo", "Brand identity"],
+    href: "/work/praise-caffeine",
+    images: [
+      { src: "/brand/pc-word.jpg", alt: "Praise Caffeine horizontal logo.", width: 1200, height: 1200 },
+      {
+        src: "/brand/pc-stamp-dark.jpg",
+        alt: "Praise Caffeine circular stamp on a dark background.",
+        width: 1200,
+        height: 1200,
+      },
+    ],
+  },
+  {
+    slug: "the-six-league",
+    name: "The Six League",
+    chip: "Independent concept",
+    oneLiner: "A fictional football league built around the identity of five clubs.",
+    tags: ["Brand identity", "Club crests", "Kit concepts"],
+    href: "/work/the-six-league",
+    conceptMockup: true,
+    images: [
+      {
+        src: "/brand/six-sheet.jpg",
+        alt: "The Six League identity sheet: a kit, the eagle crest, and a flag on dark green.",
+        width: 1200,
+        height: 1200,
+      },
+    ],
+  },
+];

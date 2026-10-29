@@ -1,16 +1,16 @@
-import { Container, Eyebrow, Pill } from "@/components/primitives";
+import Image from "next/image";
+import Link from "next/link";
+import { Container, Pill } from "@/components/primitives";
 
 type MetaItem = { label: string; value: string };
 
 /**
- * Shared header for every case study: `01 / SONO` eyebrow, title, standfirst,
- * an optional intro line, the ROLE / PLATFORM / TOOLS metadata row, and a
- * `Visit [project] →` link. `liveUrl` is nullable on purpose so a fake or
- * dead link never ships. When a project's demo link isn't confirmed yet,
- * the link is simply omitted.
+ * Shared header for every case study: back link, title, standfirst, an
+ * optional intro line, the metadata grid, and the hero image on its panel.
+ * `liveUrl` is nullable on purpose so a fake or dead link never ships. The
+ * `eyebrow` strings in the data files are no longer rendered here.
  */
 export function CaseStudyHero({
-  eyebrow,
   title,
   standfirst,
   intro,
@@ -19,32 +19,37 @@ export function CaseStudyHero({
   liveLabel,
   brandColor,
   brandTextColor,
+  heroImage,
+  backHref = "/#work",
 }: {
-  eyebrow: string;
   title: string;
   standfirst: string;
   intro?: string;
   meta: readonly MetaItem[];
-  liveUrl: string | null;
-  liveLabel: string;
+  liveUrl?: string | null;
+  liveLabel?: string;
   /** The product's own primary color and a WCAG AA-safe text color for it. */
-  brandColor: string;
-  brandTextColor: string;
+  brandColor?: string;
+  brandTextColor?: string;
+  heroImage?: { src: string; width: number; height: number; alt: string; color: string };
+  backHref?: string;
 }) {
   return (
     <Container>
-      <div className="pt-14 pb-16 md:pt-20 md:pb-20">
-        <div className="flex flex-wrap items-start justify-between gap-6">
-          <Eyebrow>{eyebrow}</Eyebrow>
+      <div className="pb-4 pt-5">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <Link href={backHref} className="text-[13px] text-muted transition-colors hover:text-ink">
+            <span aria-hidden="true">&larr;</span> All work
+          </Link>
 
-          {liveUrl ? (
+          {liveUrl && brandColor && brandTextColor ? (
             <Pill
               href={liveUrl}
               target="_blank"
               rel="noreferrer noopener"
               variant="brand"
               style={{ backgroundColor: brandColor, color: brandTextColor }}
-              className="gap-1.5 px-5 py-2.5 text-sm"
+              className="gap-1.5 px-4 py-2 text-[13px]"
             >
               Visit {liveLabel}
               <span aria-hidden="true">&rarr;</span>
@@ -52,30 +57,45 @@ export function CaseStudyHero({
           ) : null}
         </div>
 
-        <h1 className="mt-8 max-w-[16ch] font-display text-[clamp(2.75rem,7vw,5.5rem)] font-medium leading-[0.98] tracking-[-0.03em]">
+        <h1 className="mt-[18px] font-display text-[clamp(2.2rem,7vw,3.4rem)] font-medium leading-none tracking-[-0.035em]">
           {title}
         </h1>
 
-        <p className="mt-8 max-w-[42ch] text-xl leading-[1.35] text-ink/70 sm:text-2xl">
+        <p className="mt-[18px] max-w-[44ch] font-serif text-xl leading-[1.45] text-[#4a463e]">
           {standfirst}
         </p>
 
         {intro ? (
-          <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-ink/60">{intro}</p>
+          <p className="mt-3.5 max-w-[54ch] font-serif text-[17px] leading-[1.55] text-[#4a463e]">
+            {intro}
+          </p>
         ) : null}
 
-        <dl className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3 sm:gap-x-10">
+        <dl className="mt-7 grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-x-6 gap-y-3.5 border-t border-dashed border-ink/20 pt-[18px]">
           {meta.map((item) => (
             <div key={item.label}>
-              <Eyebrow as="dt">
-                {item.label}
-              </Eyebrow>
-              <dd className="mt-2 max-w-[28ch] text-[0.9375rem] leading-snug text-ink/80">
-                {item.value}
-              </dd>
+              <dt className="text-xs text-muted">{item.label}</dt>
+              <dd className="mt-0.5 text-sm">{item.value}</dd>
             </div>
           ))}
         </dl>
+
+        {heroImage ? (
+          <div
+            className="mt-6 rounded-xl p-[clamp(16px,4vw,32px)]"
+            style={{ backgroundColor: heroImage.color }}
+          >
+            <Image
+              src={heroImage.src}
+              alt={heroImage.alt}
+              width={heroImage.width}
+              height={heroImage.height}
+              className="block h-auto w-full rounded-md"
+              sizes="(min-width: 768px) 656px, 100vw"
+              priority
+            />
+          </div>
+        ) : null}
       </div>
     </Container>
   );

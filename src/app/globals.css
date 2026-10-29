@@ -1,37 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm off-white page, near-black ink. No accent colour lives in the site
-     chrome — every bit of colour on the page comes from product screenshots. */
-  --paper: #f4f1ea;
+  --paper: #f6f3ec;
   --paper-sunk: #ebe6db;
-  --ink: #14120f;
-  --ink-muted: #14120f;
-  --rule: rgba(20, 18, 15, 0.16);
+  --card: #fffdf9;
+  --ink: #1a1814;
+  --muted: #6b665c;
+  --rule: rgba(26, 24, 20, 0.12);
+  --accent: #a84a24;
 }
 
 @theme inline {
   --color-paper: var(--paper);
   --color-paper-sunk: var(--paper-sunk);
+  --color-card: var(--card);
   --color-ink: var(--ink);
+  --color-muted: var(--muted);
   --color-rule: var(--rule);
+  --color-accent: var(--accent);
 
-  /* Placeholder faces — swap these two variables for the real stack. */
   --font-display: var(--font-display-face), ui-sans-serif, system-ui, sans-serif;
-  --font-sans: var(--font-sans-face), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-display-face), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif-face), Georgia, "Times New Roman", serif;
 }
 
 html {
   scroll-behavior: smooth;
   /* Anchored sections clear the sticky header. */
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 5rem;
   color-scheme: light;
+  overflow-x: clip;
 }
 
 body {
   background-color: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -44,7 +50,7 @@ body {
 :focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {

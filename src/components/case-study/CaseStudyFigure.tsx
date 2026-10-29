@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { Container } from "@/components/primitives";
+import { ConceptBadge, Container } from "@/components/primitives";
 
 type ImageSpec = {
   src: string;
@@ -10,16 +10,20 @@ type ImageSpec = {
 };
 
 /**
- * Case-study images intentionally break out of the narrow prose measure —
- * dense screens are unreadable at column width. `width`/`max` cap how wide
- * the figure runs inside the page container; a full storefront shot can go
- * near the container's edge, a 3-up grid usually wants less.
+ * Screens break out of the 720px column. The transform leaves the box in
+ * flow, so height is preserved; the page clips the sideways overflow.
  */
+const breakout = "ml-[50%] w-[min(1060px,calc(100vw-32px))] -translate-x-1/2";
+
+const captionClass = "mt-2 text-[13px] leading-relaxed text-muted";
+
+const imageClass = "h-auto w-full rounded-xl border border-rule";
+
+/** `max` is kept for call-site compatibility; the breakout width is fixed by the design. */
 export function CaseStudyFigure({
   image,
   caption,
   priority = false,
-  max = "1200px",
 }: {
   image: ImageSpec;
   caption?: ReactNode;
@@ -28,31 +32,26 @@ export function CaseStudyFigure({
 }) {
   return (
     <Container>
-      <figure className="py-6 md:py-8" style={{ maxWidth: max, marginInline: "auto" }}>
+      <figure className={`my-4 md:my-5 ${breakout}`}>
         <Image
           src={image.src}
           alt={image.alt}
           width={image.width}
           height={image.height}
-          className="h-auto w-full rounded-xl border border-rule"
-          sizes="(min-width: 1200px) 1200px, 92vw"
+          className={imageClass}
+          sizes="(min-width: 1092px) 1060px, 100vw"
           priority={priority}
         />
-        {caption ? (
-          <figcaption className="mx-auto mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">
-            {caption}
-          </figcaption>
-        ) : null}
+        {caption ? <figcaption className={captionClass}>{caption}</figcaption> : null}
       </figure>
     </Container>
   );
 }
 
-/** Two or three images side by side, still capped to the same breakout width. */
+/** Two or three images side by side, on the same breakout width. */
 export function CaseStudyFigureGrid({
   images,
   caption,
-  max = "1200px",
 }: {
   images: ImageSpec[];
   caption?: ReactNode;
@@ -60,7 +59,7 @@ export function CaseStudyFigureGrid({
 }) {
   return (
     <Container>
-      <figure className="py-6 md:py-8" style={{ maxWidth: max, marginInline: "auto" }}>
+      <figure className={`my-4 md:my-5 ${breakout}`}>
         <div
           className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${images.length >= 3 ? "lg:grid-cols-3" : ""}`}
         >
@@ -71,17 +70,46 @@ export function CaseStudyFigureGrid({
               alt={image.alt}
               width={image.width}
               height={image.height}
-              className="h-auto w-full rounded-xl border border-rule"
-              sizes="(min-width: 1200px) 400px, 92vw"
+              className={imageClass}
+              sizes="(min-width: 1092px) 340px, 92vw"
             />
           ))}
         </div>
-        {caption ? (
-          <figcaption className="mx-auto mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">
-            {caption}
-          </figcaption>
-        ) : null}
+        {caption ? <figcaption className={captionClass}>{caption}</figcaption> : null}
       </figure>
     </Container>
+  );
+}
+
+/** A square image held to the 720px column, optionally badged as a concept mockup. */
+export function ColumnFigure({
+  image,
+  caption,
+  badge = false,
+  priority = false,
+  className = "",
+}: {
+  image: ImageSpec;
+  caption?: ReactNode;
+  badge?: boolean;
+  priority?: boolean;
+  className?: string;
+}) {
+  return (
+    <figure className={className}>
+      <div className="relative">
+        {badge ? <ConceptBadge /> : null}
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          className={imageClass}
+          sizes="(min-width: 768px) 720px, 100vw"
+          priority={priority}
+        />
+      </div>
+      {caption ? <figcaption className={captionClass}>{caption}</figcaption> : null}
+    </figure>
   );
 }

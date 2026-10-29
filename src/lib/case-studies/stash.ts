@@ -1,22 +1,19 @@
 /**
- * Stash case-study copy. Sourced from the author's final overview/problem/
- * approach/design-language/flows text, restructured into the site's shared
- * five-section skeleton (problem, decisions, caught & fixed, screens, role).
+ * Stash case-study copy, restructured into the site's shared case-study
+ * skeleton (problem, decisions, caught & fixed, screens, role). No em dashes.
  *
  * No live URL: nothing in the local source repos (stash-app, stash-landing)
- * or Downloads pointed to a real deployment, so liveUrl stays null rather
- * than guessing — same discipline as the placeholder text that turned out
- * to be fake for Sono.
+ * or Downloads pointed to a real deployment, so liveUrl stays null.
  *
- * The "caught and fixed" section didn't exist in the author's draft — Stash
- * is mock data, so there's no bug tracker to pull from. It's built instead
- * from a real, already-documented fact: the marketing site's first pass
- * used gradient borders, glow effects, fabricated stats (12K+ "active
- * savers", a 4.8 rating) and fake named testimonials, all stripped in a
- * deliberate refinement pass. The "before" screenshots for that pass
- * (Stash hero, Stash landing 1-8) are otherwise unusable anywhere on this
- * site — they're exactly the fabricated-content pattern the project bans —
- * so they only appear here, explicitly labeled as the discarded version.
+ * The "caught and fixed" section is built from a real, documented fact: the
+ * marketing site's first pass used gradient borders, glow effects, invented
+ * stats (12K+ "active savers", a 4.8 rating) and fake named testimonials,
+ * all removed in a refinement pass. The "before" screenshots for that pass
+ * (Stash hero, Stash landing 1-8) only appear in this section, labelled as
+ * the discarded version.
+ *
+ * There is no standalone Send screenshot. The full 19-screen image includes
+ * the Send screens, so the caption points to it.
  */
 export const stash = {
   liveUrl: null as string | null,
@@ -30,9 +27,9 @@ export const stash = {
     eyebrow: "03 / STASH · Personal finance concept · Product design · Brand & UI",
     title: "Stash",
     standfirst:
-      "A savings and payments app concept for young professionals across Nigeria and Ghana who save with intent, toward a MacBook, a December trip, rent, a wedding contribution, but are underserved by banking apps built for older, more formal use cases.",
+      "A personal finance concept for young adults in West Africa, covering savings goals, group pools and sending money.",
     intro:
-      "I designed and built the full product: 19 mobile screens covering onboarding, savings goals, peer-to-peer transfers, and group savings pools, plus a marketing landing page to introduce it.",
+      "I designed 19 mobile screens covering onboarding, savings goals, peer-to-peer transfers and group pools, plus a marketing landing page.",
     concept:
       "Stash is a design and frontend concept, not a live product: nineteen screens and a marketing site, built in real code, running on mock data with no connected backend.",
     meta: [
@@ -45,8 +42,8 @@ export const stash = {
   problem: {
     heading: "The problem",
     paragraphs: [
-      "Most fintech apps in the region treat saving as a static balance and sending money as a form to fill out. Neither matches how people actually save, toward specific, named things, often with other people's help. Group contributions (rent splits, event funds, “aso-ebi” pools) are still coordinated over WhatsApp and spreadsheets.",
-      "I wanted to design something that made goal-based saving and group pooling first-class, not bolted-on features.",
+      "Many savings apps show saving as a single balance and sending money as a form. People often save toward specific things, sometimes with other people's help. Group contributions such as rent splits, event funds and aso-ebi pools are still organised over WhatsApp and spreadsheets.",
+      "I wanted goal-based saving and group pooling to be core features of the app, not add-ons.",
     ],
   },
 
@@ -54,20 +51,20 @@ export const stash = {
     heading: "What I decided, and why",
     items: [
       {
-        lead: "Goals, Send, and Pools as equal peers.",
-        body: "Everything in the information architecture flows from the three jobs people actually hire a savings app for: save toward something specific, move money to someone instantly, pool money with a group. Goals, Send and Pools sit alongside Home in the bottom nav. Most banking apps bury pooled savings three menus deep. This doesn't.",
+        lead: "Goals, Send and Pools sit in the main navigation.",
+        body: "I organised the app around three things people use a savings app for: saving toward something specific, sending money to someone, and pooling money with a group. Goals, Send and Pools sit alongside Home in the bottom navigation, so pooled savings aren't buried in menus.",
       },
       {
-        lead: "Every screen backed by real interaction logic.",
-        body: "Creating a goal actually writes to state and shows up on the home dashboard. Adding money to a goal updates its progress ring in real time. Inviting members to a pool actually adds them to that pool's member list. A prototype that only looks right falls apart the moment you click past the first screen, and I wanted this to hold up under real use, not just a walkthrough.",
+        lead: "Screens run on real interaction logic.",
+        body: "Creating a goal writes to state and shows up on the home dashboard. Adding money updates the goal's progress ring, and inviting someone to a pool adds them to its member list. I built it this way so the prototype can be tested by clicking through it, not just viewed as a walkthrough.",
       },
       {
-        lead: "Gold means money, and only money.",
-        body: "Dark navy base, violet as the primary action colour, gold reserved for money-positive moments: reaching a goal, a completed transfer, a milestone. Gold is used deliberately rarely. If everything is gold, nothing reads as a win.",
+        lead: "Gold marks savings milestones and successful transactions.",
+        body: "The base is dark navy, with violet for primary actions. Gold is only used when money goes the right way: reaching a goal, completing a transfer or hitting a milestone. I kept it rare so those moments stand out.",
       },
       {
-        lead: "Progress is a shape before it's a number.",
-        body: "Circular rings on goals, horizontal bars on pools, because glancing at a shape is faster than reading a percentage, and the whole point of the app is to make saving feel tangible.",
+        lead: "Goals and pools show progress differently.",
+        body: "Goals use a circular progress ring and pools use horizontal bars. Both show progress as a shape, which is quicker to read at a glance than a percentage.",
       },
     ],
   },
@@ -75,12 +72,12 @@ export const stash = {
   fixes: {
     heading: "What I caught and fixed",
     paragraphs: [
-      "The first pass at the marketing site had gradient borders, glow effects, and stock-style avatars, the visual signature of anything built quickly with AI assistance. It also leaned on invented social proof: a made-up active-user count, a star rating, fake named testimonials with fake handles and cities, exactly the kind of unverifiable claim this project doesn't allow anywhere else.",
-      "Looking at it again next to the actual product, none of it held up. Stash doesn't have users yet, so it doesn't get a user count. Stock photos undercut a product built around specific, named goals and people you actually know. Gradients and glow are decoration standing in for a decision that hadn't been made yet.",
+      "The first version of the marketing site had gradient borders, glow effects and stock-style avatars. It also had invented social proof: a made-up active-user count, a star rating, and fake named testimonials with fake handles and cities.",
+      "Stash has no users yet, so it shouldn't show a user count, and the testimonials couldn't be real. I removed all of it, along with the gradients and stock photos, which didn't suit a product built around specific goals and people you know.",
     ],
     fixedHeading: "What replaced it",
     fixed:
-      "Every invented number, borrowed face, and gradient came out. What's left is the system in the design tokens: a fixed dark-navy and violet base, gold pulled back to the moments money actually moves, real interaction states instead of static comps. Fewer ingredients, used more deliberately.",
+      "The page now relies on the design system: a dark navy and violet base, gold only for money moments, and real interface states in place of static mockups.",
     beforeAlt:
       "The pre-refinement Stash marketing hero: gradient headline text, a fabricated \"12,000+ active savers\" stat, a 4.8 star rating, stock photo avatars, and a \"Now live in Nigeria & Ghana\" badge. Discarded. Shown here only as the before state.",
     afterAlt:
@@ -90,26 +87,26 @@ export const stash = {
   screens: {
     heading: "Screens",
     intro:
-      "Nineteen screens across three core flows, each backed by real state, not a static comp.",
+      "Nineteen screens across three flows. In the prototype each one runs on app state, not a static mockup.",
     flows: [
       {
         label: "Goals",
-        body: "Set a target, an emoji, and a savings rhythm (weekly, monthly, manual, or auto-save), then track it with a concentric progress ring that fills as contributions land. Hitting 100% triggers a dedicated celebration screen. It doesn't just update a number.",
+        body: "Set a target, an emoji and a savings rhythm (weekly, monthly, manual or auto-save), then track progress on a circular ring that fills as contributions are added. Reaching 100% opens a celebration screen.",
       },
       {
         label: "Send",
-        body: "Search a contact or pick from recents, enter an amount on a full-screen numpad, confirm with a fee breakdown, done. Three taps, no bank details, because the fastest transfers are the ones you don't think about.",
+        body: "Search for a contact or pick one from recents, enter an amount on a full-screen numpad and confirm with a fee breakdown. Sending takes three taps and doesn't ask for bank details.",
       },
       {
         label: "Pools",
-        body: "Create a group pool, invite contacts, set a target and due date. Every member's contribution is visible to the whole group in real time, which is the actual point: group saving breaks down when people can't see who's paid.",
+        body: "Create a group pool, invite contacts, and set a target and due date. Every member's contribution is visible to the whole group, so people can see who has paid.",
       },
     ],
     flowScreensCaption:
-      "Goals and Pools, showing real state, not a static comp: progress bars filled from actual contributions, and every member's share visible by name. No screenshot yet for Send.",
+      "The Goals and Pools screens: progress bars filled from contributions, and each member's share shown by name. The Send screens are in the full set of 19 below.",
     landingHeading: "The landing page",
     landingBody:
-      "A separate marketing site introduces the product with a dark, editorial layout, a floating cluster of real UI cards (balance, a goal in progress, a pool, a live transaction) in the hero instead of a static phone screenshot, because the interface itself is the pitch. Copy stays short and confident throughout: no feature-explainer paragraphs, just what the product does and why it's different.",
+      "A separate marketing site introduces the product. The hero shows a cluster of UI cards (a balance, a goal in progress, a pool and a recent transaction) instead of a phone screenshot. The copy is short and covers what the product does and why it's different.",
   },
 
   role: {
@@ -117,6 +114,6 @@ export const stash = {
     body: "Solo: product design, UI design, and front-end build. Next.js, TypeScript, Tailwind, Zustand for state, Framer Motion for transitions.",
     differentlyHeading: "What I'd do differently",
     differentlyBody:
-      "Given more time, I'd want real backend-connected balances tying Send and Pool contributions back to a single wallet figure instead of three independently-mocked numbers, and a proper login flow with real session persistence instead of a mocked auth store. Both are solvable. They just weren't the point of this pass, which was proving out the interaction design end to end.",
+      "With more time, I'd connect balances to a backend so Send and Pool contributions feed a single wallet figure instead of three separate mock numbers, and add a proper login flow with session persistence in place of the mocked auth store. These weren't the goal of this pass, which was working out the interaction design end to end.",
   },
 } as const;
