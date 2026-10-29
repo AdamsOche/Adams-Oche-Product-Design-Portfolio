@@ -10,11 +10,11 @@ import { stash } from "@/lib/case-studies/stash";
 export const metadata: Metadata = {
   title: "Stash · Adams Oche",
   description:
-    "A savings and payments app concept for young professionals across Nigeria and Ghana, saving toward specific goals and pooling money with a group. A design and frontend concept on mock data. Case study by Adams Oche.",
+    "A personal finance concept for young adults in West Africa, covering savings goals, group pools and sending money. A design and frontend concept on mock data. Case study by Adams Oche.",
   openGraph: {
     title: "Stash · Adams Oche",
     description:
-      "A savings and payments app concept for young professionals across Nigeria and Ghana, saving toward specific goals and pooling money with a group.",
+      "A personal finance concept for young adults in West Africa, covering savings goals, group pools and sending money.",
     type: "article",
     images: [
       {

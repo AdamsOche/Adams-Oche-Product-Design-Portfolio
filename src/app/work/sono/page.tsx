@@ -201,7 +201,6 @@ export default function SonoCaseStudy() {
               {item.body}
             </ProseItem>
           ))}
-          <p className="pt-2 text-lg leading-relaxed text-ink/75">{sono.fixes.closing}</p>
         </ProseSection>
 
         <Rule />

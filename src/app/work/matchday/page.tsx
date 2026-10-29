@@ -10,11 +10,11 @@ import { matchday } from "@/lib/case-studies/matchday";
 export const metadata: Metadata = {
   title: "Matchday · Adams Oche",
   description:
-    "A squad management tool for grassroots and semi-pro football teams, keeping the squad, their form and the next lineup in one place. Case study by Adams Oche.",
+    "A squad management tool that helps football coaches check player availability and organise their squad and lineup before a match. Case study by Adams Oche.",
   openGraph: {
     title: "Matchday · Adams Oche",
     description:
-      "A squad management tool for grassroots and semi-pro football teams, keeping the squad, their form and the next lineup in one place.",
+      "A squad management tool that helps football coaches check player availability and organise their squad and lineup before a match.",
     type: "article",
     images: [
       {
@@ -104,7 +104,6 @@ export default function MatchdayCaseStudy() {
           ))}
 
           <p className="text-lg leading-relaxed text-ink/75">{matchday.fixes.featureRequest}</p>
-          <p className="pt-2 text-lg leading-relaxed text-ink/75">{matchday.fixes.closing}</p>
         </ProseSection>
 
         <Rule />
@@ -135,9 +134,9 @@ export default function MatchdayCaseStudy() {
             src: "/case-studies/matchday/matchday-formation-builder.png",
             width: 1567,
             height: 904,
-            alt: "The Matchday formation builder: tap a player then tap another to swap them, with a bench panel and formation switcher.",
+            alt: "The Matchday formation builder: tap a player, then tap another player or someone on the bench to swap them, with a bench panel and formation switcher.",
           }}
-          caption={matchday.screens.visualPassCaption}
+          caption={matchday.screens.formationCaption}
           max="1360px"
         />
 
@@ -152,8 +151,7 @@ export default function MatchdayCaseStudy() {
               </Eyebrow>
             </div>
             <figcaption className="mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">
-              The tap to swap argument rests on phone use, so a phone width screen belongs here.
-              Coming once it&rsquo;s captured.
+              {matchday.screens.mobilePlaceholderCaption}
             </figcaption>
           </figure>
         </Container>

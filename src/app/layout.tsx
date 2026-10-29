@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://adamsoche.netlify.app"),
   title: `${identity.name} · ${identity.title}`,
   description:
-    "Adams Oche is a product designer and builder in Abuja, Nigeria. Storefront and checkout software for independent music producers, squad management for amateur football teams, and a personal finance concept.",
+    "Adams Oche is a product designer and builder in Abuja, Nigeria. Storefront and checkout software for independent music producers, squad management for amateur football teams, and concepts for personal finance and weekend planning.",
   openGraph: {
     title: `${identity.name} · ${identity.title}`,
     description:
-      "Product design taken through to working software. Selected work: Sono, Matchday, Stash and WKND.",
+      "Product designer and builder in Abuja. Selected work: Sono, Matchday, Stash and WKND.",
     type: "website",
     locale: "en_NG",
   },

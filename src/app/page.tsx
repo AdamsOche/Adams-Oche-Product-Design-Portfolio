@@ -16,20 +16,15 @@ export default function Home() {
         <section className="pt-20 pb-20 md:pt-28 md:pb-28">
           <Container>
             <h1 className="max-w-[16ch] font-display text-[clamp(2.75rem,9vw,7.5rem)] font-medium leading-[0.94] tracking-[-0.04em]">
-              I design products, and <em className="italic">build</em> them.
+              I design products and <em className="italic">build</em> them.
             </h1>
 
             <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-12">
               <div className="md:col-span-7 md:col-start-6 space-y-5">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  I&rsquo;m Adams, a product designer and builder in Abuja. I take
-                  products from the first problem to the interface, the system
-                  underneath, and a working build.
-                </p>
-                <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  Four products so far: Sono, checkout software for music producers;
-                  Matchday, a squad tool used by real football coaches; Stash, a
-                  finance concept; and WKND, a weekend planning app.
+                  I&rsquo;m Adams, a product designer and builder in Abuja. I work on
+                  digital products from the first idea through interface design and
+                  implementation.
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-3">
@@ -51,8 +46,7 @@ export default function Home() {
             <div className="py-16 md:py-20">
               <TwoCol heading="Selected work" eyebrow="Work">
                 <p className="max-w-[62ch] text-lg leading-relaxed text-ink/70">
-                  Four products. The first one I designed twice, because the first
-                  version was wrong.
+                  Four products I&rsquo;ve designed and built.
                 </p>
               </TwoCol>
             </div>
@@ -117,14 +111,13 @@ export default function Home() {
               >
                 <div className="max-w-[62ch] space-y-6 text-lg leading-relaxed text-ink/70">
                   <p>
-                    I&rsquo;m a product designer and builder based in Abuja. I like
-                    figuring out what a product needs, designing how it should work, and
-                    then building it into something people can actually use.
+                    I&rsquo;m a product designer and builder based in Abuja. I work
+                    across product design and frontend development, from figuring out
+                    what a product needs to building the interface.
                   </p>
                   <p>
-                    Building has become a big part of how I design. It&rsquo;s easy for
-                    something to make sense in Figma. Building and testing it is usually
-                    where you find out whether it actually makes sense.
+                    I use Figma to explore and refine ideas, then build and test them
+                    to see how they work beyond the design file.
                   </p>
                 </div>
               </TwoCol>

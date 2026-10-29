@@ -10,11 +10,11 @@ import { wknd } from "@/lib/case-studies/wknd";
 export const metadata: Metadata = {
   title: "WKND · Adams Oche",
   description:
-    "A mobile app for finding things to do in Abuja and making plans with friends. Case study by Adams Oche.",
+    "A mobile concept for finding things to do in Abuja and making plans with friends. Case study by Adams Oche.",
   openGraph: {
     title: "WKND · Adams Oche",
     description:
-      "A mobile app for finding things to do in Abuja and making plans with friends.",
+      "A mobile concept for finding things to do in Abuja and making plans with friends.",
     type: "article",
     images: [
       {
@@ -116,13 +116,10 @@ export default function WkndCaseStudy() {
 
           {wknd.validation.tests.map((item) => (
             <ProseItem key={item.lead} lead={item.lead}>
-              {item.body}
+              <strong className="font-medium text-ink">Test:</strong> {item.test}{" "}
+              <strong className="font-medium text-ink">Measure:</strong> {item.measure}
             </ProseItem>
           ))}
-
-          <p className="pt-2 text-lg leading-relaxed text-ink/75">
-            {wknd.validation.closing}
-          </p>
         </ProseSection>
 
         <Rule />

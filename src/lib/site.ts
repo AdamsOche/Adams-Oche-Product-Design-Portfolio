@@ -57,12 +57,12 @@ export const projects: Project[] = [
     oneLiner:
       "Storefront and checkout software for independent music producers who want to sell beats directly to their audience.",
     detail: [
-      "I designed Sono as a browsable storefront first, open to anyone searching for beats. Then I spoke to a producer who had tried selling on BeatStars. He couldn't get noticed there, and that open, browse-and-discover model didn't make much sense for someone who already had an audience.",
-      "So I scrapped the feed, search and cart and rebuilt the product around one thing: a producer sharing one link with their audience.",
+      "I first designed Sono as a place where buyers browse and search for beats. Then I spoke to a producer who had tried selling on BeatStars. He couldn't get noticed there, and a feed like that didn't suit someone who already had an audience.",
+      "So I removed the feed, search and cart and rebuilt Sono around a single storefront link that the producer shares with their own audience.",
     ],
     tags: ["Product design", "Product build", "Checkout", "Design system"],
     status:
-      "Runs as a working demo on free infrastructure in Paystack test mode. Every screen works; only the currency isn't real.",
+      "The demo supports the main storefront and checkout flows. Payments run in test mode.",
     href: "/work/sono",
     image: "/work/sono-home-dashboard.png",
     imageWidth: 1897,
@@ -78,10 +78,10 @@ export const projects: Project[] = [
     slug: "matchday",
     name: "Matchday",
     oneLiner:
-      "Squad and lineup management for amateur football teams. Built for the ten minutes before kickoff, on a phone, at the side of a pitch.",
+      "A squad management tool that helps football coaches check player availability and organise their squad and lineup before a match.",
     tags: ["Product design", "Product build", "Formation builder", "Design system"],
     status:
-      "Built to handle every squad size a real team plays, from five-a-side to eleven.",
+      "Two coaches tested it with their real squads. Their feedback led to fixes for formations not saving and player availability not updating reliably.",
     href: "/work/matchday",
     image: "/work/matchday-squad-overview.png",
     imageWidth: 1892,
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     slug: "stash",
     name: "Stash",
     oneLiner:
-      "A personal finance concept for saving toward goals, sending money, and pooling funds with friends, designed for a Nigerian and Ghanaian context.",
+      "A personal finance concept for young adults in West Africa, covering savings goals, group pools and sending money.",
     tags: ["Product design", "Brand identity", "Design system", "Next.js"],
     status:
       "Design and frontend concept built with Next.js. Uses mock data and has no live backend.",
@@ -117,9 +117,9 @@ export const projects: Project[] = [
     slug: "wknd",
     name: "WKND",
     oneLiner:
-      "A mobile app for finding things to do in Abuja and making plans with friends.",
+      "A mobile concept for finding things to do in Abuja and making plans with friends.",
     detail: [
-      "The first version of WKND was mostly an event catalogue. I redesigned it around the whole process of making a weekend plan: finding something nearby, deciding what to do, getting friends involved and booking a place.",
+      "I redesigned an event catalogue around planning the weekend: a home screen that changes through the week, invitations friends can answer from a web link, checkout, and sponsored offers.",
     ],
     tags: ["Product design", "Mobile", "User flows", "Design system"],
     status:
