@@ -90,7 +90,7 @@ export const matchday = {
       },
     ],
     featureRequest:
-      "Both were fixed after the tests. The coaches also asked for custom formations. That is a feature request, not a bug, and it showed them trying to use Matchday for a setup I hadn't planned for. It isn't built yet.",
+      "Both were fixed after the tests. The coaches also asked for custom formations. That is a feature request, not a bug, and it showed them trying to use Matchday for a setup I hadn't planned for. I have since added custom formations to the formation builder.",
   },
 
   screens: {
