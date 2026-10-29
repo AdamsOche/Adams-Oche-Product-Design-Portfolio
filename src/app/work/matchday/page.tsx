@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { CaseStudyHero } from "@/components/case-study/CaseStudyHero";
 import { CaseStudyFigure, CaseStudyFigureGrid } from "@/components/case-study/CaseStudyFigure";
 import { ProseItem, ProseP, ProseSection } from "@/components/case-study/Prose";
-import { Container, Eyebrow, Rule } from "@/components/primitives";
+import { Container, Rule } from "@/components/primitives";
 import { heroImageFor } from "@/lib/site";
 import { matchday } from "@/lib/case-studies/matchday";
 
@@ -142,17 +143,17 @@ export default function MatchdayCaseStudy() {
         />
 
         <Container>
-          <figure className="mx-auto max-w-[900px] py-6 md:py-8">
-            <div
-              role="presentation"
-              className="flex aspect-[9/16] w-full max-w-[320px] items-center justify-center rounded-xl border border-dashed border-ink/20 bg-paper-sunk"
-            >
-              <Eyebrow className="px-6 text-center">
-                Mobile view: pending capture
-              </Eyebrow>
-            </div>
-            <figcaption className="mt-4 max-w-[62ch] text-[13px] leading-relaxed text-muted">
-              {matchday.screens.mobilePlaceholderCaption}
+          <figure className="py-6 md:py-8">
+            <Image
+              src="/case-studies/matchday/matchday-formation-builder-mobile.png"
+              alt="The Matchday formation builder on a phone: the formation switcher with a custom formation, and the pitch with eleven players placed in a 4-3-3."
+              width={828}
+              height={1654}
+              sizes="(min-width: 768px) 320px, 80vw"
+              className="h-auto w-full max-w-[320px] rounded-xl border border-rule"
+            />
+            <figcaption className="mt-2 max-w-[62ch] text-[13px] leading-relaxed text-muted">
+              {matchday.screens.mobileCaption}
             </figcaption>
           </figure>
         </Container>

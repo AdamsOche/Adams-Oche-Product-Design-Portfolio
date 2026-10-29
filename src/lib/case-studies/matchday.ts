@@ -2,9 +2,7 @@
  * Matchday case-study copy. No em dashes by design. Live demo confirmed at
  * https://matchday-ma.vercel.app.
  *
- * The mobile screenshot is still pending: the Screens section keeps a
- * placeholder that accepts it without a layout change. Root causes for the
- * two coach-reported bugs aren't recorded in the project files, so the copy
+ * Root causes for the two coach-reported bugs aren't recorded in the project files, so the copy
  * says what happened and that both were fixed, and nothing more.
  */
 export const matchday = {
@@ -99,8 +97,7 @@ export const matchday = {
     heading: "Screens",
     formationCaption:
       "The formation builder, with the bench panel and formation switcher.",
-    mobilePlaceholderCaption:
-      "A phone-width screenshot of the formation builder will go here.",
+    mobileCaption: "The formation builder on a phone.",
     landingHeading: "The landing page",
     landingBody:
       "The landing page has a short note from me explaining what the product is for, in the place where many SaaS pages put testimonials. Matchday had no users at that point, so there were no testimonials to show and I didn't invent any. An early version also had gradient borders, glow effects and generated avatars, which I removed.",
