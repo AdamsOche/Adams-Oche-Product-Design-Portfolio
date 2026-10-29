@@ -5,6 +5,7 @@ import { CaseStudyHero } from "@/components/case-study/CaseStudyHero";
 import { CaseStudyFigure, CaseStudyFigureGrid } from "@/components/case-study/CaseStudyFigure";
 import { ProseItem, ProseP, ProseSection } from "@/components/case-study/Prose";
 import { Container, Eyebrow, Rule } from "@/components/primitives";
+import { heroImageFor } from "@/lib/site";
 import { matchday } from "@/lib/case-studies/matchday";
 
 export const metadata: Metadata = {
@@ -35,7 +36,6 @@ export default function MatchdayCaseStudy() {
 
       <main id="main">
         <CaseStudyHero
-          eyebrow={matchday.hero.eyebrow}
           title={matchday.hero.title}
           standfirst={matchday.hero.standfirst}
           intro={matchday.hero.intro}
@@ -44,6 +44,7 @@ export default function MatchdayCaseStudy() {
           liveLabel={matchday.liveLabel}
           brandColor={matchday.brandColor}
           brandTextColor={matchday.brandTextColor}
+          heroImage={heroImageFor("matchday")}
         />
 
         <Rule />
@@ -85,7 +86,7 @@ export default function MatchdayCaseStudy() {
 
           <ul className="space-y-4">
             {matchday.fixes.selfFound.map((item) => (
-              <li key={item} className="flex gap-3 text-lg leading-relaxed text-ink/75">
+              <li key={item} className="flex gap-3 font-serif text-lg leading-[1.6] text-[#3f3b34]">
                 <span
                   aria-hidden="true"
                   className="mt-3 h-1 w-1 shrink-0 rounded-full bg-ink/40"
@@ -103,7 +104,7 @@ export default function MatchdayCaseStudy() {
             </ProseItem>
           ))}
 
-          <p className="text-lg leading-relaxed text-ink/75">{matchday.fixes.featureRequest}</p>
+          <p className="font-serif text-lg leading-[1.6] text-[#3f3b34]">{matchday.fixes.featureRequest}</p>
         </ProseSection>
 
         <Rule />
@@ -150,7 +151,7 @@ export default function MatchdayCaseStudy() {
                 Mobile view: pending capture
               </Eyebrow>
             </div>
-            <figcaption className="mt-4 max-w-[62ch] text-sm leading-relaxed text-ink/65">
+            <figcaption className="mt-4 max-w-[62ch] text-[13px] leading-relaxed text-muted">
               {matchday.screens.mobilePlaceholderCaption}
             </figcaption>
           </figure>
@@ -162,7 +163,7 @@ export default function MatchdayCaseStudy() {
               <h3 className="font-display text-xl tracking-[-0.02em]">
                 {matchday.screens.landingHeading}
               </h3>
-              <p className="mt-4 text-lg leading-relaxed text-ink/75">
+              <p className="mt-4 font-serif text-lg leading-[1.6] text-[#3f3b34]">
                 {matchday.screens.landingBody}
               </p>
             </div>
@@ -172,9 +173,9 @@ export default function MatchdayCaseStudy() {
         <Rule />
 
         {/* -------------------------------------------------------- Role & stack */}
-        <ProseSection heading={matchday.role.heading} className="pb-20 md:pb-28">
+        <ProseSection heading={matchday.role.heading} className="pb-6 md:pb-6">
           <ProseP>{matchday.role.body}</ProseP>
-          <p className="border-t border-rule pt-6 text-[0.9375rem] leading-relaxed text-ink/65">
+          <p className="border-t border-rule pt-6 text-[13px] leading-relaxed text-muted">
             {matchday.role.verification}
           </p>
         </ProseSection>

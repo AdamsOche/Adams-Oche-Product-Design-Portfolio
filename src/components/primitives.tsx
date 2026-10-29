@@ -10,15 +10,64 @@ export function Container({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-14 ${className}`}>
+    <div className={`mx-auto w-full max-w-[752px] px-4 ${className}`}>
       {children}
     </div>
   );
 }
 
-/** Full-bleed hairline divider between sections. */
+/** Dashed divider between sections, held to the column. */
 export function Rule({ className = "" }: { className?: string }) {
-  return <div role="presentation" className={`h-px w-full bg-rule ${className}`} />;
+  return (
+    <Container className={className}>
+      <div role="presentation" className="border-t border-dashed border-ink/20" />
+    </Container>
+  );
+}
+
+/** Small outlined pill used as a section label. Renders a real heading. */
+export function SectionPill({
+  children,
+  as: Tag = "h2",
+  className = "",
+}: {
+  children: ReactNode;
+  as?: "h2" | "h3" | "p";
+  className?: string;
+}) {
+  return (
+    <Tag
+      className={`inline-block rounded-full border border-rule bg-card px-3.5 py-[5px] text-[13px] font-normal leading-normal text-[#4a463e] ${className}`}
+    >
+      {children}
+    </Tag>
+  );
+}
+
+/**
+ * Required on every image that shows a kit: the kit photos carry a real
+ * sportswear logo, so each is labelled as a concept. Place inside a
+ * `relative` wrapper.
+ */
+export function ConceptBadge() {
+  return (
+    <span className="absolute left-3 top-3 z-[1] rounded-full bg-card/90 px-2.5 py-[3px] text-[11px] leading-normal text-ink">
+      Concept mockup
+    </span>
+  );
+}
+
+/** Small muted tag list, e.g. "Product design". */
+export function TagList({ tags }: { tags: readonly string[] }) {
+  return (
+    <ul className="mt-3.5 flex flex-wrap gap-1.5">
+      {tags.map((tag) => (
+        <li key={tag} className="rounded-md bg-ink/5 px-[9px] py-[3px] text-xs text-[#5a564e]">
+          {tag}
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 /** Letterspaced small-caps eyebrow for metadata: `01 / SONO`, `ROLE`, `TOOLS`. */
@@ -64,46 +113,5 @@ export function Pill({ variant = "primary", className = "", children, ...rest }:
     <Link className={`${base} ${styles} ${className}`} {...rest}>
       {children}
     </Link>
-  );
-}
-
-/**
- * Two-column section layout: short heading left, body copy right.
- * Collapses to a single stacked column below `md`.
- */
-export function TwoCol({
-  heading,
-  eyebrow,
-  media,
-  children,
-  className = "",
-  id,
-}: {
-  heading: ReactNode;
-  eyebrow?: ReactNode;
-  /** Optional small visual (e.g. an avatar), rendered above the heading. */
-  media?: ReactNode;
-  children?: ReactNode;
-  className?: string;
-  id?: string;
-}) {
-  return (
-    <div
-      id={id}
-      className={`grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-12 ${className}`}
-    >
-      <div className="md:col-span-5 lg:col-span-4">
-        {media ? <div className="mb-6">{media}</div> : null}
-        {eyebrow ? <Eyebrow className="mb-5">{eyebrow}</Eyebrow> : null}
-        <h2 className="font-display text-3xl leading-[1.05] tracking-[-0.03em] sm:text-4xl lg:text-5xl">
-          {heading}
-        </h2>
-      </div>
-      {children ? (
-        <div className="md:col-span-7 md:col-start-6 lg:col-span-7 lg:col-start-6">
-          {children}
-        </div>
-      ) : null}
-    </div>
   );
 }

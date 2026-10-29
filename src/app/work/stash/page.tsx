@@ -5,6 +5,7 @@ import { CaseStudyHero } from "@/components/case-study/CaseStudyHero";
 import { CaseStudyFigure, CaseStudyFigureGrid } from "@/components/case-study/CaseStudyFigure";
 import { ProseItem, ProseP, ProseSection } from "@/components/case-study/Prose";
 import { Container, Rule } from "@/components/primitives";
+import { heroImageFor } from "@/lib/site";
 import { stash } from "@/lib/case-studies/stash";
 
 export const metadata: Metadata = {
@@ -35,7 +36,6 @@ export default function StashCaseStudy() {
 
       <main id="main">
         <CaseStudyHero
-          eyebrow={stash.hero.eyebrow}
           title={stash.hero.title}
           standfirst={stash.hero.standfirst}
           intro={stash.hero.intro}
@@ -44,10 +44,11 @@ export default function StashCaseStudy() {
           liveLabel={stash.liveLabel}
           brandColor={stash.brandColor}
           brandTextColor={stash.brandTextColor}
+          heroImage={heroImageFor("stash")}
         />
 
         <Container>
-          <p className="mx-auto -mt-10 mb-4 max-w-[680px] text-sm leading-relaxed text-ink/65">
+          <p className="mb-4 mt-2 text-[13px] leading-relaxed text-muted">
             {stash.hero.concept}
           </p>
         </Container>
@@ -101,7 +102,7 @@ export default function StashCaseStudy() {
 
         <ProseSection className="pt-0 md:pt-0">
           <p className="font-medium text-ink">{stash.fixes.fixedHeading}</p>
-          <p className="mt-4 text-lg leading-relaxed text-ink/75">{stash.fixes.fixed}</p>
+          <p className="mt-4 font-serif text-lg leading-[1.6] text-[#3f3b34]">{stash.fixes.fixed}</p>
         </ProseSection>
 
         <Rule />
@@ -157,7 +158,7 @@ export default function StashCaseStudy() {
               <h3 className="font-display text-xl tracking-[-0.02em]">
                 {stash.screens.landingHeading}
               </h3>
-              <p className="mt-4 text-lg leading-relaxed text-ink/75">
+              <p className="mt-4 font-serif text-lg leading-[1.6] text-[#3f3b34]">
                 {stash.screens.landingBody}
               </p>
             </div>
@@ -167,14 +168,14 @@ export default function StashCaseStudy() {
         <Rule />
 
         {/* -------------------------------------------------------- Role & stack */}
-        <ProseSection heading={stash.role.heading} className="pb-20 md:pb-28">
+        <ProseSection heading={stash.role.heading} className="pb-6 md:pb-6">
           <ProseP>{stash.role.body}</ProseP>
 
           <div className="border-t border-rule pt-6">
             <h3 className="font-display text-xl tracking-[-0.02em]">
               {stash.role.differentlyHeading}
             </h3>
-            <p className="mt-4 text-[0.9375rem] leading-relaxed text-ink/60">
+            <p className="mt-4 text-[13px] leading-relaxed text-muted">
               {stash.role.differentlyBody}
             </p>
           </div>

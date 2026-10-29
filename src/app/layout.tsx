@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Inter_Tight, Newsreader } from "next/font/google";
 import "./globals.css";
 import { identity } from "@/lib/site";
 
-/**
- * PLACEHOLDER TYPE STACK.
- * One tight neo-grotesque at display sizes with true italics for hero emphasis.
- * Swap both families here once the exact family/weights are pulled from the
- * live site's computed styles — nothing else in the codebase names a font.
- */
 const displayFace = Inter_Tight({
   variable: "--font-display-face",
   subsets: ["latin"],
@@ -16,9 +10,11 @@ const displayFace = Inter_Tight({
   display: "swap",
 });
 
-const sansFace = Inter({
-  variable: "--font-sans-face",
+const serifFace = Newsreader({
+  variable: "--font-serif-face",
   subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -44,7 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${displayFace.variable} ${sansFace.variable} h-full antialiased`}
+      className={`${displayFace.variable} ${serifFace.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">{children}</body>
     </html>

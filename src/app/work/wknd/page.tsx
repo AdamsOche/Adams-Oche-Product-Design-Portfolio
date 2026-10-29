@@ -5,6 +5,7 @@ import { CaseStudyHero } from "@/components/case-study/CaseStudyHero";
 import { CaseStudyFigure } from "@/components/case-study/CaseStudyFigure";
 import { ProseItem, ProseP, ProseSection } from "@/components/case-study/Prose";
 import { Rule } from "@/components/primitives";
+import { heroImageFor } from "@/lib/site";
 import { wknd } from "@/lib/case-studies/wknd";
 
 export const metadata: Metadata = {
@@ -35,7 +36,6 @@ export default function WkndCaseStudy() {
 
       <main id="main">
         <CaseStudyHero
-          eyebrow={wknd.hero.eyebrow}
           title={wknd.hero.title}
           standfirst={wknd.hero.standfirst}
           intro={wknd.hero.intro}
@@ -44,6 +44,7 @@ export default function WkndCaseStudy() {
           liveLabel={wknd.liveLabel}
           brandColor={wknd.brandColor}
           brandTextColor={wknd.brandTextColor}
+          heroImage={heroImageFor("wknd")}
         />
 
         <Rule />
@@ -61,7 +62,7 @@ export default function WkndCaseStudy() {
         <ProseSection heading={wknd.redesign.heading}>
           {wknd.redesign.items.map((item) => (
             <div key={item.title} className="space-y-4 border-t border-rule pt-6">
-              <h3 className="font-display text-2xl font-medium leading-[1.15] tracking-[-0.02em] text-ink">
+              <h3 className="font-display text-xl font-medium leading-[1.15] tracking-[-0.02em] text-ink">
                 {item.title}
               </h3>
               {item.paragraphs.map((p) => (
@@ -125,7 +126,7 @@ export default function WkndCaseStudy() {
         <Rule />
 
         {/* ------------------------------------------------------------------ Role */}
-        <ProseSection heading={wknd.role.heading} className="pb-20 md:pb-28">
+        <ProseSection heading={wknd.role.heading} className="pb-6 md:pb-6">
           {wknd.role.paragraphs.map((p) => (
             <ProseP key={p}>{p}</ProseP>
           ))}
