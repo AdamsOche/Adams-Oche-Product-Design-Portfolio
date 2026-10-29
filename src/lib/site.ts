@@ -23,6 +23,7 @@ export const nav = [
   { label: "Work", href: "/#work" },
   { label: "Brand", href: "/#brand" },
   { label: "About", href: "/#about" },
+  { label: "Bookshelf", href: "/bookshelf" },
 ] as const;
 
 export type Project = {
