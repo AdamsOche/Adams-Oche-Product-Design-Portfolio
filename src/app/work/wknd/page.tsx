@@ -117,8 +117,7 @@ export default function WkndCaseStudy() {
 
           {wknd.validation.tests.map((item) => (
             <ProseItem key={item.lead} lead={item.lead}>
-              <strong className="font-medium text-ink">Test:</strong> {item.test}{" "}
-              <strong className="font-medium text-ink">Measure:</strong> {item.measure}
+              {item.body}
             </ProseItem>
           ))}
         </ProseSection>

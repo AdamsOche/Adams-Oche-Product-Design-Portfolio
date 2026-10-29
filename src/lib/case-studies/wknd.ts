@@ -131,28 +131,15 @@ export const wknd = {
     tests: [
       {
         lead: "People decide their weekend plans during the week.",
-        test: "Interview eight people in Abuja about their last four weekends.",
-        measure: "When each plan was made.",
+        body: "Interview eight people in Abuja about their last four weekends, and note when each plan was made.",
       },
       {
         lead: "Friends will respond to a link without installing the app.",
-        test: "Share links for real plans.",
-        measure: "How many invited friends respond.",
-      },
-      {
-        lead: "A Friday reminder brings people back to the app.",
-        test: "Run the reminder over two weekends.",
-        measure: "Whether people open the app after it.",
+        body: "Share links for real plans, and count how many invited friends respond.",
       },
       {
         lead: "Operators can provide live availability, reservation holds and refunds.",
-        test: "Speak to five event operators.",
-        measure: "Which of those they can offer.",
-      },
-      {
-        lead: "People will add a photo when asked once, in the evening.",
-        test: "Try the post-event prompt at one activity.",
-        measure: "How many attendees add a photo within a day.",
+        body: "Speak to five event operators, and find out which of those they can offer.",
       },
     ],
   },
