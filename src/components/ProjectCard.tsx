@@ -37,7 +37,10 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
       <div className="px-5 pb-5 pt-[18px]">
         <div className="flex flex-wrap items-baseline justify-between gap-3">
           <h3 className="text-xl font-medium tracking-[-0.02em]">{project.name}</h3>
-          <span className="text-[13px] font-medium text-accent">
+          <span
+            className="rounded-full px-3.5 py-1.5 text-[13px] font-medium leading-none"
+            style={{ backgroundColor: project.brandColor, color: project.brandTextColor }}
+          >
             Read the case study <span aria-hidden="true">&rarr;</span>
           </span>
         </div>
