@@ -23,7 +23,16 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
             sizes="(min-width: 768px) 656px, 100vw"
             priority={priority}
           />
-        ) : null}
+        ) : (
+          <div
+            aria-hidden="true"
+            className="flex h-28 items-end rounded-md border border-ink/15 bg-[length:24px_24px] p-3 [background-image:linear-gradient(rgba(20,35,59,.09)_1px,transparent_1px),linear-gradient(90deg,rgba(20,35,59,.09)_1px,transparent_1px)]"
+          >
+            <span className="rounded-full bg-card/90 px-2.5 py-[3px] text-[11px] leading-normal text-ink">
+              Concept project
+            </span>
+          </div>
+        )}
       </div>
       <div className="px-5 pb-5 pt-[18px]">
         <div className="flex flex-wrap items-baseline justify-between gap-3">

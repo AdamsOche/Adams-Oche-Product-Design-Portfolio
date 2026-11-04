@@ -14,6 +14,7 @@ export function CaseStudyHero({
   title,
   standfirst,
   intro,
+  tag,
   meta,
   liveUrl,
   liveLabel,
@@ -25,6 +26,8 @@ export function CaseStudyHero({
   title: string;
   standfirst: string;
   intro?: string;
+  /** Optional small line above the title, e.g. "Case study · Concept project". */
+  tag?: string;
   meta: readonly MetaItem[];
   liveUrl?: string | null;
   liveLabel?: string;
@@ -57,7 +60,9 @@ export function CaseStudyHero({
           ) : null}
         </div>
 
-        <h1 className="mt-[18px] font-display text-[clamp(2.2rem,7vw,3.4rem)] font-medium leading-none tracking-[-0.035em]">
+        {tag ? <p className="mt-5 text-[13px] text-muted">{tag}</p> : null}
+
+        <h1 className={`${tag ? "mt-2" : "mt-[18px]"} font-display text-[clamp(2.2rem,7vw,3.4rem)] font-medium leading-none tracking-[-0.035em]`}>
           {title}
         </h1>
 

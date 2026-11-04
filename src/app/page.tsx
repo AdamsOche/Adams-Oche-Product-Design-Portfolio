@@ -74,7 +74,7 @@ export default function Home() {
           <section id="work" className="pt-10">
             <SectionPill className="mb-5">Work</SectionPill>
             <p className="mb-[22px] max-w-[50ch] font-serif text-[17px] text-[#4a463e]">
-              Four products I&rsquo;ve designed and built.
+              Four products I&rsquo;ve designed and built, plus one concept.
             </p>
             <div className="flex flex-col gap-5">
               {projects.map((project, i) => (

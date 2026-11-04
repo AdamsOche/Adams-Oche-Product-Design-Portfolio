@@ -138,6 +138,25 @@ export const projects: Project[] = [
     brandColor: "#3629b7",
     brandTextColor: "#ffffff",
   },
+  {
+    index: "05",
+    slug: "plaza-board",
+    name: "Plaza Board",
+    oneLiner:
+      "Concept for a plaza management tool. Floor-plan board, rent tracking and a caretaker app.",
+    tags: ["Concept project", "Product design", "Interactive prototype"],
+    status:
+      "A concept built from public research, with no interviews and invented data. Not a live product.",
+    href: "/work/plaza-board",
+    image: "/projects/plaza-board/screens/building-desktop.png",
+    imageWidth: 1473,
+    imageHeight: 945,
+    imageAlt:
+      "Plaza Board's building view: a drafting-style floor plan of Tamarind Plaza with an occupancy bar and a needs-attention list.",
+    panelColor: "#edf0f4",
+    brandColor: "#14233b",
+    brandTextColor: "#ffffff",
+  },
 ];
 
 export const stack = {
