@@ -2,6 +2,11 @@
  * Stash case-study copy, restructured into the site's shared case-study
  * skeleton (problem, decisions, caught & fixed, screens, role). No em dashes.
  *
+ * HIDDEN FOR NOW: the `fixes` section and `screens.landingHeading` / `landingBody`
+ * describe the marketing site. There is no new marketing site yet, so the page
+ * no longer renders them. Restore them (see git history for the page markup)
+ * when one exists.
+ *
  * No live URL: nothing in the local source repos (stash-app, stash-landing)
  * or Downloads pointed to a real deployment, so liveUrl stays null.
  *
@@ -29,12 +34,12 @@ export const stash = {
     standfirst:
       "A personal finance concept for young adults in West Africa, covering savings goals, group pools and sending money.",
     intro:
-      "I designed 19 mobile screens covering onboarding, savings goals, peer-to-peer transfers and group pools, plus a marketing landing page.",
+      "I designed 19 mobile screens covering onboarding, savings goals, peer-to-peer transfers and group pools. The sections below describe that first version. I then redesigned the look, and the redesign is the version shown above.",
     concept:
-      "Stash is a design and frontend concept, not a live product: nineteen screens and a marketing site, built in real code, running on mock data with no connected backend.",
+      "Stash is a design and frontend concept, not a live product: nineteen screens, built in real code, running on mock data with no connected backend.",
     meta: [
       { label: "Role", value: "Product Designer · Builder, solo" },
-      { label: "Platform", value: "Mobile app concept · Marketing site" },
+      { label: "Platform", value: "Mobile app concept" },
       { label: "Tools", value: "Figma · Next.js · TypeScript · Tailwind · Zustand · Framer Motion" },
     ],
   },
@@ -48,7 +53,7 @@ export const stash = {
   },
 
   decisions: {
-    heading: "What I decided, and why",
+    heading: "The first version: what I decided, and why",
     items: [
       {
         lead: "Goals, Send and Pools sit in the main navigation.",
@@ -60,11 +65,11 @@ export const stash = {
       },
       {
         lead: "Gold marks savings milestones and successful transactions.",
-        body: "The base is dark navy, with violet for primary actions. Gold is only used when money goes the right way: reaching a goal, completing a transfer or hitting a milestone. I kept it rare so those moments stand out.",
+        body: "The first version had a dark navy base, with violet for primary actions. I used gold only when money went the right way: reaching a goal, completing a transfer or hitting a milestone. I kept it rare so those moments stood out.",
       },
       {
         lead: "Goals and pools show progress differently.",
-        body: "Goals use a circular progress ring and pools use horizontal bars. Both show progress as a shape, which is quicker to read at a glance than a percentage.",
+        body: "The goal detail screen used a circular progress ring, and the goals list and pools used horizontal bars. Both showed progress as a shape, which is quicker to read at a glance than a percentage.",
       },
     ],
   },
@@ -77,17 +82,17 @@ export const stash = {
     ],
     fixedHeading: "What replaced it",
     fixed:
-      "The page now relies on the design system: a dark navy and violet base, gold only for money moments, and real interface states in place of static mockups.",
+      "The page then relied on the first design system: a dark navy and violet base, gold only for money moments, and real interface states in place of static mockups.",
     beforeAlt:
       "The pre-refinement Stash marketing hero: gradient headline text, a fabricated \"12,000+ active savers\" stat, a 4.8 star rating, stock photo avatars, and a \"Now live in Nigeria & Ghana\" badge. Discarded. Shown here only as the before state.",
     afterAlt:
-      "The Stash design system: colour tokens (navy base, violet actions, gold reserved for milestones), type scale, and component scaffolds that replaced the first pass.",
+      "The first Stash design system: colour tokens (navy base, violet actions, gold reserved for milestones), type scale, and component scaffolds that replaced the first pass.",
   },
 
   screens: {
-    heading: "Screens",
+    heading: "Screens in the first version",
     intro:
-      "Nineteen screens across three flows. In the prototype each one runs on app state, not a static mockup.",
+      "Nineteen screens across three flows. In that prototype each one runs on app state, not a static mockup.",
     flows: [
       {
         label: "Goals",

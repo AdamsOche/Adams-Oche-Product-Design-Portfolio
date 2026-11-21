@@ -104,11 +104,11 @@ export const projects: Project[] = [
     status:
       "Design and frontend concept built with Next.js. Uses mock data and has no live backend.",
     href: "/work/stash",
-    image: "/work/stash-screens.png",
-    imageWidth: 4603,
-    imageHeight: 2508,
+    image: "/work/stash-redesign-screens.png",
+    imageWidth: 1568,
+    imageHeight: 741,
     imageAlt:
-      "The Stash app laid out across 19 screens (onboarding, savings goals, transfers and group pools) in the deep indigo base, with the accent colour reserved for amounts.",
+      "Four screens from the redesigned Stash app on a warm cream base: home with a violet savings card and coloured jars, the Goals list, a group pool with a row of paid and unpaid dots, and the Send numpad.",
     // A touch deeper than the design system's #7B5CF6 swatch: that exact
     // shade sits just under 4.5:1 against white text, this clears it.
     // The indigo clashes with WKND's next to it, so the card panel is gold.

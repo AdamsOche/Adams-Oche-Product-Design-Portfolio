@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
         source: "/projects/plaza-board",
         destination: "/projects/plaza-board/index.html",
       },
+      {
+        source: "/projects/stash-redesign",
+        destination: "/projects/stash-redesign/index.html",
+      },
     ];
   },
 };

@@ -3,6 +3,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { CaseStudyHero } from "@/components/case-study/CaseStudyHero";
 import { CaseStudyFigure, CaseStudyFigureGrid } from "@/components/case-study/CaseStudyFigure";
+import { StashRedesign } from "@/components/case-study/StashRedesign";
 import { ProseItem, ProseP, ProseSection } from "@/components/case-study/Prose";
 import { Container, Rule } from "@/components/primitives";
 import { heroImageFor } from "@/lib/site";
@@ -75,38 +76,6 @@ export default function StashCaseStudy() {
 
         <Rule />
 
-        {/* ------------------------------------------------- Caught and fixed */}
-        <ProseSection heading={stash.fixes.heading}>
-          {stash.fixes.paragraphs.map((p) => (
-            <ProseP key={p}>{p}</ProseP>
-          ))}
-        </ProseSection>
-
-        <CaseStudyFigureGrid
-          images={[
-            {
-              src: "/case-studies/stash/stash-v1-hero.png",
-              width: 1892,
-              height: 876,
-              alt: stash.fixes.beforeAlt,
-            },
-            {
-              src: "/case-studies/stash/stash-design-system.png",
-              width: 1280,
-              height: 1698,
-              alt: stash.fixes.afterAlt,
-            },
-          ]}
-          max="1100px"
-        />
-
-        <ProseSection className="pt-0 md:pt-0">
-          <p className="font-medium text-ink">{stash.fixes.fixedHeading}</p>
-          <p className="mt-4 font-serif text-lg leading-[1.6] text-[#3f3b34]">{stash.fixes.fixed}</p>
-        </ProseSection>
-
-        <Rule />
-
         {/* ------------------------------------------------------------- Screens */}
         <ProseSection heading={stash.screens.heading} className="pb-0 md:pb-0">
           <ProseP>{stash.screens.intro}</ProseP>
@@ -152,18 +121,12 @@ export default function StashCaseStudy() {
           max="1360px"
         />
 
-        <Container>
-          <div className="pb-14 md:pb-16">
-            <div className="mx-auto max-w-[680px] pt-6">
-              <h3 className="font-display text-xl tracking-[-0.02em]">
-                {stash.screens.landingHeading}
-              </h3>
-              <p className="mt-4 font-serif text-lg leading-[1.6] text-[#3f3b34]">
-                {stash.screens.landingBody}
-              </p>
-            </div>
-          </div>
-        </Container>
+        <div className="h-12" />
+
+        <Rule />
+
+        {/* ----------------------------------------------------------- Redesign */}
+        <StashRedesign />
 
         <Rule />
 
