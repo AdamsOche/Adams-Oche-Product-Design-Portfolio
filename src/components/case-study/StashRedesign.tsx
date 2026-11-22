@@ -41,6 +41,13 @@ export function StashRedesign() {
         <ProseP key={p}>{p}</ProseP>
       ))}
 
+      <SubHeading>{r.builtHeading}</SubHeading>
+      {r.built.map((item) => (
+        <ProseItem key={item.lead} lead={item.lead}>
+          {item.body}
+        </ProseItem>
+      ))}
+
       <SubHeading>{r.pairsHeading}</SubHeading>
       <div className="space-y-9 pt-2">
         {r.pairs.map((pair) => (
@@ -71,6 +78,34 @@ export function StashRedesign() {
           </li>
         ))}
       </ul>
+
+      <SubHeading>{r.askHeading}</SubHeading>
+      {r.askIntro.map((p) => (
+        <ProseP key={p}>{p}</ProseP>
+      ))}
+      <ul className={`${breakout} grid grid-cols-2 gap-x-4 gap-y-8 py-2 min-[560px]:grid-cols-4`}>
+        {r.ask.map((s) => (
+          <li key={s.name}>
+            <Image
+              src={s.src}
+              alt={s.alt}
+              width={380}
+              height={759}
+              sizes="(min-width: 1092px) 250px, (min-width: 560px) 25vw, 50vw"
+              className={phoneImg}
+            />
+            <p className="mt-2 text-[13px] font-medium text-ink">{s.name}</p>
+            <p className="mt-0.5 text-[13px] leading-relaxed text-muted">{s.caption}</p>
+          </li>
+        ))}
+      </ul>
+      <ProseP>{r.askStyle}</ProseP>
+      <p className="pt-2 font-medium text-ink">{r.askRulesHeading}</p>
+      {r.askRules.map((item) => (
+        <ProseItem key={item.lead} lead={item.lead}>
+          {item.body}
+        </ProseItem>
+      ))}
 
       <SubHeading>{r.prototypeHeading}</SubHeading>
       <ProseP>{r.prototypeIntro}</ProseP>

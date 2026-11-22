@@ -2,6 +2,10 @@
  * Stash redesign section copy. First person, plain, no em dashes.
  * Source: stash-handoff/HANDOFF.md. Alt text describes what each PNG shows.
  *
+ * Ask Stash and "How I built this" come from the updated handoff. The "How I
+ * built this" text is Adams's draft: one line about the old Send flow was
+ * changed because the old flow already had a confirm step and a receipt.
+ *
  * Left out on purpose: the old landing-page gallery (it shows the discarded
  * invented stats the existing "What I caught and fixed" section already
  * explains), the old overview sheet and the old design-system sheet (both
@@ -16,7 +20,27 @@ export const stashRedesign = {
 
   brief: [
     "After the first version, I redesigned Stash. The earlier look was near-black with purple and yellow accents. I wanted money figures that read at a glance in daylight, and goals you could recognise without reading a label.",
-    "Below are the screens I changed most, before and after, then the rest of the new screens and a clickable prototype.",
+    "Below, I explain how I built it. Then come the screens I changed most, before and after, the rest of the new screens, a small assistant I added, and a clickable prototype.",
+  ],
+
+  builtHeading: "How I built this",
+  built: [
+    {
+      lead: "The direction was mine.",
+      body: "I started from my old dark purple Stash and set the brief: light and bold, like Perq. I chose to keep colour but give each colour a job. I asked for a send flow that starts with a New person option, and a redesigned receipt screen. I asked for a colour test because the app uses a lot of colour. When mint headers read badly with black text, I called for white. I asked for lighter slider borders across the app. For the assistant, I picked the gradient style from two references and ruled out blue because it isn't in Stash's palette.",
+    },
+    {
+      lead: "Where AI helped.",
+      body: "I used Claude to build the clickable prototype as one HTML file, run a polish pass against a UI checklist, run contrast and colour-blind checks, and draft the assistant's four screens. It was fast at producing and testing options. It was not the one deciding what Stash should feel like.",
+    },
+    {
+      lead: "What I checked myself.",
+      body: "Every screen in the prototype is clickable, so I walked each flow by hand. The Ask Stash answers are scripted, not a live model. I designed what it says, how it shows its numbers, when it admits it doesn't know, and how it asks before moving money.",
+    },
+    {
+      lead: "Where AI didn't belong.",
+      body: "The pools and savings flows have no AI in them. They didn't need it.",
+    },
   ],
 
   pairsHeading: "Before and after",
@@ -193,6 +217,47 @@ export const stashRedesign = {
       src: `${BASE}/after/failed.png`,
       alt: "A failed transfer on a coral header saying the transfer didn't go through, with a note that the money is still in the wallet and a Try again button.",
     },
+  ],
+
+  askHeading: "Ask Stash",
+  askIntro: [
+    "Ask Stash is a small assistant I added to show how I design for AI, not just with it. It only sees what happens in Stash: your jars, pools and transfers. It does not see your bank.",
+    "The answers in the prototype are scripted, not from a live model. I designed what it says and how it says it.",
+  ],
+  ask: [
+    {
+      name: "Ask",
+      src: `${BASE}/after/ask-ask.png`,
+      alt: "The Ask Stash start screen on a deep violet gradient: Hello, Tolu, what do you want to know, a note that it only sees Stash jars, pools and transfers, three suggested questions and a field to ask in your own words.",
+      caption: "It says up front what it can see. There are three suggested questions, or you can type your own.",
+    },
+    {
+      name: "Answer",
+      src: `${BASE}/after/ask-answer.png`,
+      alt: "An Ask Stash answer to Am I on track for rent: Yes, rent is full about 6 weeks early, then a table of the numbers it used, and a note on the assumption it made.",
+      caption: "The answer comes first. Then the exact numbers it used, and the assumption it made.",
+    },
+    {
+      name: "Unsure",
+      src: `${BASE}/after/ask-unsure.png`,
+      alt: "An Ask Stash reply to a December spending question, marked Not sure yet: it says it can't give a number because there are only three weeks of data, and offers two things it can do.",
+      caption: "When it can't know, it says so. It gives the reason and offers two things it can do.",
+    },
+    {
+      name: "Act",
+      src: `${BASE}/after/ask-act.png`,
+      alt: "An Ask Stash suggestion to move 30,000 naira from the wallet into the New laptop jar, with the wallet and jar figures after the move, a Move button and a Not now link.",
+      caption: "It proposes moving money to the jar that is furthest behind. Nothing moves until you tap, then it confirms and offers Undo.",
+    },
+  ],
+  askStyle:
+    "The assistant is the one dark, gradient part of the app, on purpose. It should read as a different mode from the cream money screens. It has a deep violet to ink gradient, a big greeting, glass tiles, an orb and a marigold send button. The chat screens put the question in a gradient header, over a cream answer sheet.",
+  askRulesHeading: "The rules behind it",
+  askRules: [
+    { lead: "Show your working.", body: "The answer comes with the numbers it used and the assumption it made." },
+    { lead: "Admit uncertainty in words.", body: "A Not sure yet label says it, so it doesn't rely on colour alone." },
+    { lead: "Ask before acting.", body: "Nothing moves until you tap." },
+    { lead: "Make every action reversible.", body: "After a move, it confirms and offers Undo." },
   ],
 
   prototypeHeading: "Try the redesign",

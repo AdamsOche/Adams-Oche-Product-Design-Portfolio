@@ -283,6 +283,44 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
 .gsw .cc.plus{flex:none;width:46px;background:var(--violet-soft);box-shadow:none;color:var(--violet-deep)}
 .money{position:relative}.money span{position:absolute;left:16px;top:6px;height:52px;display:grid;place-items:center;font:700 17px var(--body);color:var(--ink-2)}
 .money .inp{padding-left:34px}
+
+/* Ask Stash */
+.orb{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#FFF3C4 0,#FFC21F 42%,#FF6F59 100%);flex:none;display:inline-block;box-shadow:0 0 0 3px rgba(255,255,255,.16)}
+.screen.ai{background:radial-gradient(90% 50% at 85% 0%,#7B5CFF 0%,rgba(91,46,255,0) 72%),linear-gradient(180deg,#4421D6 0%,#2A1A8A 36%,#17114F 68%,#0D0930 100%);color:#fff}
+.ai-main{position:absolute;inset:0;display:flex;flex-direction:column;padding:22px 20px 24px}
+.ai-bar{display:flex;align-items:center;gap:12px}
+.ai-bar .h-md{color:#fff}
+.icon-btn.glass{background:rgba(255,255,255,.14);color:#fff;box-shadow:none}
+.ai-greet{margin-top:150px;font-family:var(--display);font-weight:700;font-size:34px;letter-spacing:-.035em;line-height:1.04}
+.ai-sub{margin-top:12px;font-size:15px;line-height:1.4;color:rgba(255,255,255,.82);max-width:290px}
+.ai-tiles{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ai-tile{min-height:112px;border-radius:24px;background:rgba(255,255,255,.09);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);padding:14px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;text-align:left;color:#fff;font-weight:600;font-size:16px;line-height:1.2}
+.ai-tile.wide{grid-column:1/-1;min-height:64px;flex-direction:row;align-items:center;justify-content:flex-start;gap:12px}
+.ai-tile .ti{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;flex:none}
+.ai-comp{margin-top:10px;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);border-radius:999px;padding:6px 6px 6px 14px}
+.ai-in{flex:1;min-width:0;min-height:44px;border:0;appearance:none;background:transparent;font:600 16px var(--body);color:#fff;padding:0 4px}
+.ai-in::placeholder{color:rgba(255,255,255,.7)}
+.ai-in:focus-visible{outline:3px solid #fff;outline-offset:2px;border-radius:12px}
+.ai-send{--acc:var(--violet);width:44px;height:44px;border-radius:50%;background:var(--marigold);color:var(--ink);display:grid;place-items:center;flex:none}
+.ai-hd{background:radial-gradient(90% 90% at 90% 0%,#7B5CFF 0%,rgba(91,46,255,0) 70%),linear-gradient(180deg,#4421D6 0%,#1F1570 100%);color:#fff;padding:22px 20px 58px}
+.ai-qh{margin-top:22px;font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:-.03em;line-height:1.1}
+.ai-sheet{position:relative;z-index:2;background:var(--screen);border-radius:34px 34px 0 0;margin-top:-32px;padding:22px 20px 0}
+.ai-by{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px;color:var(--ink-2)}
+.ai-h{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.025em;line-height:1.15;margin:10px 0 6px}
+.ai-p{font-size:16px;line-height:1.45}
+.ai-sheet .rcard{margin-top:6px}
+.ai-q{width:100%;display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:20px;background:#fff;box-shadow:var(--shadow-border);text-align:left;font-weight:700;font-size:16px;line-height:1.25;min-height:56px;margin-top:8px}
+.ai-q span{flex:1}
+.ai-foot{position:absolute;left:0;right:0;bottom:0;padding:12px 20px 24px;background:linear-gradient(to top,var(--screen) 78%,rgba(250,246,239,0))}
+.ai-ask{width:100%;min-height:54px;border-radius:999px;background:var(--ink);display:flex;align-items:center;gap:10px;padding:0 20px 0 14px;font-weight:600;font-size:16px;color:#fff;text-align:left}
+.ai-ask span{flex:1}
+.ai-tag{display:inline-flex;align-items:center;gap:6px;background:var(--butter);border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700}
+.ai-ok{background:var(--mint-soft);border-radius:22px;padding:12px 14px;display:flex;gap:10px;align-items:center;margin-top:12px;font-weight:600;font-size:15px;line-height:1.35}
+.askbar{width:100%;display:flex;align-items:center;gap:12px;margin-top:8px;padding:8px 14px 8px 8px;border-radius:20px;background:linear-gradient(120deg,#5B2EFF 0%,#2A1A8A 60%,#17114F 100%);color:#fff;text-align:left;min-height:56px}
+.askbar .orb{width:40px;height:40px;margin:0 0 0 0;box-shadow:0 0 0 4px rgba(255,255,255,.16)}
+.askbar .g{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.askbar b{font-size:16px}.askbar .s{font-size:14px;color:rgba(255,255,255,.82)}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
 @media (max-width:420px){.phone{zoom:.9}.cap{width:342px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media (hover:hover){
@@ -389,6 +427,11 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     <div class="cell" data-cell="pool"><div class="phone" data-phone="pool"><div class="screen" id="s-pool"></div></div></div>
     <div class="cell" data-cell="join"><div class="phone" data-phone="join"><div class="screen" id="s-join"></div></div></div>
     <div class="cell" data-cell="create"><div class="phone" data-phone="create"><div class="screen" id="s-create"></div></div></div>
+    <div class="grp"><h2>Ask Stash</h2><p>An assistant that shows its numbers, says when it can’t know, and asks before it moves money.</p></div>
+    <div class="cell" data-cell="ask"><div class="phone" data-phone="ask"><div class="screen ai" id="s-ask"></div></div></div>
+    <div class="cell" data-cell="answer"><div class="phone" data-phone="answer"><div class="screen" id="s-answer"></div></div></div>
+    <div class="cell" data-cell="unsure"><div class="phone" data-phone="unsure"><div class="screen" id="s-unsure"></div></div></div>
+    <div class="cell" data-cell="act"><div class="phone" data-phone="act"><div class="screen" id="s-act"></div></div></div>
     <div class="grp"><h2>Empty, slow or wrong</h2><p>What the app says when there is nothing, it is loading, or it fails.</p></div>
     <div class="cell" data-cell="empty"><div class="phone" data-phone="empty"><div class="screen" id="s-empty"></div></div></div>
     <div class="cell" data-cell="loading"><div class="phone" data-phone="loading"><div class="screen" id="s-loading"></div></div></div>
@@ -433,6 +476,10 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     ['pool','Pool','The pool is an invite card. Unpaid names come first, with a nudge.'],
     ['join','Friend joins','A friend opens the WhatsApp link. No account, one name, one payment.'],
     ['create','New pool','Name, share, headcount, date. The card changes as you do.'],
+    ['ask','Ask Stash','Plain questions. It says up front that it only sees what happens in Stash.'],
+    ['answer','Answer','The answer comes with the numbers it used, so you can check it.'],
+    ['unsure','Not sure','When it can’t know, it says so and offers something it can do.'],
+    ['act','Suggested move','It proposes, you confirm. Nothing moves until you tap, and you can undo.'],
     ['empty','First day','Nothing saved yet, so the screen says what to do next.'],
     ['loading','Loading','Grey shapes in the real layout, so nothing jumps when the data lands.'],
     ['failed','Failed transfer','Says what happened, that the money is safe, and what to do next.']
@@ -477,7 +524,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
       pool:{name:'Owambe fund',sub:"Ada's wedding, due 21 Feb",per:90000,count:9,paid:[1,2,3,4,5,6,7],nudged:[],color:'violet',created:false,copied:false},
       ng:{name:'Japa fund',target:2000000,pace:50000,color:'violet'},top:{amt:'50000',method:0},
       draft:{name:'Detty December house',per:45000,count:10,due:'28 Nov',color:'coral'},
-      done:'rent',moved:false,jy:{},modal:null,join:{name:null,method:0,done:false,who:null}
+      ai:{q:'',why:'short',moved:false},done:'rent',moved:false,jy:{},modal:null,join:{name:null,method:0,done:false,who:null}
     };
   }
   var S=fresh();
@@ -545,6 +592,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
       '<div class="acts"><button type="button" class="act fill" data-go="topup">'+ic('plus',24)+'Top up</button>'+
       '<button type="button" class="act" data-go="send">'+ic('send',26)+'Send</button>'+
       '<button type="button" class="act" data-go="create">'+ic('users',26)+'New pool</button></div>'+
+      '<button type="button" class="askbar" data-go="ask"><i class="orb"></i><span class="g"><b>Ask Stash</b><span class="s">Am I on track for rent?</span></span>'+ic('chev',20)+'</button>'+
       '<div class="sect"><h3 class="h-sm" style="font-size:20px">Your jars</h3></div><div class="jars">'+jars+'<button type="button" class="jt new" data-go="newgoal" aria-label="New goal">'+ic('plus',26)+'<span class="n">New goal</span></button></div>'+
       '<div class="sect"><h3 class="h-sm" style="font-size:20px">Recent activity</h3></div>'+acts+
       '</div>'+tabbar('home');
@@ -893,6 +941,73 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
       '<button type="button" class="link" data-sup="1">'+(S.sup?'Reference copied for support':'Contact support')+'</button></div></div>';
   }
 
+
+  /* ---------- Ask Stash ---------- */
+  var AIQ={track:'Am I on track for rent?',unsure:'How much will I spend in December?',act:'What should I do with the money in my wallet?'};
+  function aiHd(q){return '<div class="ai-hd"><div class="ai-bar"><button type="button" class="icon-btn glass" data-go="ask" aria-label="Back">'+ic('back',22)+'</button><h2 class="h-md">Ask Stash</h2></div><p class="ai-qh">'+esc(q)+'</p></div>';}
+  function aiBy(){return '<div class="ai-by"><i class="orb" style="width:22px;height:22px"></i>Stash</div>';}
+  function aiFoot(){return '<div class="ai-foot"><button type="button" class="ai-ask" data-go="ask"><i class="orb"></i><span>Ask something else</span>'+ic('chev',20)+'</button></div>';}
+  function rAsk(){
+    $('#s-ask').innerHTML='<div class="ai-main">'+
+      '<div class="ai-bar"><button type="button" class="icon-btn glass" data-go="home" aria-label="Back to home">'+ic('back',22)+'</button></div>'+
+      '<h3 class="ai-greet">Hello, '+esc(S.su.name)+'.<br>What do you want to know?</h3>'+
+      '<p class="ai-sub">I only see your Stash jars, pools and transfers. Not your bank.</p>'+
+      '<div class="ai-tiles">'+
+        '<button type="button" class="ai-tile" data-ai="track"><span class="ti">'+ic('jar',18)+'</span>Am I on track for rent?</button>'+
+        '<button type="button" class="ai-tile" data-ai="act"><span class="ti">'+ic('bolt',18)+'</span>What to do with my wallet</button>'+
+        '<button type="button" class="ai-tile wide" data-ai="unsure"><span class="ti">'+ic('spark',18)+'</span>How much will I spend in December?</button>'+
+      '</div>'+
+      '<div class="ai-comp"><input id="ai-q" class="ai-in" type="text" placeholder="Ask in your own words" aria-label="Ask Stash a question" autocomplete="off"><button type="button" class="ai-send" data-aisend="1" aria-label="Send question">'+ic('send',20)+'</button></div>'+
+      '</div>';
+  }
+  function rAnswer(){
+    var g=G('rent'),rem=g.target-g.saved,body;
+    var weeks=Math.max(1,Math.ceil(rem/g.pace)),land=new Date(2026,10,20+(weeks-1)*7);
+    var diff=Math.round((g.due-land)/(7*864e5));
+    if(rem<=0){body='<h3 class="ai-h">Rent is already full.</h3><p class="ai-p">You saved '+fmt(g.saved)+' for '+dstr(g.due)+'. Nothing left to do.</p>';}
+    else if(diff>=0){body='<h3 class="ai-h">Yes. Rent is full about '+diff+' week'+(diff===1?'':'s')+' early.</h3><p class="ai-p">At '+fmt(g.pace)+' every Friday you finish on '+dstr(land)+'. It’s due '+dstr(g.due)+'.</p>';}
+    else{
+      var fr=Math.max(1,Math.floor((g.due-new Date(2026,10,20))/(7*864e5))+1);
+      body='<h3 class="ai-h">Not quite. Rent is about '+(-diff)+' week'+(diff===-1?'':'s')+' late.</h3><p class="ai-p">You’d need about '+fmt(Math.ceil(rem/fr/1000)*1000)+' every Friday to make '+dstr(g.due)+'.</p>';
+    }
+    $('#s-answer').innerHTML='<div class="body" style="padding-bottom:110px">'+aiHd(AIQ.track)+'<div class="ai-sheet">'+aiBy()+body+
+      '<p class="lbl" style="margin-top:16px">What I used</p><div class="rcard">'+
+        '<div class="mr first"><span class="muted">Saved</span><b>'+fmt(g.saved)+'</b></div>'+
+        '<div class="mr"><span class="muted">Left to go</span><b>'+fmt(Math.max(rem,0))+'</b></div>'+
+        '<div class="mr"><span class="muted">Friday save</span><b>'+fmt(g.pace)+'</b></div>'+
+        '<div class="mr"><span class="muted">Due</span><b>'+dstr(g.due)+'</b></div></div>'+
+      '<p class="sm muted" style="margin-top:10px">This assumes your Friday save stays the same.</p>'+
+      '<button type="button" class="link" data-goal="rent" style="margin-top:6px">Open Lagos rent</button></div></div>'+aiFoot();
+  }
+  function rUnsure(){
+    var scope=S.ai.why==='scope';
+    $('#s-unsure').innerHTML='<div class="body" style="padding-bottom:110px">'+aiHd(S.ai.q||AIQ.unsure)+'<div class="ai-sheet">'+aiBy()+
+      '<p style="margin-top:10px"><span class="ai-tag">'+ic('alert',16)+'Not sure yet</span></p>'+
+      '<h3 class="ai-h">'+(scope?'That’s outside what I can see.':'I can’t give you a number yet.')+'</h3>'+
+      '<p class="ai-p">'+(scope?'I can answer about your jars, pools and transfers in Stash. Nothing else.':'I only see money that goes through Stash, and you’ve been here three weeks. That’s not enough to predict a whole month.')+'</p>'+
+      '<p class="lbl" style="margin-top:16px">What I can do</p>'+
+      '<button type="button" class="ai-q" data-go="goals"><span>Show what you’ve saved so far</span>'+ic('chev',20)+'</button>'+
+      '<button type="button" class="ai-q" data-go="ask"><span>Ask something I can answer</span>'+ic('chev',20)+'</button>'+
+      '</div></div>'+aiFoot();
+  }
+  function rAct(){
+    var g=G('laptop'),amt=Math.min(30000,S.balance),after=S.balance-(S.ai.moved?0:amt),p0=Math.floor((g.saved-(S.ai.moved?amt:0))/g.target*100),p1=Math.floor((g.saved+(S.ai.moved?0:amt))/g.target*100),card;
+    if(S.ai.moved){
+      card='<h3 class="ai-h">Done.</h3><p class="ai-p">I moved '+fmt(amt)+' from your wallet to '+g.name+'.</p>'+
+        '<div class="ai-ok"><span class="okb" style="width:36px;height:36px;margin:0;flex:none">'+ic('check',18)+'</span><span>'+g.name+' is now '+pct(g)+'% funded. Wallet '+fmt(S.balance)+'.</span></div>'+
+        '<button type="button" class="btn ghost" data-aiundo="1" style="margin-top:14px">Undo</button>';
+    }else{
+      card='<h3 class="ai-h">Your wallet has '+fmt(S.balance)+' sitting idle.</h3><p class="ai-p">'+g.name+' is your furthest-behind jar, at '+p0+'%. I’d move a little there.</p>'+
+        '<div class="rcard" style="margin-top:14px">'+
+        '<div class="mr first"><span class="muted">Wallet after</span><b>'+fmt(after)+'</b></div>'+
+        '<div class="mr"><span class="muted">'+g.short+' jar</span><b style="white-space:nowrap">'+p0+'% → '+p1+'%</b></div></div>'+
+        '<p class="sm muted" style="margin-top:10px">Nothing moves until you tap Move.</p>'+
+        '<button type="button" class="btn ink" data-aimove="1" style="margin-top:12px"'+(S.balance<amt||amt<=0?' disabled':'')+'>Move '+fmt(amt)+'</button>'+
+        '<button type="button" class="link" data-go="ask">Not now</button>';
+    }
+    $('#s-act').innerHTML='<div class="body" style="padding-bottom:110px">'+aiHd(AIQ.act)+'<div class="ai-sheet">'+aiBy()+card+'</div></div>'+aiFoot();
+  }
+
   /* ---------- Welcome ---------- */
   function rWelcome(){
     $('#s-welcome').innerHTML='<div class="wm" style="position:absolute;left:24px;top:30px;font-size:32px;color:#fff">stash'+ic('spark',16)+'</div>'+
@@ -1063,6 +1178,10 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     if(name==='receipt'){rRcpt();}
     if(name==='failed'){rFailed();}
     if(name==='signup'){rSignup();}
+    if(name==='ask'){rAsk();}
+    if(name==='answer'){rAnswer();}
+    if(name==='unsure'){rUnsure();}
+    if(name==='act'){rAct();}
     mark();
     var cell=document.querySelector('[data-cell="'+name+'"]');
     if(mode==='all'&&cell){
@@ -1079,7 +1198,13 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     mark();
     if(m==='walk'){window.scrollTo({top:0});}
   }
-  function renderAll(){buildCreate();buildNewGoal();rWelcome();rSignup();rEmpty();rLoading();rHome();rGoal();rTopup();rSend();rRcpt();rFailed();rPool();rJoin();rSuccess(false);}
+  function renderAll(){buildCreate();buildNewGoal();rWelcome();rSignup();rEmpty();rLoading();rHome();rGoal();rTopup();rSend();rRcpt();rFailed();rPool();rJoin();rSuccess(false);rAsk();rAnswer();rUnsure();rAct();}
+  function aiSend(){
+    var el=$('#ai-q'),v=el?el.value.trim():'';
+    if(!v){if(el){el.focus();}return;}
+    S.ai.q=v;S.ai.why='scope';go('unsure');
+  }
+  document.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target&&e.target.id==='ai-q'){e.preventDefault();aiSend();}});
   function copyText(t,done){
     try{navigator.clipboard.writeText(t).then(done,done);}catch(e){done();}
   }
@@ -1091,6 +1216,10 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     if(d.mode){setMode(d.mode);return;}
     if(t.id==='reset'){S=fresh();renderAll();go('home');return;}
     if(d.goal){S.goal=d.goal;S.chip=1;go('goal');return;}
+    if(d.ai){S.ai.q=AIQ[d.ai];S.ai.why='short';go(d.ai==='track'?'answer':d.ai);return;}
+    if(d.aisend){aiSend();return;}
+    if(d.aimove){var gl=G('laptop'),am=Math.min(30000,S.balance);if(am<=0){return;}gl.saved+=am;S.balance-=am;S.ai.moved=true;S.acts.unshift({ic:'jar',c:'violet',t:'Moved to '+gl.name,s:'Just now',a:'−'+fmt(am)});rAct();rHome();return;}
+    if(d.aiundo){var gu=G('laptop'),au=30000;gu.saved-=au;S.balance+=au;S.ai.moved=false;if(S.acts[0]&&S.acts[0].t==='Moved to '+gu.name){S.acts.shift();}rAct();rHome();return;}
     if(d.go){go(d.go);return;}
     if(d.chip!==undefined){S.chip=+d.chip;rGoal();return;}
     if(d.add){addMoney(G().chips[S.chip]);return;}
