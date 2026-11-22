@@ -321,6 +321,35 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
 .askbar .g{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
 .askbar b{font-size:16px}.askbar .s{font-size:14px;color:rgba(255,255,255,.82)}
 .btn.ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+
+.ai-greet{margin-top:90px!important}
+.ai-tile{min-height:96px!important}
+.ai-tile.wide{min-height:56px!important}
+.ai-bar .sp{flex:1}
+.ai-q small{display:block;font-weight:500;font-size:14px;color:var(--ink-2);margin-top:2px}
+.ai-q small .bad{color:var(--coral-text);font-weight:700}
+.caret{display:inline-block;width:3px;height:1em;background:var(--violet);margin-left:3px;vertical-align:-.14em;border-radius:2px;animation:blink 1s steps(2,start) infinite}
+@keyframes blink{to{opacity:0}}
+.ai-acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.ai-act{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);font-weight:700;font-size:14px;color:var(--ink)}
+.ai-src{width:100%;min-height:48px;text-align:left;align-items:center}
+.ai-src b{display:inline-flex;align-items:center;gap:6px}
+.ai-scrim{position:absolute;inset:0;z-index:5;background:rgba(13,9,48,.58);width:100%;display:block}
+.ai-pop{position:absolute;left:0;right:0;bottom:0;z-index:6;background:#fff;border-radius:30px 30px 0 0;padding:10px 20px 26px}
+.ai-grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 14px}
+.ai-opt{width:100%;min-height:52px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);display:flex;align-items:center;gap:12px;padding:0 14px;text-align:left;font-weight:600;font-size:16px;margin-top:8px}
+.ai-opt .rd{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--field);flex:none;display:grid;place-items:center}
+.ai-opt[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--violet);background:var(--violet-soft)}
+.ai-opt[aria-pressed="true"] .rd{background:var(--violet);box-shadow:none;color:#fff}
+.ai-opt:not([aria-pressed="true"]) .rd .ic{display:none}
+.ai-steps{list-style:none;margin:14px 0 0;padding:0}
+.ai-steps li{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.ai-steps li:first-child{border-top:0}
+.ai-steps .dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--mint);color:var(--ink)}
+.ai-steps .dot.you{background:#fff;box-shadow:inset 0 0 0 2.5px var(--violet);color:var(--violet)}
+.ai-steps b{display:block;font-size:16px}
+.ai-steps span.d{display:block;font-size:14px;color:var(--ink-2);margin-top:2px;line-height:1.35}
+.ai-steps span.d.you{color:var(--violet-deep);font-weight:700}
 @media (max-width:420px){.phone{zoom:.9}.cap{width:342px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media (hover:hover){
@@ -389,6 +418,10 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-del" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5-6z"/><path d="M12 10l4 4M16 10l-4 4"/></g></symbol>
     <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4.5v9" fill="none" stroke="currentColor" stroke-linecap="round"/><circle cx="12" cy="19" r="2" fill="currentColor"/></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M12 6.8V12l3.6 2.2" fill="none" stroke="var(--acc,#FFC21F)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3.5" fill="currentColor"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.4-5.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M20 3.8v5h-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M6 21V4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M6 5h12l-3 4.2 3 4.2H6z" fill="currentColor"/></symbol>
     <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </defs>
 </svg>
@@ -427,11 +460,17 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     <div class="cell" data-cell="pool"><div class="phone" data-phone="pool"><div class="screen" id="s-pool"></div></div></div>
     <div class="cell" data-cell="join"><div class="phone" data-phone="join"><div class="screen" id="s-join"></div></div></div>
     <div class="cell" data-cell="create"><div class="phone" data-phone="create"><div class="screen" id="s-create"></div></div></div>
-    <div class="grp"><h2>Ask Stash</h2><p>An assistant that shows its numbers, says when it can’t know, and asks before it moves money.</p></div>
+    <div class="grp"><h2>Ask Stash</h2><p>An assistant that shows its numbers, says when it can’t know, asks before it moves money, and fails in plain words.</p></div>
     <div class="cell" data-cell="ask"><div class="phone" data-phone="ask"><div class="screen ai" id="s-ask"></div></div></div>
+    <div class="cell" data-cell="history"><div class="phone" data-phone="history"><div class="screen" id="s-history"></div></div></div>
     <div class="cell" data-cell="answer"><div class="phone" data-phone="answer"><div class="screen" id="s-answer"></div></div></div>
+    <div class="cell" data-cell="stream"><div class="phone" data-phone="stream"><div class="screen" id="s-stream"></div></div></div>
+    <div class="cell" data-cell="source"><div class="phone" data-phone="source"><div class="screen" id="s-source"></div></div></div>
+    <div class="cell" data-cell="wrong"><div class="phone" data-phone="wrong"><div class="screen" id="s-wrong"></div></div></div>
     <div class="cell" data-cell="unsure"><div class="phone" data-phone="unsure"><div class="screen" id="s-unsure"></div></div></div>
     <div class="cell" data-cell="act"><div class="phone" data-phone="act"><div class="screen" id="s-act"></div></div></div>
+    <div class="cell" data-cell="task"><div class="phone" data-phone="task"><div class="screen" id="s-task"></div></div></div>
+    <div class="cell" data-cell="aifail"><div class="phone" data-phone="aifail"><div class="screen" id="s-aifail"></div></div></div>
     <div class="grp"><h2>Empty, slow or wrong</h2><p>What the app says when there is nothing, it is loading, or it fails.</p></div>
     <div class="cell" data-cell="empty"><div class="phone" data-phone="empty"><div class="screen" id="s-empty"></div></div></div>
     <div class="cell" data-cell="loading"><div class="phone" data-phone="loading"><div class="screen" id="s-loading"></div></div></div>
@@ -477,9 +516,15 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     ['join','Friend joins','A friend opens the WhatsApp link. No account, one name, one payment.'],
     ['create','New pool','Name, share, headcount, date. The card changes as you do.'],
     ['ask','Ask Stash','Plain questions. It says up front that it only sees what happens in Stash.'],
-    ['answer','Answer','The answer comes with the numbers it used, so you can check it.'],
+    ['history','History','Past questions, including the one that failed, so nothing is lost.'],
+    ['answer','Answer','The answer comes with the numbers it used. Tap Saved to see the deposits behind it.'],
+    ['stream','Answering','The answer arrives word by word, and you can stop it any time.'],
+    ['source','Source','Every number can be traced to something you did in Stash.'],
+    ['wrong','Wrong answer','Say what’s wrong in one tap. It never argues.'],
     ['unsure','Not sure','When it can’t know, it says so and offers something it can do.'],
     ['act','Suggested move','It proposes, you confirm. Nothing moves until you tap, and you can undo.'],
+    ['task','Multi-step task','It shows each step it took, then hands you the form to confirm.'],
+    ['aifail','Assistant down','Says what broke, that your money is fine, and what to do next.'],
     ['empty','First day','Nothing saved yet, so the screen says what to do next.'],
     ['loading','Loading','Grey shapes in the real layout, so nothing jumps when the data lands.'],
     ['failed','Failed transfer','Says what happened, that the money is safe, and what to do next.']
@@ -524,7 +569,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
       pool:{name:'Owambe fund',sub:"Ada's wedding, due 21 Feb",per:90000,count:9,paid:[1,2,3,4,5,6,7],nudged:[],color:'violet',created:false,copied:false},
       ng:{name:'Japa fund',target:2000000,pace:50000,color:'violet'},top:{amt:'50000',method:0},
       draft:{name:'Detty December house',per:45000,count:10,due:'28 Nov',color:'coral'},
-      ai:{q:'',why:'short',moved:false},done:'rent',moved:false,jy:{},modal:null,join:{name:null,method:0,done:false,who:null}
+      ai:{q:'',why:'short',moved:false,st:'mid',p:.55,wrong:null},done:'rent',moved:false,jy:{},modal:null,join:{name:null,method:0,done:false,who:null}
     };
   }
   var S=fresh();
@@ -943,41 +988,85 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
 
 
   /* ---------- Ask Stash ---------- */
-  var AIQ={track:'Am I on track for rent?',unsure:'How much will I spend in December?',act:'What should I do with the money in my wallet?'};
-  function aiHd(q){return '<div class="ai-hd"><div class="ai-bar"><button type="button" class="icon-btn glass" data-go="ask" aria-label="Back">'+ic('back',22)+'</button><h2 class="h-md">Ask Stash</h2></div><p class="ai-qh">'+esc(q)+'</p></div>';}
+  var AIQ={track:'Am I on track for rent?',unsure:'How much will I spend in December?',act:'What should I do with the money in my wallet?',task:'Help me save ₦200,000 for December'};
+  function aiHd(q,title,back){return '<div class="ai-hd"><div class="ai-bar"><button type="button" class="icon-btn glass" data-go="'+(back||'ask')+'" aria-label="Back">'+ic('back',22)+'</button><h2 class="h-md">'+(title||'Ask Stash')+'</h2></div><p class="ai-qh">'+esc(q)+'</p></div>';}
   function aiBy(){return '<div class="ai-by"><i class="orb" style="width:22px;height:22px"></i>Stash</div>';}
   function aiFoot(){return '<div class="ai-foot"><button type="button" class="ai-ask" data-go="ask"><i class="orb"></i><span>Ask something else</span>'+ic('chev',20)+'</button></div>';}
+  function rentCopy(){
+    var g=G('rent'),rem=g.target-g.saved,head,text;
+    var weeks=Math.max(1,Math.ceil(rem/g.pace)),land=new Date(2026,10,20+(weeks-1)*7);
+    var diff=Math.round((g.due-land)/(7*864e5));
+    if(rem<=0){head='Rent is already full.';text='You saved '+fmt(g.saved)+' for '+dstr(g.due)+'. Nothing left to do.';}
+    else if(diff>=0){head='Yes. Rent is full about '+diff+' week'+(diff===1?'':'s')+' early.';text='At '+fmt(g.pace)+' every Friday you finish on '+dstr(land)+'. It’s due '+dstr(g.due)+'.';}
+    else{var fr=Math.max(1,Math.floor((g.due-new Date(2026,10,20))/(7*864e5))+1);head='Not quite. Rent is about '+(-diff)+' week'+(diff===-1?'':'s')+' late.';text='You’d need about '+fmt(Math.ceil(rem/fr/1000)*1000)+' every Friday to make '+dstr(g.due)+'.';}
+    return {g:g,rem:rem,head:head,text:text};
+  }
+  function aiAnswerHTML(inert){
+    var c=rentCopy(),g=c.g;
+    return '<div class="body" style="padding-bottom:110px"'+(inert?' inert aria-hidden="true"':'')+'>'+aiHd(AIQ.track)+'<div class="ai-sheet">'+aiBy()+
+      '<h3 class="ai-h">'+c.head+'</h3><p class="ai-p">'+c.text+'</p>'+
+      '<p class="lbl" style="margin-top:16px">What I used</p><div class="rcard">'+
+        '<button type="button" class="mr first ai-src" data-go="source" aria-label="Saved '+fmt(g.saved)+'. See where it comes from"><span class="muted">Saved</span><b>'+fmt(g.saved)+ic('chev',16)+'</b></button>'+
+        '<div class="mr"><span class="muted">Left to go</span><b>'+fmt(Math.max(c.rem,0))+'</b></div>'+
+        '<div class="mr"><span class="muted">Friday save</span><b>'+fmt(g.pace)+'</b></div>'+
+        '<div class="mr"><span class="muted">Due</span><b>'+dstr(g.due)+'</b></div></div>'+
+      '<p class="sm muted" style="margin-top:10px">Tap Saved to see the deposits behind it. This assumes your Friday save stays the same.</p>'+
+      '<div class="ai-acts"><button type="button" class="ai-act" data-aireg="1">'+ic('redo',18)+'Regenerate</button><button type="button" class="ai-act" data-aiwrongopen="1">'+ic('flag',18)+'Something wrong?</button></div>'+
+      '</div></div>';
+  }
   function rAsk(){
     $('#s-ask').innerHTML='<div class="ai-main">'+
-      '<div class="ai-bar"><button type="button" class="icon-btn glass" data-go="home" aria-label="Back to home">'+ic('back',22)+'</button></div>'+
+      '<div class="ai-bar"><button type="button" class="icon-btn glass" data-go="home" aria-label="Back to home">'+ic('back',22)+'</button><span class="sp"></span><button type="button" class="icon-btn glass" data-go="history" aria-label="History">'+ic('history',22)+'</button></div>'+
       '<h3 class="ai-greet">Hello, '+esc(S.su.name)+'.<br>What do you want to know?</h3>'+
       '<p class="ai-sub">I only see your Stash jars, pools and transfers. Not your bank.</p>'+
       '<div class="ai-tiles">'+
         '<button type="button" class="ai-tile" data-ai="track"><span class="ti">'+ic('jar',18)+'</span>Am I on track for rent?</button>'+
         '<button type="button" class="ai-tile" data-ai="act"><span class="ti">'+ic('bolt',18)+'</span>What to do with my wallet</button>'+
+        '<button type="button" class="ai-tile wide" data-ai="task"><span class="ti">'+ic('plus',18)+'</span>Help me save ₦200,000 for December</button>'+
         '<button type="button" class="ai-tile wide" data-ai="unsure"><span class="ti">'+ic('spark',18)+'</span>How much will I spend in December?</button>'+
       '</div>'+
       '<div class="ai-comp"><input id="ai-q" class="ai-in" type="text" placeholder="Ask in your own words" aria-label="Ask Stash a question" autocomplete="off"><button type="button" class="ai-send" data-aisend="1" aria-label="Send question">'+ic('send',20)+'</button></div>'+
       '</div>';
   }
-  function rAnswer(){
-    var g=G('rent'),rem=g.target-g.saved,body;
-    var weeks=Math.max(1,Math.ceil(rem/g.pace)),land=new Date(2026,10,20+(weeks-1)*7);
-    var diff=Math.round((g.due-land)/(7*864e5));
-    if(rem<=0){body='<h3 class="ai-h">Rent is already full.</h3><p class="ai-p">You saved '+fmt(g.saved)+' for '+dstr(g.due)+'. Nothing left to do.</p>';}
-    else if(diff>=0){body='<h3 class="ai-h">Yes. Rent is full about '+diff+' week'+(diff===1?'':'s')+' early.</h3><p class="ai-p">At '+fmt(g.pace)+' every Friday you finish on '+dstr(land)+'. It’s due '+dstr(g.due)+'.</p>';}
-    else{
-      var fr=Math.max(1,Math.floor((g.due-new Date(2026,10,20))/(7*864e5))+1);
-      body='<h3 class="ai-h">Not quite. Rent is about '+(-diff)+' week'+(diff===-1?'':'s')+' late.</h3><p class="ai-p">You’d need about '+fmt(Math.ceil(rem/fr/1000)*1000)+' every Friday to make '+dstr(g.due)+'.</p>';
+  function rHistory(){
+    function row(q,sub,to,bad){return '<button type="button" class="ai-q" data-go="'+to+'"><span>'+esc(q)+'<small>'+(bad?'<b class="bad">Couldn’t answer</b> · ':'')+sub+'</small></span>'+ic('chev',20)+'</button>';}
+    $('#s-history').innerHTML='<div class="body" style="padding-bottom:30px">'+aiHd('Past questions','History')+'<div class="ai-sheet">'+
+      '<p class="lbl">Today</p>'+row(AIQ.act,'09:14','act')+row(AIQ.track,'09:12','answer')+
+      '<p class="lbl" style="margin-top:18px">Yesterday</p>'+row(AIQ.unsure,'Not sure yet · 21:50','unsure')+row(AIQ.task,'20:31','task')+row(AIQ.track,'20:12','aifail',true)+
+      '</div></div>';
+  }
+  function rAnswer(){$('#s-answer').innerHTML=aiAnswerHTML(false)+aiFoot();}
+  function rStream(){
+    var c=rentCopy(),A=S.ai,hw=c.head.split(' '),tw=c.text.split(' '),k=Math.round((hw.length+tw.length)*A.p);
+    var hs=hw.slice(0,k).join(' '),ts=tw.slice(0,Math.max(0,k-hw.length)).join(' '),car='<i class="caret" aria-hidden="true"></i>';
+    var stopped=A.st==='stopped';
+    var inner=aiBy()+(stopped?'<p style="margin-top:10px"><span class="ai-tag">'+ic('stop',14)+'Stopped</span></p>':'')+
+      '<h3 class="ai-h">'+hs+(k<=hw.length&&!stopped?car:'')+'</h3>'+(ts?'<p class="ai-p">'+ts+(stopped?'':car)+'</p>':'');
+    if(stopped){
+      inner+='<p class="sm muted" style="margin-top:12px">You stopped this answer. Nothing was changed.</p><button type="button" class="btn ink" data-go="answer" style="margin-top:14px">Continue</button><button type="button" class="link" data-go="ask">Ask again</button>';
     }
-    $('#s-answer').innerHTML='<div class="body" style="padding-bottom:110px">'+aiHd(AIQ.track)+'<div class="ai-sheet">'+aiBy()+body+
-      '<p class="lbl" style="margin-top:16px">What I used</p><div class="rcard">'+
-        '<div class="mr first"><span class="muted">Saved</span><b>'+fmt(g.saved)+'</b></div>'+
-        '<div class="mr"><span class="muted">Left to go</span><b>'+fmt(Math.max(rem,0))+'</b></div>'+
-        '<div class="mr"><span class="muted">Friday save</span><b>'+fmt(g.pace)+'</b></div>'+
-        '<div class="mr"><span class="muted">Due</span><b>'+dstr(g.due)+'</b></div></div>'+
-      '<p class="sm muted" style="margin-top:10px">This assumes your Friday save stays the same.</p>'+
-      '<button type="button" class="link" data-goal="rent" style="margin-top:6px">Open Lagos rent</button></div></div>'+aiFoot();
+    $('#s-stream').innerHTML='<div class="body" style="padding-bottom:110px">'+aiHd(AIQ.track)+'<div class="ai-sheet" aria-live="polite">'+inner+'</div></div>'+
+      (stopped?aiFoot():'<div class="ai-foot"><button type="button" class="ai-ask" data-aistop="1">'+ic('stop',18)+'<span>Stop answering</span></button></div>');
+  }
+  function rSource(){
+    var g=G('rent'),pace=g.pace,base=g.saved-3*pace;
+    function r(t,a,f){return '<div class="mr'+(f?' first':'')+'"><span class="muted">'+t+'</span><b>+'+fmt(a)+'</b></div>';}
+    $('#s-source').innerHTML=aiAnswerHTML(true)+'<button type="button" class="ai-scrim" data-go="answer" aria-label="Close sources"></button>'+
+      '<div class="ai-pop" role="dialog" aria-label="Where this number comes from"><div class="ai-grab"></div><h3 class="h-md">Where '+fmt(g.saved)+' comes from</h3><p class="sm muted" style="margin-top:4px">Deposits to '+g.name+'. Nothing from your bank.</p>'+
+      '<div class="rcard" style="margin-top:10px">'+r('Fri 13 Nov',pace,1)+r('Fri 6 Nov',pace)+r('Fri 30 Oct',pace)+(base>0?r('Earlier deposits',base):'')+'</div>'+
+      '<button type="button" class="btn ink" data-go="answer" style="margin-top:14px">Back to answer</button></div>';
+  }
+  var WRONG=['A number is off','It’s not what I asked','It’s out of date','Something else'];
+  function rWrong(){
+    var w=S.ai.wrong,sent=w==='sent',pop;
+    if(sent){
+      pop='<h3 class="h-md">Thanks.</h3><p class="ai-p" style="margin-top:6px">I’ve noted it. You can ask again, and I’ll work it out from your latest activity.</p>'+
+        '<button type="button" class="btn ink" data-aireg="1" style="margin-top:14px">Ask again</button><button type="button" class="link" data-go="answer">Close</button>';
+    }else{
+      pop='<h3 class="h-md">What’s wrong with this answer?</h3>'+WRONG.map(function(t,i){return '<button type="button" class="ai-opt" data-aiwpick="'+i+'" aria-pressed="'+(w&&w.pick===i?'true':'false')+'"><span class="rd">'+ic('check',14)+'</span>'+t+'</button>';}).join('')+
+        '<button type="button" class="btn ink" data-aiwsend="1" style="margin-top:14px"'+(w&&typeof w.pick==='number'?'':' disabled')+'>Send</button><button type="button" class="link" data-go="answer">Cancel</button>';
+    }
+    $('#s-wrong').innerHTML=aiAnswerHTML(true)+'<button type="button" class="ai-scrim" data-go="answer" aria-label="Close"></button><div class="ai-pop" role="dialog" aria-label="Report a wrong answer"><div class="ai-grab"></div>'+pop+'</div>';
   }
   function rUnsure(){
     var scope=S.ai.why==='scope';
@@ -1006,6 +1095,23 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
         '<button type="button" class="link" data-go="ask">Not now</button>';
     }
     $('#s-act').innerHTML='<div class="body" style="padding-bottom:110px">'+aiHd(AIQ.act)+'<div class="ai-sheet">'+aiBy()+card+'</div></div>'+aiFoot();
+  }
+  function rTask(){
+    var st=[['Read your Fridays','₦95,000 saved across 3 jars.',0],['Counted Fridays left','5 before 25 Dec, from 20 Nov.',0],['Worked out the amount','₦200,000 ÷ 5 Fridays = ₦40,000.',0],['Your OK','New jar “December”, ₦200,000, ₦40,000 every Friday. Nothing is created yet.',1]];
+    $('#s-task').innerHTML='<div class="body" style="padding-bottom:110px">'+aiHd(AIQ.task)+'<div class="ai-sheet">'+aiBy()+
+      '<h3 class="ai-h">Plan ready. Needs your OK.</h3>'+
+      '<ol class="ai-steps">'+st.map(function(x){return '<li><span class="dot'+(x[2]?' you':'')+'">'+(x[2]?ic('spark',14):ic('check',16))+'</span><div><b>'+x[0]+'</b><span class="d'+(x[2]?' you':'')+'">'+(x[2]?'Needs you. ':'Done. ')+x[1]+'</span></div></li>';}).join('')+'</ol>'+
+      '<button type="button" class="btn ink" data-aitask="1" style="margin-top:8px">Review in New goal</button><button type="button" class="link" data-go="ask">Not now</button>'+
+      '</div></div>'+aiFoot();
+  }
+  function rFailAi(){
+    $('#s-aifail').innerHTML='<div class="body" style="padding-bottom:110px">'+aiHd(AIQ.track)+'<div class="ai-sheet">'+aiBy()+
+      '<p style="margin-top:10px"><span class="ai-tag">'+ic('alert',16)+'Couldn’t answer</span></p>'+
+      '<h3 class="ai-h">I couldn’t answer that just now.</h3>'+
+      '<p class="ai-p">The answering service didn’t respond. Your jars, pools and money are fine, and nothing was changed.</p>'+
+      '<div class="ai-ok"><span class="okb" style="width:36px;height:36px;margin:0;flex:none">'+ic('check',18)+'</span><span>Your question is saved in History.</span></div>'+
+      '<button type="button" class="btn ink" data-aireg="1" style="margin-top:14px">Try again</button><button type="button" class="link" data-go="goals">Look at your jars instead</button>'+
+      '</div></div>'+aiFoot();
   }
 
   /* ---------- Welcome ---------- */
@@ -1182,6 +1288,12 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     if(name==='answer'){rAnswer();}
     if(name==='unsure'){rUnsure();}
     if(name==='act'){rAct();}
+    if(name==='history'){rHistory();}
+    if(name==='stream'){rStream();}
+    if(name==='source'){rSource();}
+    if(name==='wrong'){rWrong();}
+    if(name==='task'){rTask();}
+    if(name==='aifail'){rFailAi();}
     mark();
     var cell=document.querySelector('[data-cell="'+name+'"]');
     if(mode==='all'&&cell){
@@ -1198,7 +1310,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     mark();
     if(m==='walk'){window.scrollTo({top:0});}
   }
-  function renderAll(){buildCreate();buildNewGoal();rWelcome();rSignup();rEmpty();rLoading();rHome();rGoal();rTopup();rSend();rRcpt();rFailed();rPool();rJoin();rSuccess(false);rAsk();rAnswer();rUnsure();rAct();}
+  function renderAll(){buildCreate();buildNewGoal();rWelcome();rSignup();rEmpty();rLoading();rHome();rGoal();rTopup();rSend();rRcpt();rFailed();rPool();rJoin();rSuccess(false);rAsk();rHistory();rAnswer();rStream();rSource();rWrong();rUnsure();rAct();rTask();rFailAi();}
   function aiSend(){
     var el=$('#ai-q'),v=el?el.value.trim():'';
     if(!v){if(el){el.focus();}return;}
@@ -1217,6 +1329,12 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(52px,9vw,88px);let
     if(t.id==='reset'){S=fresh();renderAll();go('home');return;}
     if(d.goal){S.goal=d.goal;S.chip=1;go('goal');return;}
     if(d.ai){S.ai.q=AIQ[d.ai];S.ai.why='short';go(d.ai==='track'?'answer':d.ai);return;}
+    if(d.aistop){S.ai.st='stopped';rStream();return;}
+    if(d.aireg){S.ai.st='mid';S.ai.p=.55;S.ai.wrong=null;go('stream');return;}
+    if(d.aiwrongopen){S.ai.wrong=null;go('wrong');return;}
+    if(d.aiwpick!==undefined){S.ai.wrong={pick:+d.aiwpick};rWrong();return;}
+    if(d.aiwsend){if(S.ai.wrong&&typeof S.ai.wrong.pick==='number'){S.ai.wrong='sent';rWrong();}return;}
+    if(d.aitask){S.ng={name:'December',target:200000,pace:40000,color:'mint'};buildNewGoal();go('newgoal');return;}
     if(d.aisend){aiSend();return;}
     if(d.aimove){var gl=G('laptop'),am=Math.min(30000,S.balance);if(am<=0){return;}gl.saved+=am;S.balance-=am;S.ai.moved=true;S.acts.unshift({ic:'jar',c:'violet',t:'Moved to '+gl.name,s:'Just now',a:'−'+fmt(am)});rAct();rHome();return;}
     if(d.aiundo){var gu=G('laptop'),au=30000;gu.saved-=au;S.balance+=au;S.ai.moved=false;if(S.acts[0]&&S.acts[0].t==='Moved to '+gu.name){S.acts.shift();}rAct();rHome();return;}

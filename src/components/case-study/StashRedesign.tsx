@@ -83,22 +83,27 @@ export function StashRedesign() {
       {r.askIntro.map((p) => (
         <ProseP key={p}>{p}</ProseP>
       ))}
-      <ul className={`${breakout} grid grid-cols-2 gap-x-4 gap-y-8 py-2 min-[560px]:grid-cols-4`}>
-        {r.ask.map((s) => (
-          <li key={s.name}>
-            <Image
-              src={s.src}
-              alt={s.alt}
-              width={380}
-              height={759}
-              sizes="(min-width: 1092px) 250px, (min-width: 560px) 25vw, 50vw"
-              className={phoneImg}
-            />
-            <p className="mt-2 text-[13px] font-medium text-ink">{s.name}</p>
-            <p className="mt-0.5 text-[13px] leading-relaxed text-muted">{s.caption}</p>
-          </li>
-        ))}
-      </ul>
+      {r.askGroups.map((group) => (
+        <div key={group.heading} className="space-y-3.5 pt-2">
+          <p className="font-medium text-ink">{group.heading}</p>
+          <ul className={`${breakout} grid grid-cols-2 gap-x-4 gap-y-8 py-2 min-[560px]:grid-cols-4`}>
+            {group.screens.map((s) => (
+              <li key={s.name}>
+                <Image
+                  src={s.src}
+                  alt={s.alt}
+                  width={380}
+                  height={759}
+                  sizes="(min-width: 1092px) 250px, (min-width: 560px) 25vw, 50vw"
+                  className={phoneImg}
+                />
+                <p className="mt-2 text-[13px] font-medium text-ink">{s.name}</p>
+                <p className="mt-0.5 text-[13px] leading-relaxed text-muted">{s.caption}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
       <ProseP>{r.askStyle}</ProseP>
       <p className="pt-2 font-medium text-ink">{r.askRulesHeading}</p>
       {r.askRules.map((item) => (
@@ -106,6 +111,7 @@ export function StashRedesign() {
           {item.body}
         </ProseItem>
       ))}
+      <ProseP>{r.askClosing}</ProseP>
 
       <SubHeading>{r.prototypeHeading}</SubHeading>
       <ProseP>{r.prototypeIntro}</ProseP>

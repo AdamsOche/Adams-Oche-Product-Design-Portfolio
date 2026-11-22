@@ -31,7 +31,7 @@ export const stashRedesign = {
     },
     {
       lead: "Where AI helped.",
-      body: "I used Claude to build the clickable prototype as one HTML file, run a polish pass against a UI checklist, run contrast and colour-blind checks, and draft the assistant's four screens. It was fast at producing and testing options. It was not the one deciding what Stash should feel like.",
+      body: "I used Claude to build the clickable prototype as one HTML file, run a polish pass against a UI checklist, run contrast and colour-blind checks, and draft the assistant's screens. It was fast at producing and testing options. It was not the one deciding what Stash should feel like.",
     },
     {
       lead: "What I checked myself.",
@@ -224,30 +224,87 @@ export const stashRedesign = {
     "Ask Stash is a small assistant I added to show how I design for AI, not just with it. It only sees what happens in Stash: your jars, pools and transfers. It does not see your bank.",
     "The answers in the prototype are scripted, not from a live model. I designed what it says and how it says it.",
   ],
-  ask: [
+  askGroups: [
     {
-      name: "Ask",
-      src: `${BASE}/after/ask-ask.png`,
-      alt: "The Ask Stash start screen on a deep violet gradient: Hello, Tolu, what do you want to know, a note that it only sees Stash jars, pools and transfers, three suggested questions and a field to ask in your own words.",
-      caption: "It says up front what it can see. There are three suggested questions, or you can type your own.",
+      heading: "The answer flow",
+      screens: [
+        {
+          name: "Ask",
+          src: `${BASE}/after/ask-ask-v2.png`,
+          alt: "The Ask Stash start screen on a deep violet gradient: Hello, Tolu, what do you want to know, a note that it only sees Stash jars, pools and transfers, four starter questions and a field to ask in your own words, with a history button at the top right.",
+          caption: "It says up front what it can see. There are four starter questions, or you can type your own. The clock button opens history.",
+        },
+        {
+          name: "Answer",
+          src: `${BASE}/after/ask-answer-v2.png`,
+          alt: "An Ask Stash answer to Am I on track for rent: Yes, rent is full about 6 weeks early, a table of the numbers it used, a note on the assumption, and Regenerate and Something wrong buttons.",
+          caption: "The verdict comes first. Then the exact numbers it used and the assumption it made. Regenerate and Something wrong sit underneath.",
+        },
+        {
+          name: "Streaming",
+          src: `${BASE}/after/ask-stream.png`,
+          alt: "Ask Stash mid-answer: the verdict has appeared and the next line is arriving word by word, with a Stop answering button at the bottom.",
+          caption: "The answer arrives word by word, with a Stop button.",
+        },
+        {
+          name: "Stopped",
+          src: `${BASE}/after/ask-stream-stopped.png`,
+          alt: "Ask Stash after the person stopped an answer: a Stopped label, the part already said, a note that nothing was changed, and Continue and Ask again buttons.",
+          caption: "If you stop it, it keeps what it already said and offers Continue. Nothing is changed.",
+        },
+        {
+          name: "Source",
+          src: `${BASE}/after/ask-source.png`,
+          alt: "A sheet over the answer titled Where 1,070,000 naira comes from: three recent weekly deposits and a line for earlier deposits, with a note that nothing comes from your bank.",
+          caption: "Tap Saved to see the actual deposits behind the number. Nothing comes from your bank.",
+        },
+        {
+          name: "Something wrong",
+          src: `${BASE}/after/ask-wrong.png`,
+          alt: "A sheet asking What's wrong with this answer, with four options: a number is off, it's not what I asked, it's out of date, or something else, and a Send button.",
+          caption: "Something wrong asks what is wrong, with four options. Then a plain thank-you and Ask again.",
+        },
+      ],
     },
     {
-      name: "Answer",
-      src: `${BASE}/after/ask-answer.png`,
-      alt: "An Ask Stash answer to Am I on track for rent: Yes, rent is full about 6 weeks early, then a table of the numbers it used, and a note on the assumption it made.",
-      caption: "The answer comes first. Then the exact numbers it used, and the assumption it made.",
+      heading: "Honest limits and failure",
+      screens: [
+        {
+          name: "Unsure",
+          src: `${BASE}/after/ask-unsure-v2.png`,
+          alt: "An Ask Stash reply to a December spending question, marked Not sure yet: it says it can't give a number because there are only three weeks of data, and offers two things it can do.",
+          caption: "When it can't know, it says so. It gives the reason and offers two things it can do. It does this for a December forecast from three weeks of data, and for off-topic questions.",
+        },
+        {
+          name: "Service down",
+          src: `${BASE}/after/ask-aifail.png`,
+          alt: "An Ask Stash error reply marked Couldn't answer: the answering service didn't respond, jars, pools and money are fine, the question is saved in History, with Try again and Look at your jars instead.",
+          caption: "When the answering service is down, it says what happened, that your money is fine and that your question is saved. It offers Try again.",
+        },
+        {
+          name: "History",
+          src: `${BASE}/after/ask-history.png`,
+          alt: "The History screen listing past questions grouped by Today and Yesterday, including one marked Not sure yet and one marked Couldn't answer.",
+          caption: "Past questions, including the one that failed, so nothing is lost.",
+        },
+      ],
     },
     {
-      name: "Unsure",
-      src: `${BASE}/after/ask-unsure.png`,
-      alt: "An Ask Stash reply to a December spending question, marked Not sure yet: it says it can't give a number because there are only three weeks of data, and offers two things it can do.",
-      caption: "When it can't know, it says so. It gives the reason and offers two things it can do.",
-    },
-    {
-      name: "Act",
-      src: `${BASE}/after/ask-act.png`,
-      alt: "An Ask Stash suggestion to move 30,000 naira from the wallet into the New laptop jar, with the wallet and jar figures after the move, a Move button and a Not now link.",
-      caption: "It proposes moving money to the jar that is furthest behind. Nothing moves until you tap, then it confirms and offers Undo.",
+      heading: "Acting for you",
+      screens: [
+        {
+          name: "Move money",
+          src: `${BASE}/after/ask-act-v2.png`,
+          alt: "An Ask Stash suggestion to move 30,000 naira from the wallet into the New laptop jar, with the wallet and jar figures after the move, a Move button and a Not now link.",
+          caption: "It proposes moving money to the jar that is furthest behind. Nothing moves until you tap, then it confirms and offers Undo.",
+        },
+        {
+          name: "Plan a goal",
+          src: `${BASE}/after/ask-task.png`,
+          alt: "An Ask Stash plan for saving 200,000 naira for December: three finished steps showing its working, and a fourth step that needs your OK, with a Review in New goal button.",
+          caption: "For Help me save 200,000 naira for December, it shows each step it took. Then it hands off to the real New goal form, pre-filled. Nothing is created until you confirm there.",
+        },
+      ],
     },
   ],
   askStyle:
@@ -257,8 +314,10 @@ export const stashRedesign = {
     { lead: "Show your working.", body: "The answer comes with the numbers it used and the assumption it made." },
     { lead: "Admit uncertainty in words.", body: "A Not sure yet label says it, so it doesn't rely on colour alone." },
     { lead: "Ask before acting.", body: "Nothing moves until you tap." },
-    { lead: "Make every action reversible.", body: "After a move, it confirms and offers Undo." },
+    { lead: "Let the person stop it, correct it and undo it.", body: "There is a Stop button, a Something wrong option and an Undo after a move." },
+    { lead: "Fail in plain words.", body: "When it can't answer, it says what happened and that your money is fine." },
   ],
+  askClosing: "The assistant never creates or moves anything without a tap.",
 
   prototypeHeading: "Try the redesign",
   prototypeIntro: "This is the redesigned version, running in the page. Tap through it.",
