@@ -157,6 +157,26 @@ export const projects: Project[] = [
     brandColor: "#14233b",
     brandTextColor: "#ffffff",
   },
+  {
+    index: "06",
+    slug: "power-pay",
+    name: "Power Pay",
+    oneLiner:
+      "A concept app that sends prepaid electricity units straight into your meter, so there is no token to copy and nothing to type into the box.",
+    tags: ["Concept project", "Product design", "Mobile", "User flows"],
+    status:
+      "A concept across 28 screens and five flows. Not a live product, and the data is sample data.",
+    href: "/work/power-pay",
+    image: "/work/power-pay-screens.png",
+    imageWidth: 1568,
+    imageHeight: 740,
+    imageAlt:
+      "Four Power Pay screens: Home with 86.4 units left on the meter, Buy power with an amount picker, Loading with a ring showing units moving into the meter, and the Done screen.",
+    // The app's own orange, with the dark ink for text: white on this orange
+    // is under 3:1, the ink clears 6:1.
+    brandColor: "#ff6a13",
+    brandTextColor: "#17151b",
+  },
 ];
 
 export const stack = {
